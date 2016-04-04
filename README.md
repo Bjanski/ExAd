@@ -2,11 +2,24 @@
 Exile Addons - originally small projects developed for the Arma Exile communities EXO and SP4R but now rewritten and collected here for public use. 
 
 ## Collection
-* Core
-* Virtual Garage
-* Admin Events
-* Base Events
-* Bike
+  * Core
+  * Virtual Garage
+  * Admin Events
+  * Base Events
+  * Bike
+
+## Dependencies
+  * Core
+    * [Exile](http://www.exilemod.com/downloads/)
+  * Virtual Garage
+    * Core
+  * Admin Events
+    * Core
+    * [Infistar](https://infistar.de/)
+  * Base Events
+    * Virtual Garage
+  * Bike 
+    * Core
 
 ##Contribute
 Contributions are allways welcome, please read [Contribution Guidlines](CONTRIBUTING.md) first.
