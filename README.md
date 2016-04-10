@@ -5,10 +5,11 @@ I'll gradually add all features I built, encouragements always helps the project
 
 ##Collection
   * Core
-  * Virtual Garage
-  * Admin Events
-  * Base Events
-  * Bike
+  * Virtual Garage .. *Coming Soon*
+  * Admin Events .. *Coming Soon*
+  * Hacking .. *Coming Soon*
+  * Grinding
+  * Halo & Parachute
 
 ##Dependencies
   * Core
@@ -18,9 +19,9 @@ I'll gradually add all features I built, encouragements always helps the project
   * Admin Events
     * Core
     * [Infistar](https://infistar.de/)
-  * Base Events
+  * Hacking
     * Virtual Garage
-  * Bike 
+  * Grinding
     * Core
 
 ##Contribute
