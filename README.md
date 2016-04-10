@@ -4,7 +4,7 @@ Exile Addons - originally small projects developed for the Arma Exile communitie
 I'll gradually add all features I built, encouragements always helps the project to stay alive a little longer :smirk: | [Donate here](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jan%2ebabor%2e383%40gmail%2ecom&lc=GB&item_name=ExAd&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
 ##Collection
-  * Core
+  * [Core](https://github.com/Bjanski/ExAd/tree/Core)
   * Virtual Garage .. *Coming Soon*
   * Admin Events .. *Coming Soon*
   * Hacking .. *Coming Soon*
