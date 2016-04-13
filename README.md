@@ -30,7 +30,7 @@ Contributions are allways welcome, please read [Contribution Guidlines](CONTRIBU
 All contributed code first needs to be rewieved before pushed to master. 
 
 ##License
-MIT License
+Apache License
 
 ##Contact
 For this project I only reply through my [Exile profile](http://www.exilemod.com/profile/7143-janski/)  
