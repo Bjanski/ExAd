@@ -1,6 +1,6 @@
-/*  
-	fn_debugHandler.sqf
-
+/*
+	fn_createCrate.sqf
+  
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +15,21 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-params ["_fnc","_exception",["_server", false]];
 
-if(ExAd_Debug)then{
-	diag_log format["ExAd%3 Debugger: Error in %1 - '%2'",_fnc, _exception, (if(_server)then{"Server"}else{""})]
-}
+private["_pos","_list","_crateType","_crate"];
+
+_pos = [_this,0,[0,0,0]] call BIS_fnc_param;
+_list = [_this,1,[]] call BIS_fnc_param;
+_crateType = [_this,2,"Box_IND_AmmoVeh_F"] call BIS_fnc_param;
+
+_crate = _crateType createVehicle _pos;
+clearBackpackCargoGlobal _crate;
+clearItemCargoGlobal _crate;
+clearMagazineCargoGlobal _crate;
+clearWeaponCargoGlobal _crate;
+
+{
+	_crate addItemCargoGlobal [_x select 0,_x select 1]
+}forEach _list;
+
+_crate
