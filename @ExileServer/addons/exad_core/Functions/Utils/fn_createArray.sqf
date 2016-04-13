@@ -1,6 +1,6 @@
-/*  
-	fn_debugHandler.sqf
-
+/*
+	fn_createArray.sqf
+  
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +15,14 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-params ["_fnc","_exception",["_server", false]];
 
-if(ExAd_Debug)then{
-	diag_log format["ExAd%3 Debugger: Error in %1 - '%2'",_fnc, _exception, (if(_server)then{"Server"}else{""})]
-}
+private ["_array"];
+
+_array = [];
+{
+	for "_i" from 1 to (_x select 0) do {
+		_array pushBack (_x select 1)
+	}
+}forEach _this;
+
+_array
