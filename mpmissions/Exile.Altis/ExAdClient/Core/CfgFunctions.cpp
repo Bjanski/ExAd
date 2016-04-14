@@ -19,9 +19,9 @@
 class System
 {
 file = "ExAdClient\Core\Functions\System";
+	class debugHandler {};
 	class serverDispatch {};
 	class incomingRequest {};
-	class initOverlay {};
 	class changeable {file = "ExAdClient\Core\postInit.sqf"; postInit = 1;};
 };
 class Utilities
