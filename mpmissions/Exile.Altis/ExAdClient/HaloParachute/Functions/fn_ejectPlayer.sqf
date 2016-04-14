@@ -32,4 +32,8 @@ _push = if (_vehicleObj isKindOf "Plane") then {
 
 player setVelocity ((velocity player) vectorAdd _push);
 
+if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
+	ExAd_PARACHUTE_SAFE_THREAD = [0.1, ExAd_fnc_parachuteSafeMode, [], true] call ExileClient_system_thread_addtask;
+};
+
 true
