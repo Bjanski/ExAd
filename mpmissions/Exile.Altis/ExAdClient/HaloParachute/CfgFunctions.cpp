@@ -19,10 +19,10 @@
 
 class HaloParachute
 {
-	file = "ExHP\Functions";
+	file = "ExHPClient\Functions";
 	class ejectPlayer {};
 	class pullParachute {};
 	class showEject {};
 	class showParachute {};
-	class customize {file = "ExAd\HaloParachute\postInit.sqf"; postInit = 1;};
+	class customize {file = "ExHPClient\HaloParachute\postInit.sqf"; postInit = 1;};
 };
