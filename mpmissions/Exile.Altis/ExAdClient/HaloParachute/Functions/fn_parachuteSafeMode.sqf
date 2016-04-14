@@ -16,6 +16,6 @@
 	limitations under the License.
 */
 
-if(getPosATL player <= ExAd_ACTION_PARACHUTE_HEIGHT)then{
+if((getPosATL player) select 2 <= ExAd_ACTION_PARACHUTE_HEIGHT)then{
 	call ExAd_fnc_pullParachute;
 };

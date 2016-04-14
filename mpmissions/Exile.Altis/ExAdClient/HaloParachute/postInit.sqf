@@ -27,11 +27,19 @@ execVM "ExAdClient\HaloParachute\customize.sqf";
 		UISleep 0.1;
 		waitUntil{alive player};
 		
-		ExAd_ACTION_PARACHUTE = player addaction ["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' /> Open Parachute!</t>", "call ExAd_fnc_pullParachute", [], 6, true, true, "", "call ExAd_fnc_showParachute"];
-		ExAd_ACTION_EJECT = player addaction ["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' /> Halo Jump</t>", "call ExAd_fnc_ejectPlayer", [], 6, false, true, "", "call ExAd_fnc_showEject;"];
+		ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE"], {call ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+		ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_HALO"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
+		
+		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
+			ExAd_ACTION_PARACHUTE_DETACH = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_DETACH"], {call ExAd_fnc_detachParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+		};
 		
 		waitUntil{!alive player};
 		player removeAction ExAd_ACTION_PARACHUTE;
 		player removeAction ExAd_ACTION_EJECT;
-	}
+		
+		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
+			player removeAction ExAd_ACTION_PARACHUTE_DETACH;
+		};
+	};
 };
