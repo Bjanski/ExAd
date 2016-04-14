@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="ExAd">
+	<Package name="HaloParachute">
+		<Container name="Actions">
+			<Key ID="STR_ExAd_HALOPARACHUTE_ACTIONS_HALO">
+				<Original>Halo Jump</Original>
+			</Key>
+			<Key ID="STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE">
+				<Original>Open Parachute</Original>
+			</Key>
+		</Container>
+	</Package>
+</Project>
