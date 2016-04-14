@@ -8,6 +8,9 @@
 			<Key ID="STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE">
 				<Original>Open Parachute</Original>
 			</Key>
+			<Key ID="STR_ExAd_HALOPARACHUTE_ACTIONS_DETACH">
+				<Original>Open Parachute</Original>
+			</Key>
 		</Container>
 	</Package>
 </Project>
