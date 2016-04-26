@@ -1,5 +1,5 @@
 /*
-	fn_detachParachute.sqf
+	fn_showDetachParachute.sqf
   
 	Copyright 2016 Jan Babor
 
@@ -16,6 +16,4 @@
 	limitations under the License.
 */
 
-	hint "Detach parachute";
-
-true
+((getPos player) select 2 > ExAd_ACTION_PARACHUTE_HEIGHT && vehicle player isKindOf "Steerable_Parachute_F")

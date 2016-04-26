@@ -20,7 +20,7 @@
 class HaloParachute
 {
 	file = "ExAdClient\HaloParachute\Functions";
-	class detachParachute {};
+	class canDetachParachute {};
 	class ejectPlayer {};
 	class parachutesafemode {};
 	class pullParachute {};

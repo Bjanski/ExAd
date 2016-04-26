@@ -31,7 +31,13 @@ execVM "ExAdClient\HaloParachute\customize.sqf";
 		ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_HALO"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
 		
 		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
-			ExAd_ACTION_PARACHUTE_DETACH = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_DETACH"], {call ExAd_fnc_detachParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+			ExAd_ACTION_PARACHUTE_DETACH = (findDisplay 46) displayAddEventHandler ["KeyDown",{
+				if(call ExAd_fnc_canDetachParachute)then{
+					if(_this select 1 == 45 && _this select 2 && _this select 4)then{
+						call ExAd_fnc_ejectPlayer
+					}			
+				}
+			}];
 		};
 		
 		waitUntil{!alive player};
@@ -39,7 +45,7 @@ execVM "ExAdClient\HaloParachute\customize.sqf";
 		player removeAction ExAd_ACTION_EJECT;
 		
 		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
-			player removeAction ExAd_ACTION_PARACHUTE_DETACH;
+			(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_PARACHUTE_DETACH];
 		};
 	};
 };
