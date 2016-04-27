@@ -12,5 +12,10 @@
 				<Original>Open Parachute</Original>
 			</Key>
 		</Container>
+		<Container name="Info">
+			<Key ID="STR_ExAd_HALOPARACHUTE_INFO_DETACH">
+				<Original>You can eject from parachute with: Alt Shift x</Original>
+			</Key>
+		</Container>
 	</Package>
 </Project>
