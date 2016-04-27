@@ -2,7 +2,7 @@
 
 Below I provide with some examples of how to use HaloParachute
 
-##Chang settings 
+##Change settings 
 
 Customize settings to allow different scenarios.
 * Allow vehicle ejection
@@ -13,4 +13,15 @@ Customize settings to allow different scenarios.
 ```sqf
 	ExAd_HALOPARACHUTE_SAFE_MODE = true;
 ```  
-  
+* Enable parachute Detach - makes it possible to detach the parachute
+```sqf
+	ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE = true;
+```  
+##Change defined notification texts
+Customizing stringtable.xml allows you to easily change defined texts or add language support.
+* Change detach message in stringtable.xml.
+```sqf
+	<Key ID="STR_ExAd_HALOPARACHUTE_INFO_DETACH">
+		<Original>You can eject from parachute with: Alt Shift x</Original>
+	</Key>
+```
