@@ -16,6 +16,7 @@ I'll gradually add all features I built, encouragements always helps the project
     * [Exile](http://www.exilemod.com/downloads/)
   * Virtual Garage
     * Core
+	* [XM8 Apps Improved](https://github.com/vitalymind/XM8_apps_improved)
   * Admin Events
     * Core
     * [Infistar](https://infistar.de/)
