@@ -6,6 +6,7 @@
 
 * Place the folder "HaloParachute" into "mpmissions\exile.<MAP>\ExAd\"
 * Goto "mpmissions\exile.<MAP>\ExAd\CfgFunctions" and uncomment  
+
 From
 ```cpp
         //#include "HaloParachute\CfgFunctions.cpp"	
