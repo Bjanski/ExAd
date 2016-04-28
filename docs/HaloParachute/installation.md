@@ -1,6 +1,6 @@
 # Installation
 
-* Remember for this plugin to work you first need to install [Core](https://github.com/Bjanski/ExAd/blob/Core/docs/core/installation.md)  
+* Remember for this plugin to work you first need to install [Core](https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)  
   
 ## Client
 
@@ -15,7 +15,7 @@ To
         #include "HaloParachute\CfgFunctions.cpp"	
 ```
 
-3. Now you can go into "mpmissions\exile.<MAP>\ExAd\HaloParachute\customize.sqf" and change to desirable settings.
+3. Now you can go into "mpmissions\exile.<MAP>\ExAdClient\HaloParachute\customize.sqf" and change to desirable settings.
 
 ## Server 
 
