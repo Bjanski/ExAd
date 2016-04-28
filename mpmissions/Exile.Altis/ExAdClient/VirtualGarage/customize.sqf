@@ -1,6 +1,6 @@
 /*  
-	CfgHints.cpp
-
+	customize.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +15,13 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-class ExAd
-{
-	displayName = "ExAd Virtual Garage";
-	#include "VirtualGarage\CfgHints.cpp"
-};
+
+ExAd_VG_MIN_ALLOWED_VEH = 5;			//SCALAR - Minimun allowed vehicles in the virtual garage.
+
+ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR = 3;//SCALAR - How many extra vehicle slots for each territory level.
+
+ExAd_VG_ACCESS_LEVEL = 1; 				//SCALAR - Lowest level that can access the Virtual Garage --> 1|2|3 -> Pleb|Moderator|Owner.
+
+ExAd_VG_CLEAN_ON_STORE = true;			//BOOLEAN - If vehicle inventory should reset when stored.
+
+ExAd_VG_SHOW_ADVHINT = false 			//BOOLEAN - If the virtual garage should display an Advanced hint upon store and fetch.

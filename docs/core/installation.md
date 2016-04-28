@@ -28,11 +28,18 @@ class CfgFunctions
 	#include "SOMEOTHER_ADDON\CfgFunctions.cpp"
 };
 ```  
-* Copy over "Core" from "mpmissions\Exile.Altis\ExAd\Core"
-
+* Copy over "Core" from "mpmissions\Exile.Altis\ExAdClient\"  
+* Copy over all files in "mpmissions\Exile.Altis\ExAdClient\"  
+These files includes the installation requirements for all other ExAd plugins  
+E.g in "mpmissions\Exile.Altis\ExAdClient\CfgFunctions.cpp" you can see that there are alot of lines commented out some of these need to be uncommented for plugins to work. Each plugin will describe more in detail which ones need to be adjusted. 
 ## Server 
 
 * Navigate to "@ExileServer\addons\" 
 * Copy "exad_core"
 * Pack exad_core into a .pbo file.
+
+## BattlEye
+
+I've put all plugins battleye exceptions in "BattlEye"  
+Check the files and append appropriate exceptions into your BattlEye files.  
 
