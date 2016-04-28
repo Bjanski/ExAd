@@ -1,5 +1,5 @@
 /*  
-	CfgHints.cpp
+	CfgFunctions.cpp
 
 	Copyright 2016 Jan Babor
 
@@ -15,8 +15,14 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-class ExAd
+
+
+class VirtualGarage
 {
-	displayName = "ExAd Virtual Garage";
-	#include "VirtualGarage\CfgHints.cpp"
+	file = "ExAdClient\VirtualGarage\Functions";
+	class allowVGStore {};
+	class fillVGList {};
+	class loadVGDetailView {};
+	class onBtnClickVG {};
+	class postInit {file = "ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};
 };

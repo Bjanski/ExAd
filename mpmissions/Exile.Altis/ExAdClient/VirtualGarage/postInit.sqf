@@ -1,6 +1,6 @@
 /*  
-	CfgHints.cpp
-
+	postInit.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +14,7 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
 */
-class ExAd
-{
-	displayName = "ExAd Virtual Garage";
-	#include "VirtualGarage\CfgHints.cpp"
-};
+
+execVM "ExAdClient\VirtualGarage\customize.sqf";

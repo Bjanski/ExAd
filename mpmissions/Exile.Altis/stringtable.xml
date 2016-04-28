@@ -18,4 +18,11 @@
 			</Key>
 		</Container>
 	</Package>
+	<Package name="VirtualGarage">
+		<Container name="Notifications">
+			<Key ID="STR_ExAd_VIRTUALGARAGE_NOTI_FULL">
+				<Original>You garage is full!</Original>
+			</Key>
+		</Container>
+	</Package>
 </Project>

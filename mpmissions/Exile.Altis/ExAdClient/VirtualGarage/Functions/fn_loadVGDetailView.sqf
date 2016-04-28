@@ -1,5 +1,5 @@
 /*  
-	CfgHints.cpp
+	fn_loadVGDetailView.sqf
 
 	Copyright 2016 Jan Babor
 
@@ -15,8 +15,13 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-class ExAd
-{
-	displayName = "ExAd Virtual Garage";
-	#include "VirtualGarage\CfgHints.cpp"
-};
+params ["_text","_idc"];
+disableSerialization;
+
+_display = uiNameSpace getVariable ["RscExileXM8", displayNull];
+
+if(isNull _display)exitWith{false};
+
+(_display displayCtrl _idc) ctrlSetStructuredText parseText _text;
+
+true
