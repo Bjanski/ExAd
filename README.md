@@ -10,24 +10,29 @@ Below you can see what dependencies each plugin has.
 
 ##Collection
   * Core
+  * Halo & Parachute
   * Virtual Garage
   * Admin Events .. *Coming Soon*
   * Hacking .. *Coming Soon*
   * Grinding .. *Coming Soon*
-  * Halo & Parachute
+  * VehicleUpgrade -- *Coming Soon*
 
 ##Dependencies
-  * Core
+* Core
     * [Exile](http://www.exilemod.com/downloads/)
-  * Virtual Garage
+* Virtual Garage
     * Core
 	* [XM8 Apps Improved](https://github.com/vitalymind/XM8_apps_improved)
-  * Admin Events
+* Admin Events
     * Core
     * [Infistar](https://infistar.de/)
-  * Hacking
+* Hacking
     * Virtual Garage
-  * Grinding
+* Grinding
+    * Core
+* Halo & Parachute
+    * Core
+* VehicleUpgrade
     * Core
 
 ##Contribute
