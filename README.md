@@ -3,12 +3,17 @@ Exile Addons - originally small projects developed for the Arma Exile communitie
 
 I'll gradually add all features I built, encouragements always helps the project to stay alive a little longer :smirk: | [Donate here](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jan%2ebabor%2e383%40gmail%2ecom&lc=GB&item_name=ExAd&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
+## Installation & Examples
+Instructions for installtion is found under [docs](https://github.com/Bjanski/ExAd/tree/master/docs). 
+Each plugin must be installed seperately, I've done it this way to make the update procedure easier. 
+Below you can see what dependencies each plugin has. 
+
 ##Collection
   * [Core](https://github.com/Bjanski/ExAd/tree/Core)
-  * Virtual Garage .. *Coming Soon*
+  * Virtual Garage
   * Admin Events .. *Coming Soon*
   * Hacking .. *Coming Soon*
-  * Grinding
+  * Grinding .. *Coming Soon*
   * Halo & Parachute
 
 ##Dependencies
@@ -28,7 +33,7 @@ I'll gradually add all features I built, encouragements always helps the project
 ##Contribute
 Contributions are allways welcome, please read [Contribution Guidlines](CONTRIBUTING.md) first.
 
-All contributed code first needs to be rewieved before pushed to master. 
+All contributed code first needs to be rewieved and tested before pushed to master. 
 
 ##License
 Apache License
