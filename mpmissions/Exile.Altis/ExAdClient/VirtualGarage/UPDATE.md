@@ -8,5 +8,5 @@
 * Replace "ExAdClient\VirtualGarage\CfgHints.cpp"
 * Replace "XM8_apps\apps\XM8_VG"
  
-### 160425 12:00 . v0.5.0  
+### 160428 12:00 . v0.5.0  
 #### Full installation
