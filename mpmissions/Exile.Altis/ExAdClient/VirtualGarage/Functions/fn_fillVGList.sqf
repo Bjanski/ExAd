@@ -20,6 +20,8 @@ private ["_list","_idc","_vehClass","_data","_name","_index","_pic"];
 _list = _this select 0;
 _idc = _this select 1;
 
+lbClear _idc;
+
 {
 	_vehClass = if(typeName _x isEqualTo "ARRAY")then{_x select 1}else{typeOf _x};
 	_data = if(typeName _x isEqualTo "ARRAY")then{format["%1",_x select 0]}else{netId _x};

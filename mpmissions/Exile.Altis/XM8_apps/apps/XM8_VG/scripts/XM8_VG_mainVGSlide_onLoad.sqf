@@ -110,6 +110,9 @@ _slides = _display displayCtrl 4007;
 if (isNull _slides) exitWith {_error = "Error loading XM8 VG app, slides control is null"; systemChat _error; diag_log _error;};
 
 _unloadScript = '
+	if (ExileClientXM8CurrentSlide == "mainVGSlide") then {
+		ExileClientXM8CurrentSlide = "sideApps";
+	};
 	ExAd_Cur_Flag_NetId = nil;
 ';
 _display displayAddEventHandler ["unload",_unloadScript];

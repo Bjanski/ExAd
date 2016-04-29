@@ -21,7 +21,7 @@ class VGStore
 	displayName = "Vehicle stored";
 	/*displayNameShort = "Your vehicle has been stored and is available through the Virtual Garage interface";*/
 	description = "Your vehicle has been stored and is only available through the territory it has been stored at. ";
-	image = "ExAdClient\Icons\logo.paa";
+	image = "ExAdClient\Core\Img\logo.paa";
 	noImage = false;
 	tip = "";
 	arguments[] = {};
@@ -30,7 +30,7 @@ class VGLoad
 {
 	displayName = "Vehicle loaded to world";
 	description = "%1Your vehicle has been loaded to the world, the pin code is %11";
-	image = "EXOClient\Icons\logo.paa";
+	image = "ExAdClient\Core\Img\logo.paa";
 	noImage = false;
 	tip = "";
 	arguments[] = {"VGLoad select 0"};
