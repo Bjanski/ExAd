@@ -6,8 +6,10 @@
 * BattlEye filters been updated  
 * VG App return to sideApp on unLoad  
 * VG App clear lists before onLoad and content being loaded. 
-* AdvHint trying to show EXO Logo
+* AdvHint trying to show EXO Logo  
+  
 #### Added
 * ExAd Logo.png  
+  
 #### Deleted
 * EXO Logo.png
