@@ -1,1 +1,7 @@
-7 eventHandler !="ExAd_ACTION_PARACHUTE_DETACH = (findDisplay 46) displayAddEventHandler ["KeyDown",{"
+eventHandler 	!="ExAd_ACTION_PARACHUTE_DETACH = (findDisplay 46) displayAddEventHandler ["KeyDown",{"
+compile 		!="call compile format[\"_messageParameters call ExAd_fnc_%1;\",_messageName]"
+createVehicle 	!="_parachuteObject = createVehicle [\"Steerable_Parachute_F\", getPosATL player, [], 0, \"CAN_COLLIDE\"]"
+addAction 		!="ExAd_ACTION_PARACHUTE = player addaction [format"
+Entities 		!="waitUntil {sleep 0.1; {player distance _x < 10 max (sizeOf typeOf _x)} count (player nearEntities [\"Helicopter_Base_F\", 20]) == 0}"
+disableCollisionWith	!="_parachuteObject disableCollisionWith player"
+remoteexec 		!="_this remoteExec [\"ExAdServer_fnc_clientRequest\",2]"
