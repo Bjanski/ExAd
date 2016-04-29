@@ -8,6 +8,9 @@ Instructions for installation is found under [docs](https://github.com/Bjanski/E
 Each plugin must be installed seperately, I've done it this way to make the update procedure easier. 
 Below you can see what dependencies each plugin has. 
 
+## Update Instructions
+After you have installed the entire or parts of the ExAd Package you will easiest update by checking each subproject client folder to retrieve the changelog and update instructions. 
+
 ##Collection
   * Core
   * Halo & Parachute
