@@ -4,8 +4,10 @@
 ### 160429 14:04 . v0.5.14  
 #### Fixed  
 * AdvHint trying to show EXO Logo  
+
 #### Added
 * ExAd Logo.png  
+
 #### Deleted
 * EXO Logo.png
  
