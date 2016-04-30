@@ -1,7 +1,16 @@
 #Core  
 ## Changelog:   
 
-### 160429 14:04 . v0.5.14  
+### 160430 09:20 . v0.5.2  
+
+#### Fixed  
+* Description.ext was wrongly configured 
+
+#### Added
+
+#### Deleted
+
+### 160429 14:04 . v0.5.1  
 
 #### Fixed  
 * AdvHint trying to show EXO Logo  
