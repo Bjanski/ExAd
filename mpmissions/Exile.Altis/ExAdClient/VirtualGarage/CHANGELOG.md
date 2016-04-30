@@ -1,7 +1,7 @@
 #VirtualGarage  
 ## Changelog:    
 
-### 160429 14:04 . v0.5.14  
+### 160429 14:04 . v0.5.1   
 #### Fixed  
 * BattlEye filters been updated  
 * VG App return to sideApp on unLoad  

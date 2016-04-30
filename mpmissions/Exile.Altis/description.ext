@@ -28,7 +28,7 @@ class CfgRemoteExec
 		jip = 0;
 		
 		class ExileServer_system_network_dispatchIncomingMessage { allowedTargets=2; };
-		class ExAd_fnc_clientRequest { allowedTargets=2; };
+		class ExAdServer_fnc_clientRequest { allowedTargets=2; };
 	};
 	class Commands 
 	{
