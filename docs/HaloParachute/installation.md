@@ -5,7 +5,7 @@
 ## Client
 
 * Place the folder "HaloParachute" into "mpmissions\exile.<MAP>\ExAd\"
-* Goto "mpmissions\exile.<MAP>\ExAd\CfgFunctions" and uncomment  
+* Goto "mpmissions\exile.<MAP>\ExAdClient\CfgFunctions" and uncomment  
 
 From
 ```cpp
