@@ -17,10 +17,12 @@
 */
 
 
-class VirtualGarage
+class Grinding
 {
 	file = "ExAdClient\Grinding\Functions";
+	class canGrindLock {};
+	class canRestoreLock {};
 	class grindLock {};
 	class restoreLock {};
-	class postInit {file = "ExAdClient\Grinding\postInit.sqf"; postInit = 1;};
+	class postInitGrinding {file = "ExAdClient\Grinding\postInit.sqf"; postInit = 1;};
 };

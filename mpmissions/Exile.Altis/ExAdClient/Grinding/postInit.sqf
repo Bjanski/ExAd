@@ -19,6 +19,8 @@
 
 execVM "ExAdClient\Grinding\customize.sqf";
 
+ExAd_GRINDING = false;
+
 STR_ExAd_GRINDING_NOTI_BROKE = if(isLocalized "STR_ExAd_GRINDING_NOTI_BROKE")then{localize "STR_ExAd_GRINDING_NOTI_BROKE"}else{"Your grinder broke, get a new one before you can continue."};
 
 STR_ExAd_GRINDING_NOTI_EMPTY_BAT = if(isLocalized "STR_ExAd_GRINDING_NOTI_EMPTY_BAT")then{localize "STR_ExAd_GRINDING_NOTI_EMPTY_BAT"}else{"Find some batteries to get the grinder to work."};

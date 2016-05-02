@@ -30,7 +30,7 @@ ExAd_DRAW3D_HANDLER = addMissionEventHandler ["Draw3D", {
 	private ["_object","_progress"];
 	
 	_object = if(isNil "ExAd_GRINDING_OBJECT")then{cursorTarget}else{ExAd_GRINDING_OBJECT};
-	_progress = 1 min ((_object getVariable ["EXO_Grinding_progress", 1]) / ExAd_GRINDING_OBJECT_MAX);
+	_progress = 1 min ((_object getVariable ["ExAd_Grinding_progress", 1]) / ExAd_GRINDING_OBJECT_MAX);
 	
 	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 1], cursorTarget modelToWorld [0.5, -0.15, 1], [0,0,0,1]];
 	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 0.95], cursorTarget modelToWorld [0.5, -0.15, 0.95], [0,0,0,1]];
@@ -69,14 +69,14 @@ while{(ExAd_GRINDING_OBJECT == cursorTarget) && ExAd_GRINDING}do{
 		player removeItem "Exile_Magazine_Battery";
 		
 		["grindProgress", [netId ExAd_GRINDING_OBJECT]] call ExAd_fnc_serverDispatch;
-		['Whoops', [STR_ExAd_GRINDING_NOTI_PROGRESS]] call ExileClient_gui_notification_event_addNotification;
+		['Success', [STR_ExAd_GRINDING_NOTI_PROGRESS]] call ExileClient_gui_notification_event_addNotification;
 		
 		player playActionNow "medicStart";
 	};
 	
 	if(ExAd_GRINDING_OBJECT getVariable ["ExAd_Grinding_progress", 0] > ExAd_GRINDING_OBJECT_MAX)exitWith{
 		UISleep 2;
-		['Whoops', [STR_ExAd_GRINDING_NOTI_FINISHED]] call ExileClient_gui_notification_event_addNotification;
+		['Success', [STR_ExAd_GRINDING_NOTI_FINISHED]] call ExileClient_gui_notification_event_addNotification;
 	};
 	_ticker = _ticker + 1;
 };

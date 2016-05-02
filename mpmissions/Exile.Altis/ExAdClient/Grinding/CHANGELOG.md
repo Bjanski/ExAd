@@ -6,5 +6,6 @@
 
 #### Added  
 * Grinding introduced  
+* Grinding battleye scripts  
 
 #### Deleted  

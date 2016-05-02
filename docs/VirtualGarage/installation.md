@@ -8,7 +8,7 @@ Remember for this plugin to work you first need to install
 
 * Place the folder "VirtualGarage" into "mpmissions\exile.<MAP>\ExAdClient\"  
 
-* Goto "mpmissions\exile.<MAP>\ExAd\CfgFunctions" and uncomment  
+* Goto "mpmissions\exile.<MAP>\ExAdClient\CfgFunctions" and uncomment  
 
 _From_  
 ```cpp  
@@ -22,7 +22,7 @@ _To_
 
 * In "config.cpp" in the mission root folder, find class CfgExileCustomCode  and add the following row
 ```js
-	ExileServer_system_territory_database_load = "EXOClient\CustomCode\ExileServer_system_territory_database_load.sqf";  
+	ExileServer_system_territory_database_load = "ExAdClient\CustomCode\ExileServer_system_territory_database_load.sqf";  
 ```
 * In "config.cpp" you can also add the ("CfgInteractionMenus" >> "Flag" >> "VG") class if you want to be able to fast load the app through your flag pole.  
 

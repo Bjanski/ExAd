@@ -1,6 +1,6 @@
 /*  
-	customize.sqf
-	
+	fn_canRestoreLock.sqf
+
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,12 +16,4 @@
 	limitations under the License.
 */
 
-ExAd_GRINDING_PROGRESS_INTERVALL = 60;	//SCALAR - Grinding, interval time measured in seconds.
-
-ExAd_GRINDING_PROGRESS = 30;			//SCALAR - Damage each finished interval will take from the code lock.
-
-ExAd_GRINDING_OBJECT_MAX = 900;			//SCALAR - Code lock sustainability.
-
-/*
-The default values above means that a full succesful grind will take (900 / 30) * 60 = 1800 = 20 minutes
-*/
+(('Exile_Item_Codelock' in (magazines player)) && (ExileClientInteractionObject getVariable ['ExAd_Grinding_progress', 0] > 0))
