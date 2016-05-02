@@ -25,4 +25,23 @@
 			</Key>
 		</Container>
 	</Package>
+	<Package name="Grinding">
+		<Container name="Notifications">
+			<Key ID="STR_ExAd_GRINDING_NOTI_BROKE">
+				<Original>Your grinder broke, get a new one before you can continue.</Original>
+			</Key>
+			<Key ID="STR_ExAd_GRINDING_NOTI_EMPTY_BAT">
+				<Original>Find some batteries to get the grinder to work.</Original>
+			</Key>
+			<Key ID="STR_ExAd_GRINDING_NOTI_PROGRESS">
+				<Original>I think I'm getting through.</Original>
+			</Key>
+			<Key ID="STR_ExAd_GRINDING_NOTI_FINISHED">
+				<Original>You have broken the code lock.</Original>
+			</Key>
+			<Key ID="STR_ExAd_GRINDING_NOTI_RESTORED">
+				<Original>You've changed the look</Original>
+			</Key>
+		</Container>
+	</Package>
 </Project>
