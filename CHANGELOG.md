@@ -1,7 +1,17 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 
 ## Changelog:  
-### 160426 14:04 . v0.5.2  
+### 160502 23:15 . v0.6.0  
+#### Fixed 
+
+#### Added
+* Implemented Grinding
+* Added battleye grinding exceptions
+  
+#### Deleted
+
+## Changelog:  
+### 160423 14:04 . v0.5.2  
 #### Fixed  
 * Description.ext was wrongly configured (Core) 
   
