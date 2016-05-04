@@ -1,5 +1,9 @@
 #VirtualGarage  
 ## Changelog:    
+ 
+### 160505 01:40 . v0.6.1  
+#### Fixed 
+* Display null when entering Virtual Garage from Flag
 
 ### 160429 14:04 . v0.5.1   
 #### Fixed  

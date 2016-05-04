@@ -1,5 +1,18 @@
 #VirtualGarage  
 ## Instructions:   
+ 
+### 160505 01:40 . v0.6.1  
+#### Update 
+* Modify config.cpp ("CfgInteractionMenus" >> "Flag")
+```cpp
+class VG : ExileAbstractAction
+{
+	title = "Virtual Garage";
+	condition = "(([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL";
+	action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
+};
+```
+
 
 ### 160429 14:04 . v0.5.1  
 #### Update  

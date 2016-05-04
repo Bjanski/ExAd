@@ -15,7 +15,7 @@ class CfgInteractionMenus
 			{
 				title = "Virtual Garage";
 				condition = "(([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL";
-				action = "call XM8_VG_checkNearByFlags";
+				action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
 			};
 		};
 	};
