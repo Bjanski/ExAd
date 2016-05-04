@@ -22,7 +22,9 @@ if(vehicle player != player)exitWith{false};
 ExAd_GRINDING_OBJECT = _this select 0;
 ExAd_GRINDING = true;
 call ExileClient_gui_interactionMenu_unhook;
-_soundSrc = createSoundSource ["Sound_Factory10", position ExAd_GRINDING_OBJECT, [], 0];
+if(isClass(configFile >> "CfgVehicles" >> "Sound_Factory10")) then {
+	_soundSrc = createSoundSource ["Sound_Factory10", position ExAd_GRINDING_OBJECT, [], 0];
+};
 player playActionNow "medicStart";
 
  
@@ -81,7 +83,10 @@ while{(ExAd_GRINDING_OBJECT == cursorTarget) && ExAd_GRINDING}do{
 	_ticker = _ticker + 1;
 };
 
-deleteVehicle _soundSrc;
+if(isClass(configFile >> "CfgVehicles" >> "Sound_Factory10")) then {
+	deleteVehicle _soundSrc;
+};
+
 player playActionNow "medicStop";
 removeMissionEventHandler ["Draw3D",ExAd_DRAW3D_HANDLER]; 
 

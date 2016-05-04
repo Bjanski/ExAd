@@ -1,6 +1,16 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 
 ## Changelog:  
+### 160505 01:40 . v0.6.1  
+#### Fixed 
+* Display null when entering Virtual Garage from Flag (Virtual Garage)
+* Sound error for grinding, tmp fix, sound will work on Chernarus (Grinding)
+
+#### Added
+
+#### Deleted
+
+## Changelog:  
 ### 160502 23:15 . v0.6.0  
 #### Fixed 
 
