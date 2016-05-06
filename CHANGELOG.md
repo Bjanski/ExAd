@@ -14,7 +14,6 @@ Must be implemented for Hacking to work proparly
 
 #### Deleted
 
-## Changelog:  
 ### 160505 01:40 . v0.6.1  
 #### Fixed 
 * Display null when entering Virtual Garage from Flag (Virtual Garage)
@@ -24,7 +23,6 @@ Must be implemented for Hacking to work proparly
 
 #### Deleted
 
-## Changelog:  
 ### 160502 23:15 . v0.6.0  
 #### Fixed 
 
