@@ -16,6 +16,8 @@ To
         #include "HaloParachute\CfgFunctions.cpp"	
 ```
 
+* Modify - "mpmissions\exile.<MAP>\stringtable.xml" - add if missing package="HaloParachute" and change to desirable notifications
+
 * Now you can go into "mpmissions\exile.<MAP>\ExAdClient\HaloParachute\customize.sqf" and change to desirable settings.
 
 ## Server 

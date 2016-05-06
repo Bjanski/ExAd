@@ -1,5 +1,9 @@
 #Core  
 ## Instructions:   
+### 160430 09:20 . v0.7.0  
+#### Update  
+* Replace "ExAdClient\Core\customize.sqf"
+  
 ### 160430 09:20 . v0.5.1  
 #### Update  
 * Description.ext was wrongly configured fixed ("CfgRemoteExec" >> "Functions")

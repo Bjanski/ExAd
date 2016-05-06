@@ -1,7 +1,7 @@
 # Installation
 
 Remember for this plugin to work you first need to install  
-* [Core](https://github.com/Bjanski/ExAd/blob/Core/docs/core/installation.md)
+* [Core]((https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)
   
 ## Client
 
@@ -43,6 +43,8 @@ class Construction
 	};
 };
 ```
+
+* Modify - "mpmissions\exile.<MAP>\stringtable.xml" - add package="Grinding" and change to desirable notifications
   
 * Now you can go into "mpmissions\exile.<MAP>\ExAdClient\Grinding\customize.sqf" and change to desirable settings.
   

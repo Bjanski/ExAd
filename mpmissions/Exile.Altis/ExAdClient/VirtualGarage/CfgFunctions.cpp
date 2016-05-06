@@ -24,5 +24,5 @@ class VirtualGarage
 	class fillVGList {};
 	class loadVGDetailView {};
 	class onBtnClickVG {};
-	class postInit {file = "ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};
+	class postInitVG {file = "ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};
 };

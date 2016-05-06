@@ -1,5 +1,5 @@
 /*  
-	customize.sqf
+	config.cpp
 
 	Copyright 2016 Jan Babor
 
@@ -16,12 +16,31 @@
 	limitations under the License.
 */
 
-ExAd_Debug = true; 						//BOOLEAN - If you want the ExAd code to generate debug logs. 
+class CfgPatches {
+	class ExAd_Hacking {
+		requiredVersion = 0.1;
+		requiredAddons[] = {"ExAd_Core", "ExAd_VG"};
+	};
+};
 
-ExAd_Hint_Title_Color = "#E48A36";		//STRING - Hint message color
-ExAd_Hint_Title_Size = 1.5;				//SCALAR - Hint title size
-ExAd_Hint_Title_Font = "TahomaB";		//STRING - Hint title font
+class CfgFunctions {
+	class ExAdServer {
+		class Hacking {
+			file = "exad_hacking\Functions";
+			class startHack {};
+			class stopHack {};
+		};
+	};
+};
 
-ExAd_Hint_Msg_Color = "#ffffff";		//STRING - Hint message color
-ExAd_Hint_Msg_Size = 1;					//SCALAR - Hint message size
-ExAd_Hint_Msg_Font = "TahomaB";			//STRING - Hint message font
+class CfgNetworkMessages
+{
+	class startHack
+	{
+		parameters[] = {"STRING","STRING"};
+	};
+	class stopHack
+	{
+		parameters[] = {"STRING"};
+	};
+};

@@ -23,6 +23,9 @@
 			<Key ID="STR_ExAd_VIRTUALGARAGE_NOTI_FULL">
 				<Original>You garage is full!</Original>
 			</Key>
+			<Key ID="STR_ExAd_VIRTUALGARAGE_NOTI_NOT_PERSISTENT">
+				<Original>You can only store pincode protected vehicles into the garage!</Original>
+			</Key>
 		</Container>
 	</Package>
 	<Package name="Grinding">
@@ -41,6 +44,44 @@
 			</Key>
 			<Key ID="STR_ExAd_GRINDING_NOTI_RESTORED">
 				<Original>You've changed the look</Original>
+			</Key>
+		</Container>
+	<Package name="Hacking">
+		<Container name="Notifications">
+			<Key ID="STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED">
+				<Original>Connection failed! Territory Wi-Fi is down!</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK">
+				<Original>Wi-Fi occupied!!</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS">
+				<Original>The laptop overloaded and got destroyed! Another hacker is already using the grid.</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_VG_SUCCESS">
+				<Original>Hack successful! The Virtual Garage unloaded a %1</Original> <!-- %1 indicates the vehicle class name that's going to be shown-->
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_VG_NO_VEH">
+				<Original>Hack successful! No vehicles were stored in the Virtual Garage.</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_SAFE_SUCCESS">
+				<Original>Hack successful! The safe is now unlocked.</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_INTERUPTED">
+				<Original>Hack has been interupted</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_FAILED">
+				<Original>Hack failed! Circuits overloaded!</Original>
+			</Key>
+		</Container>
+		<Container name="Hint">
+			<Key ID="STR_ExAd_HACKING_HINT_TITLE">
+				<Original>Hack Activity</Original>
+			</Key>
+			<Key ID="STR_ExAd_HACKING_HINT_HACK_START">
+				<Original>A brute force hack is detected on the grid!</Original>
+			</Key>
+			<Key ID="">
+				<Original></Original>
 			</Key>
 		</Container>
 	</Package>
