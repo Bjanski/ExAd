@@ -16,8 +16,8 @@ After you have installed the entire or parts of the ExAd Package you will easies
   * Halo & Parachute
   * Virtual Garage
   * Grinding
+  * Hacking
   * Admin Events .. *Coming Soon*
-  * Hacking .. *Coming Soon*
   * VehicleUpgrade -- *Coming Soon*
 
 ##Dependencies
