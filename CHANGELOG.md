@@ -1,6 +1,20 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 
 ## Changelog:  
+### 160506 09:00 . v0.7.0  
+#### Fixed 
+* Small issue where VG didn't show an advancedHint when storing. (VirtualGarage)
+
+#### Added
+* New stringtable values (VirtualGarage)
+* New customizable values (Core)
+Must be implemented for Hacking to work proparly
+* Implemented Hacking (Hacking)
+* Added battleye Hacking exceptions
+
+#### Deleted
+
+## Changelog:  
 ### 160505 01:40 . v0.6.1  
 #### Fixed 
 * Display null when entering Virtual Garage from Flag (Virtual Garage)

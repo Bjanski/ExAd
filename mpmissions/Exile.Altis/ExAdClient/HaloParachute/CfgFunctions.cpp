@@ -26,5 +26,5 @@ class HaloParachute
 	class pullParachute {};
 	class showEject {};
 	class showParachute {};
-	class customize {file = "ExAdClient\HaloParachute\postInit.sqf"; postInit = 1;};
+	class postInitHP {file = "ExAdClient\HaloParachute\postInit.sqf"; postInit = 1;};
 };

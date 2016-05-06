@@ -1,6 +1,12 @@
 #VirtualGarage  
 ## Instructions:   
  
+### 160506 09:00 . v0.7.0  
+#### Update 
+* Copy over the new VirtualGarage Package in "stringtable.xml"  
+* Replace and pack "@ExileServer\addons\exad_vg"
+
+ 
 ### 160505 01:40 . v0.6.1  
 #### Update 
 * Modify config.cpp ("CfgInteractionMenus" >> "Flag")

@@ -1,6 +1,12 @@
 #VirtualGarage  
 ## Changelog:    
  
+### 160506 09:00 . v0.7.0  
+#### Fixed 
+* Small issue where VG didn't show an advancedHint when storing.
+#### Added 
+* New stringtable values
+ 
 ### 160505 01:40 . v0.6.1  
 #### Fixed 
 * Display null when entering Virtual Garage from Flag
@@ -12,7 +18,5 @@
 * VG App clear lists before onLoad and content being loaded. 
 
 ### 160428 12:00 . v0.5.0  
-#### Fixed  
 #### Added  
-* Introduced **VirtualGarage** to the ExAd package
-#### Deleted  
+* Introduced **VirtualGarage** to the ExAd package 

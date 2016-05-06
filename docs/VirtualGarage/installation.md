@@ -1,7 +1,7 @@
 # Installation
 
 Remember for this plugin to work you first need to install  
-* [Core](https://github.com/Bjanski/ExAd/blob/Core/docs/core/installation.md)  
+* [Core](https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)  
 * [XM8 Apps Improved](https://github.com/vitalymind/XM8_apps_improved)
   
 ## Client
@@ -25,6 +25,8 @@ _To_
 	ExileServer_system_territory_database_load = "ExAdClient\CustomCode\ExileServer_system_territory_database_load.sqf";  
 ```
 * In "config.cpp" you can also add the ("CfgInteractionMenus" >> "Flag" >> "VG") class if you want to be able to fast load the app through your flag pole.  
+
+* Modify - "mpmissions\exile.<MAP>\stringtable.xml" - add if missing package="VirtualGarage" and change to desirable notifications
 
 * Now you can go into "mpmissions\exile.<MAP>\ExAdClient\VirtualGarage\customize.sqf" and change to desirable settings.
 
