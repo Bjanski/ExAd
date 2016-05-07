@@ -19,7 +19,7 @@
 class CfgPatches {
 	class ExAd_Hacking {
 		requiredVersion = 0.1;
-		requiredAddons[] = {"ExAd_Core", "ExAd_VG"};
+		requiredAddons[] = {"ExAd_Core"};
 	};
 };
 

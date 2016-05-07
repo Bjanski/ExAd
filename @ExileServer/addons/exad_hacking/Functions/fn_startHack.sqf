@@ -90,29 +90,34 @@ _player removeItem "Exile_Item_Laptop";
 		_flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
 		_flag setVariable ["ExAd_HACKS_SUCCEEDED", (_flag getVariable ["ExAd_HACKS_SUCCEEDED",0]) + 1];
 		if(_object isKindOf "Exile_Construction_Flag_Static")then{
-			private ["_vehList","_objId","_vehObj","_extDB2Message","_pos"];
-			_vehList = _object getVariable ["ExAdVGVeh", []];
-			if((count _vehList) > 0)then{
-				_objId = (_vehList call BIS_fnc_selectRandom) select 0;
-				{
-					if((_x select 0) isEqualTo _objId)exitWith{
-						_vehList deleteAt _forEachIndex;
-					}
-				}forEach _vehList;
-				_object setVariable ["ExAdVGVeh", _vehList, true];
-				
-				_vehObj = _objId call ExileServer_object_vehicle_database_load;
-				_extDB2Message = ["loadVehFromVG", [_objId]] call ExileServer_util_extDB2_createMessage;
-				_extDB2Message call ExileServer_system_database_query_fireAndForget;
-				
-				_pos = getPosATL _vehObj;
-				_pos set [2, (_pos select 2) + 0.1];
-				_vehObj setPosATL _pos;			
-				_vehObj lock 0;
-				
-				format[STR_ExAd_HACKING_NOTI_VG_SUCCESS, (getText(ConfigFile >> "CfgVehicles" >> typeOf _vehObj >> "displayName"))]
-			}else{
-				STR_ExAd_HACKING_NOTI_VG_NO_VEH
+			if(!isClass(configFile >> "CfgPatches" >> "ExAd_VG"))then{
+				["startHack", "You are missing the ExAd_VG dependenci to run this function.", true] call ExAd_fnc_debugHandler;
+				"This server isn't using the ExAd Virtual Garage, tell the admins to get a grip!!"
+			}else{			
+				private ["_vehList","_objId","_vehObj","_extDB2Message","_pos"];
+				_vehList = _object getVariable ["ExAdVGVeh", []];
+				if((count _vehList) > 0)then{
+					_objId = (_vehList call BIS_fnc_selectRandom) select 0;
+					{
+						if((_x select 0) isEqualTo _objId)exitWith{
+							_vehList deleteAt _forEachIndex;
+						}
+					}forEach _vehList;
+					_object setVariable ["ExAdVGVeh", _vehList, true];
+					
+					_vehObj = _objId call ExileServer_object_vehicle_database_load;
+					_extDB2Message = ["loadVehFromVG", [_objId]] call ExileServer_util_extDB2_createMessage;
+					_extDB2Message call ExileServer_system_database_query_fireAndForget;
+					
+					_pos = getPosATL _vehObj;
+					_pos set [2, (_pos select 2) + 0.1];
+					_vehObj setPosATL _pos;			
+					_vehObj lock 0;
+					
+					format[STR_ExAd_HACKING_NOTI_VG_SUCCESS, (getText(ConfigFile >> "CfgVehicles" >> typeOf _vehObj >> "displayName"))]
+				}else{
+					STR_ExAd_HACKING_NOTI_VG_NO_VEH
+				}
 			}
 		}else{
 			_object setVariable ["ExileIsLocked",0,true];
