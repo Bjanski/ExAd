@@ -2,6 +2,13 @@
 
 # Changelog:  
 
+## 160510 18:00 . v0.7.4  
+###Fixed 
+* Various documentation has been updated. 
+  
+###Added 
+* Some small features for HaloParachute
+  
 ## 160510 16:00 . v0.7.3  
 ###Fixed   
 * Cleaned the code (Hacking)  
