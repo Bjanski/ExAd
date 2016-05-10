@@ -1,6 +1,12 @@
 #HaloParachute  
 ## Instructions:   
  
+### 160507 18:00 . v0.7.4  
+#### Update
+* Replace folder "mpmissions\Exile.<map>\ExAdClient\HaloParachute\Functions"
+* Replace file "mpmissions\Exile.<map>\ExAdClient\HaloParachute\CfgFunctions.cpp"
+* Replace file "mpmissions\Exile.<map>\ExAdClient\HaloParachute\postInit.sqf"
+ 
 ### 160507 16:00 . v0.7.3  
 #### Update
 * Replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute\postInit.sqf"

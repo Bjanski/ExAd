@@ -1,6 +1,13 @@
 #HaloParachute  
 ## Changelog:    
 
+### 160510 18:00 . v0.7.4  
+#### Added
+* Feature - Customization for using key bindings instead of displayed addActions 
+
+#### Deleted 
+* "mpmission\Exile.Altis\ExAdClient\HaloParachute\Functions\canDetachParachute.sqf
+
 ### 160510 16:00 . v0.7.3  
 #### Fixed  
 * Declaration of un custamized variables  

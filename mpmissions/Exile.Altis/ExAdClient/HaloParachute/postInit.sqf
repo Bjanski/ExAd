@@ -17,12 +17,15 @@
 
 */
 
+ExAd_HALOPARACHUTE_VERSION = "v0.7.4";
+
 execVM "ExAdClient\HaloParachute\customize.sqf";
 
 if(isNil "ExAd_HALOPARACHUTE_SAFE_MODE"){ExAd_HALOPARACHUTE_SAFE_MODE = false;};
-if(isNil "ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE"){ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE = false;};
+if(isNil "ExAd_HALOPARACHUTE_USE_ACTIONS"){ExAd_HALOPARACHUTE_USE_ACTIONS = true;};
+if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS"){ExAd_HALOPARACHUTE_USE_KEY_ACTIONS = true;};
 if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT"){ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
-if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 100;};
+if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 0;};
 
 [] spawn {
 	while {true} do {
@@ -32,25 +35,33 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 100;};
 		UISleep 0.1;
 		waitUntil{alive player};
 		
-		ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE"], {call ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
-		ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_HALO"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
+		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
+			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE"], {call ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+			ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_HALO"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
+		};
 		
-		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
-			ExAd_ACTION_PARACHUTE_DETACH = (findDisplay 46) displayAddEventHandler ["KeyDown",{
-				if(call ExAd_fnc_canDetachParachute)then{
-					if(_this select 1 == 45 && _this select 2 && _this select 4)then{
+		if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
+			ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS = (findDisplay 46) displayAddEventHandler ["KeyDown",{
+				if(_this select 1 == 45 && _this select 2 && _this select 4)then{
+					if((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT && vehicle player != player)then{
 						call ExAd_fnc_ejectPlayer
-					}			
+					}else{
+						if(ExAd_fnc_showParachute)then{
+							call ExAd_fnc_pullParachute
+						}
+					}
 				}
 			}];
 		};
 		
 		waitUntil{!alive player};
-		player removeAction ExAd_ACTION_PARACHUTE;
-		player removeAction ExAd_ACTION_EJECT;
+		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
+			player removeAction ExAd_ACTION_PARACHUTE;
+			player removeAction ExAd_ACTION_EJECT;
+		};
 		
-		if(ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE)then{
-			(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_PARACHUTE_DETACH];
+		if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
+			(findDisplay 46) displayRemoveEventHandler ["KeyDown", ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS];
 		};
 	};
 };
