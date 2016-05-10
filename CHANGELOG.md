@@ -2,6 +2,11 @@
 
 # Changelog:  
 
+## 160510 21:00 . v0.7.5  
+###Fixed 
+* Syntax error in postInit.sqf (HaloParachute)
+* Added battleye exceptions (HaloParachute)
+
 ## 160510 18:00 . v0.7.4  
 ###Fixed 
 * Various documentation has been updated. 

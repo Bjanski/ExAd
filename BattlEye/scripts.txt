@@ -4,7 +4,7 @@ createVehicle 	!="_parachuteObject = createVehicle [\"Steerable_Parachute_F\", g
 addAction 		!="ExAd_ACTION_PARACHUTE = player addaction [format"
 drawLine3D 		!="drawLine3D [cursorTarget modelToWorld ["
 playableUnits	!="(({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE)"
-Entities 		!="waitUntil {sleep 0.1; {player distance _x < 10 max (sizeOf typeOf _x)} count (player nearEntities [\"Helicopter_Base_F\", 20]) == 0}"
+Entities 		!="waitUntil {sleep 0.1; ({player distance _x < (10 max (sizeOf typeOf _x))} count (player nearEntities [\"Air\", 20])) == 0};"
 Units			!="(({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE)"
 disableCollisionWith	!="_parachuteObject disableCollisionWith player"
 remoteexec 		!="_this remoteExec [\"ExAdServer_fnc_clientRequest\",2]"

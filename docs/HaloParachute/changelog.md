@@ -1,6 +1,13 @@
 #HaloParachute  
 ## Changelog:    
 
+## 160510 21:00 . v0.7.5  
+###Fixed 
+* Syntax error in postInit.sqf
+* Remove parachute backpack when parachute is pulled. 
+* Removed one action when carrying parachute backpack 
+* Added battleye exceptions
+
 ### 160510 18:00 . v0.7.4  
 #### Added
 * Feature - Customization for using key bindings instead of displayed addActions 

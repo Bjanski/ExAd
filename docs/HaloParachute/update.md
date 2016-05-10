@@ -1,6 +1,15 @@
 #HaloParachute  
 ## Instructions:   
- 
+
+## 160510 21:00 . v0.7.5  
+###Fixed 
+* replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute\postInit.sqf"
+* replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute\Functions"
+* Replace battleye exceptions - Entities
+```cpp
+	!="waitUntil {sleep 0.1; ({player distance _x < (10 max (sizeOf typeOf _x))} count (player nearEntities [\"Air\", 20])) == 0};"
+```
+
 ### 160507 18:00 . v0.7.4  
 #### Update
 * Replace folder "mpmissions\Exile.<map>\ExAdClient\HaloParachute\Functions"
