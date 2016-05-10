@@ -19,6 +19,11 @@
 
 execVM "ExAdClient\HaloParachute\customize.sqf";
 
+if(isNil "ExAd_HALOPARACHUTE_SAFE_MODE"){ExAd_HALOPARACHUTE_SAFE_MODE = false;};
+if(isNil "ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE"){ExAd_HALOPARACHUTE_DETACH_PARACHUTE_MODE = false;};
+if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT"){ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
+if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 100;};
+
 [] spawn {
 	while {true} do {
 		waitUntil{!isNil "ExileClientLoadedIn"};

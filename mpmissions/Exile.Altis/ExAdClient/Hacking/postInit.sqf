@@ -19,6 +19,17 @@
 
 execVM "ExAdClient\Hacking\customize.sqf";
 
+if(isNil "ExAd_HACKING_MIN_PLAYERS_ONLINE")then{ExAd_HACKING_MIN_PLAYERS_ONLINE = 30;};
+if(isNil "ExAd_HACKING_ALLOWED_HACKS")then{ExAd_HACKING_ALLOWED_HACKS = 1;};
+if(isNil "ExAd_HACKING_MAX_TIME")then{ExAd_HACKING_MAX_TIME = 1200;};
+if(isNil "ExAd_HACKING_MAX_DISTANCE")then{ExAd_HACKING_MAX_DISTANCE = 50;};
+if(isNil "ExAd_HACKING_TERRITORY_MAX")then{ExAd_HACKING_TERRITORY_MAX = 3;};
+if(isNil "ExAd_HACKING_MARKER_COLOR")then{ExAd_HACKING_MARKER_COLOR = "ColorOrange";};
+if(isNil "ExAd_HACKING_MARKER_TITLE")then{ExAd_HACKING_MARKER_TITLE = "Hacker activity";};
+if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_HACKING_FAILED_HACK = 0.15;};
+
+if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_VG_ACCESS_LEVEL = 1;}; /*Needs to be here if peolpe don't use the VirtualGarage*/
+
 STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED = if(isLocalized "STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED")then{localize "STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED"}else{"Connection failed! Territory Wi-Fi is down!"};
 
 STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK = if(isLocalized "STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK")then{localize "STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK"}else{"Wi-Fi occupied!!"};

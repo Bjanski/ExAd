@@ -1,6 +1,31 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 
 # Changelog:  
+
+## 160510 16:00 . v0.7.3  
+###Fixed   
+* Cleaned the code (Hacking)  
+* Declaration of un custamized variables (All)  
+
+## 160507 09:00 . v0.7.2  
+### Added 
+* "docs\core\update.md" & "docs\core\changelog.md"
+* "docs\Grinding\update.md" & "docs\Grinding\changelog.md"
+* "docs\Hacking\update.md" & "docs\Hacking\changelog.md"
+* "docs\HaloParachute\update.md" & "docs\HaloParachute\changelog.md"
+* "docs\VirtualGarage\update.md" & "docs\VirtualGarage\changelog.md"
+
+### Deleted  
+* "mpmissions\Exile.Altis\ExAdClient\core\update.md" & "mpmissions\Exile.Altis\ExAdClient\core\changelog.md"
+* "mpmissions\Exile.Altis\ExAdClient\Grinding\update.md" & "mpmissions\Exile.Altis\ExAdClient\Grinding\changelog.md"
+* "mpmissions\Exile.Altis\ExAdClient\Hacking\update.md" & "mpmissions\Exile.Altis\ExAdClient\Hacking\changelog.md"
+* "mpmissions\Exile.Altis\ExAdClient\HaloParachute\update.md" & "mpmissions\Exile.Altis\ExAdClient\HaloParachute\changelog.md"
+* "mpmissions\Exile.Altis\ExAdClient\VirtualGarage\update.md" & "mpmissions\Exile.Altis\ExAdClient\VirtualGarage\changelog.md"
+
+## 160507 09:00 . v0.7.1  
+### Fixed 
+* Hacking isn't dependent on VirtualGarage anymore (Hacking)
+  
 ## 160506 09:00 . v0.7.0  
 ### Fixed 
 * Small issue where VG didn't show an advancedHint when storing. (VirtualGarage)
@@ -12,30 +37,19 @@ Must be implemented for Hacking to work proparly
 * Implemented Hacking (Hacking)
 * Added battleye Hacking exceptions
 
-### Deleted
-
 ## 160505 01:40 . v0.6.1  
 ### Fixed 
 * Display null when entering Virtual Garage from Flag (Virtual Garage)
 * Sound error for grinding, tmp fix, sound will work on Chernarus (Grinding)
 
-### Added
-### Deleted
-
 ## 160502 23:15 . v0.6.0  
-### Fixed 
 ### Added
 * Implemented Grinding
 * Added battleye grinding exceptions  
 
-### Deleted
-
 ## 160423 14:04 . v0.5.2  
 ### Fixed  
 * Description.ext was wrongly configured (Core) 
-  
-### Added
-### Deleted
 
 ## 160426 14:04 . v0.5.1  
 ### Fixed  
@@ -51,9 +65,6 @@ Must be implemented for Hacking to work proparly
 * EXO Logo.png (Core)
 
 ## 160426 . v0.5.0  
-### Fixed  
 ### Added
 * Changelog introduced (All)
 * Repo public  (All)
-  
-### Deleted

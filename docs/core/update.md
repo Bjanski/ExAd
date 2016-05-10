@@ -1,5 +1,10 @@
 #Core  
 ## Instructions:   
+ 
+### 160507 16:00 . v0.7.3  
+#### Update
+* Replace "mpmissions\Exile.<map>\ExAdClient\Core\postInit.sqf"
+
 ### 160430 09:20 . v0.7.0  
 #### Update  
 * Replace "ExAdClient\Core\customize.sqf"

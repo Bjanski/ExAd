@@ -1,6 +1,10 @@
 #VirtualGarage  
 ## Instructions:   
  
+### 160507 16:00 . v0.7.3  
+#### Update
+* Replace "mpmissions\Exile.<map>\ExAdClient\VirtualGarage\postInit.sqf"
+ 
 ### 160506 09:00 . v0.7.0  
 #### Update 
 * Copy over the new VirtualGarage Package in "stringtable.xml"  
