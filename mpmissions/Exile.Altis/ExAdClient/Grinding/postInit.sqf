@@ -19,6 +19,10 @@
 
 execVM "ExAdClient\Grinding\customize.sqf";
 
+if(isNil "ExAd_GRINDING_PROGRESS_INTERVALL")then{ExAd_GRINDING_PROGRESS_INTERVALL = 60;};
+if(isNil "ExAd_GRINDING_PROGRESS")then{ExAd_GRINDING_PROGRESS = 30;};
+if(isNil "ExAd_GRINDING_OBJECT_MAX")then{ExAd_GRINDING_OBJECT_MAX = 900;};
+
 ExAd_GRINDING = false;
 
 STR_ExAd_GRINDING_NOTI_BROKE = if(isLocalized "STR_ExAd_GRINDING_NOTI_BROKE")then{localize "STR_ExAd_GRINDING_NOTI_BROKE"}else{"Your grinder broke, get a new one before you can continue."};
