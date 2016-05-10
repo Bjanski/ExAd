@@ -6,6 +6,7 @@
 * Replace folder "mpmissions\Exile.<map>\ExAdClient\HaloParachute\Functions"
 * Replace file "mpmissions\Exile.<map>\ExAdClient\HaloParachute\CfgFunctions.cpp"
 * Replace file "mpmissions\Exile.<map>\ExAdClient\HaloParachute\postInit.sqf"
+* Replace, or update manually, file "mpmissions\Exile.<map>\ExAdClient\HaloParachute\customize.sqf"
  
 ### 160507 16:00 . v0.7.3  
 #### Update
