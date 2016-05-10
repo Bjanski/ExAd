@@ -18,9 +18,11 @@
 
 private ["_parachuteObject"];
 
-waitUntil {sleep 0.1; {player distance _x < 10 max (sizeOf typeOf _x)} count (player nearEntities ["Helicopter_Base_F", 20]) == 0};
+waitUntil {sleep 0.1; ({player distance _x < (10 max (sizeOf typeOf _x))} count (player nearEntities ["Air", 20])) == 0};
 
 if (!alive player || vehicle player != player) exitWith {};
+
+if(backpack player == "B_Parachute")then{removeBackpack player};
 
 _parachuteObject = createVehicle ["Steerable_Parachute_F", getPosATL player, [], 0, "CAN_COLLIDE"];
 _parachuteObject setDir getDir player;

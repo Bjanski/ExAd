@@ -21,11 +21,11 @@ ExAd_HALOPARACHUTE_VERSION = "v0.7.4";
 
 execVM "ExAdClient\HaloParachute\customize.sqf";
 
-if(isNil "ExAd_HALOPARACHUTE_SAFE_MODE"){ExAd_HALOPARACHUTE_SAFE_MODE = false;};
-if(isNil "ExAd_HALOPARACHUTE_USE_ACTIONS"){ExAd_HALOPARACHUTE_USE_ACTIONS = true;};
-if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS"){ExAd_HALOPARACHUTE_USE_KEY_ACTIONS = true;};
-if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT"){ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
-if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 0;};
+if(isNil "ExAd_HALOPARACHUTE_SAFE_MODE")then{ExAd_HALOPARACHUTE_SAFE_MODE = false;};
+if(isNil "ExAd_HALOPARACHUTE_USE_ACTIONS")then{ExAd_HALOPARACHUTE_USE_ACTIONS = true;};
+if(isNil "ExAd_HALOPARACHUTE_USE_KEY_ACTIONS")then{ExAd_HALOPARACHUTE_USE_KEY_ACTIONS = true;};
+if(isNil "ExAd_ACTION_PARACHUTE_HEIGHT")then{ExAd_ACTION_PARACHUTE_HEIGHT = 10;};
+if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 
 [] spawn {
 	while {true} do {
@@ -36,7 +36,7 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 0;};
 		waitUntil{alive player};
 		
 		if(ExAd_HALOPARACHUTE_USE_ACTIONS)then{
-			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE"], {call ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
+			ExAd_ACTION_PARACHUTE = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_PARACHUTE"], {[] spawn ExAd_fnc_pullParachute}, [], 6, true, true, "", "call ExAd_fnc_showParachute"];
 			ExAd_ACTION_EJECT = player addaction [format["<t color='#E48A36'><img image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa' />%1</t>", localize "STR_ExAd_HALOPARACHUTE_ACTIONS_HALO"], {call ExAd_fnc_ejectPlayer}, [], 6, false, true, "", "call ExAd_fnc_showEject;"];
 		};
 		
@@ -46,8 +46,8 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT"){ExAd_ACTION_EJECT_HEIGHT = 0;};
 					if((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT && vehicle player != player)then{
 						call ExAd_fnc_ejectPlayer
 					}else{
-						if(ExAd_fnc_showParachute)then{
-							call ExAd_fnc_pullParachute
+						if(call ExAd_fnc_showParachute)then{
+							[] spawn ExAd_fnc_pullParachute
 						}
 					}
 				}
