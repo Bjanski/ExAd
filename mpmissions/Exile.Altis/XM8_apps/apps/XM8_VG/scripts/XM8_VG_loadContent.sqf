@@ -37,6 +37,9 @@ _strTxtVehCnt = "SubTitle1Cnt" call _getControl;
 _strTxtVehCnt ctrlSetStructuredText parseText format ["<t size='1' align='right' color='%1'>%2/%3</t>",_strTxtVehCntColor,_storedVeh,_allowedVeh];
 
 [(objectFromNetId ExAdCurFlagNetId) getVariable ["ExAdVGVeh", []],ctrlIDC ("StoreVehList" call _getControl)] call ExAd_fnc_fillVGList;
+for "_i" from 0 to 3 do {
+	_index = lbAdd[ctrlIDC ("StoreVehList" call _getControl),""];
+};
 
 [[_flag, ["Car","Air"],_flag getVariable ["ExileTerritorySize", 50]] call ExAd_fnc_getNearByLocalVeh,ctrlIDC ("NearVehicleList" call _getControl)] call ExAd_fnc_fillVGList;
 

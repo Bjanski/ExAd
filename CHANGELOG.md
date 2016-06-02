@@ -1,6 +1,10 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 
 # Changelog:  
+## 16 . v0.7.6  
+###Fixed 
+* Progress bar height customizable (Grinder)
+* 
 
 ## 160510 21:00 . v0.7.5  
 ###Fixed 

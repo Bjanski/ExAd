@@ -23,7 +23,7 @@ _flagNetId = [_this,1,"",[""]] call BIS_fnc_param;
 _flag = objectFromNetId _flagNetId;
 _owner = owner _objVeh;
 
-if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_requestFrom, "notificationRequest", ["Whoops", [STR_ExAd_VIRTUALGARAGE_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to; false};
+if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_owner, "notificationRequest", ["Whoops", [STR_ExAd_VIRTUALGARAGE_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to; false};
 
 if!(_objVeh setOwner 2)exitWith{format["Get out of the vehicle before storing it."] remoteExec ["hint", _owner]; false};
 
