@@ -26,15 +26,21 @@ _ctrl = [_this,4,-1,[0]] call BIS_fnc_param;
 _flag = objectFromNetId _flagNetId;
 _requestFrom = owner (objectFromNetId _playerNetId);
 
-/*Check if vehicle is in flag - avoid cheaters fishing for pin codes*/
-
 _data = format ["loadVehicle:%1", _objId] call ExileServer_system_database_query_selectSingle;
 
-_displayName = getText(ConfigFile >> "CfgVehicles" >> (_data select 1) >> "displayName");
-_pinCode = if(_streamFriendlyUI == 0)then{_data select 20}else{"XXXX"};
+if(count _data > 0)then{
+	_displayName = getText(ConfigFile >> "CfgVehicles" >> (_data select 1) >> "displayName");
+	_pinCode = if(_streamFriendlyUI == 0)then{_data select 20}else{"XXXX"};
+	_fuel = _data select 5;
+	_damage = _data select 6;
+	_texture = _data select 21;
+	_items = _data select 17;
+	_magazines = _data select 18;
+	_weapons = _data select 19;
 
-_text = format["%1 <br/>Pin code: %2<br/>",_displayName, _pinCode];
+	_text = format[STR_ExAd_VG_APP_DETAILS, "<br/>", _displayName, _pinCode, _fuel, _damage, _texture, _items, _magazines, _weapons];
 
-[_text,_ctrl] remoteExec ["ExAd_fnc_loadVGDetailView", _requestFrom]; 
+	[_text,_ctrl] remoteExec ["ExAd_fnc_loadVGDetailView", _requestFrom]; 
+};
 
 true

@@ -1,29 +1,24 @@
 #Core  
-## Changelog:   
+## Changelog:
 
-### 160510 16:00 . v0.7.3  
+### v0.7.6  
+####Added
+* Extra loggin functionality
+* Changeable variables for logging functionality
+
+### v0.7.3  
 #### Fixed  
 * Declaration of un custamized variables  
 
-### 160506 09:00 . v0.7.0  
-#### Fixed  
-
+### v0.7.0  
 #### Added
 * New customizable values (Core)  
 
-#### Deleted
-
-
-### 160430 09:20 . v0.5.2  
+### v0.5.2  
 #### Fixed  
 * Description.ext was wrongly configured  
 
-#### Added
-
-#### Deleted
-
-
-### 160429 14:04 . v0.5.1  
+### v0.5.1  
 #### Fixed  
 * AdvHint trying to show EXO Logo  
 
@@ -33,12 +28,6 @@
 #### Deleted
 * EXO Logo.png
  
- 
-### 160425 12:00 . v0.5.0  
-
-#### Fixed  
-
+### v0.5.0  
 #### Added  
 * Introduced **Core** to the ExAd package
-
-#### Deleted  

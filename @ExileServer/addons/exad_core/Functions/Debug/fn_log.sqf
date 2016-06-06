@@ -1,6 +1,6 @@
-/*  
-	config.cpp
-
+/*
+	fn_log.sqf
+  
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,30 +16,8 @@
 	limitations under the License.
 */
 
-class CfgPatches {
-	class ExAd_Core {
-		requiredVersion = 0.1;
-		requiredAddons[] = {"exile_server"};
-	};
-};
+params ["_file","_msg"];
 
-class CfgFunctions {
-	class ExAdServer {
-		class Debug {
-		file = "exad_core\Functions\Debug";
-			class log {};
-		};
-		class System {
-		file = "exad_core\Functions\System";
-			class clientDispatch {};
-			class clientRequest {};
-		};
-		class Utils {
-		file = "exad_core\Functions\Utils";
-			class createArray {};
-			class createCrate {};
-			class createMarker {};
-			class putInContainer {};
-		};
-	};
-};
+if(ExAd_Logging)then{
+	"Arma_Log" callExtension format['%1\%2:%3',ExAd_Log_Folder,_file,_msg];
+}

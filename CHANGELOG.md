@@ -1,10 +1,15 @@
 #<img src="logo.png" alt="ExAd" width="200" />
-
 # Changelog:  
+
 ## 16 . v0.7.6  
-###Fixed 
+###Fixed
+* Quick-fix - VG App scroll for stored list(Virtual Garage)
+
+###Added
+* Extra loggin functionality (All) 
 * Progress bar height customizable (Grinder)
-* 
+* Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones. (All)
+* Added vehicle details to VirtualGarage DetailsView (Virtual Garage)
 
 ## 160510 21:00 . v0.7.5  
 ###Fixed 

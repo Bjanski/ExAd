@@ -22,8 +22,9 @@ _objVeh = objectFromNetId _objVehNetId;
 _flagNetId = [_this,1,"",[""]] call BIS_fnc_param;
 _flag = objectFromNetId _flagNetId;
 _owner = owner _objVeh;
+_player = {if(owner _x == _owner)exitWith{_x}}forEach playableUnits;
 
-if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_owner, "notificationRequest", ["Whoops", [STR_ExAd_VIRTUALGARAGE_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to; false};
+if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_owner, "notificationRequest", ["Whoops", [STR_ExAd_VG_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to; false};
 
 if!(_objVeh setOwner 2)exitWith{format["Get out of the vehicle before storing it."] remoteExec ["hint", _owner]; false};
 
@@ -42,6 +43,8 @@ _objVehId = _objVeh getVariable ["ExileDatabaseID",-1];
 _flagId = _flag getVariable ["ExileDatabaseID", -1];
 
 if(_objVehId > -1 && _flagId > -1)then{
+	["VirtualGarage", format["Store: Player - %1(%2)|Vehicle - %3(%4)|Reset gear - %5",name _player, getPlayerUID _player, typeOf _objVeh, _objVehId, str ExAd_VG_CLEAN_ON_STORE]] call ExAdServer_fnc_log;
+	
 	_data = [_flagId, _objVehId];
 
 	_extDB2Message = ["loadVehToVG", _data] call ExileServer_util_extDB2_createMessage;

@@ -1,13 +1,11 @@
-#VirtualGarage  
+#Grinding  
 ## Instructions:   
   
-### 160507 16:00 . v0.7.3  
-#### Update
+### v0.7.3 
 * Replace "mpmissions\Exile.<map>\ExAdClient\Grinding\postInit.sqf"
  
-### 160505 01:40 . v0.6.1  
-#### Update 
+### v0.6.1  
 * Replace "ExAdClient\Grinding\Functions"
  
-### 160502 23:15 . v0.6.0  
-#### Full installation
+### v0.6.0  
+* Full installation

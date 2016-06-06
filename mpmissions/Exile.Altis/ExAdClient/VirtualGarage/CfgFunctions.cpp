@@ -20,6 +20,7 @@
 class VirtualGarage
 {
 	file = "ExAdClient\VirtualGarage\Functions";
+	class allowedVGVeh {};
 	class allowVGStore {};
 	class fillVGList {};
 	class loadVGDetailView {};
