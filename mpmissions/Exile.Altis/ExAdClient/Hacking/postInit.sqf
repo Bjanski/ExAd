@@ -31,23 +31,13 @@ if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_HACKING_FAILED_HACK = 0.15;};
 
 if(isNil "ExAd_HACKING_FAILED_HACK")then{ExAd_VG_ACCESS_LEVEL = 1;}; /*Needs to be here if peolpe don't use the VirtualGarage*/
 
-
-STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED = if(isLocalized "STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED")then{localize "STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED"}else{"Connection failed! Territory Wi-Fi is down!"};
-
-STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK = if(isLocalized "STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK")then{localize "STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK"}else{"Wi-Fi occupied!!"};
-
-STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS = if(isLocalized "STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS")then{localize "STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS"}else{"The laptop overloaded and got destroyed! Another hacker is already using the grid."};
-
-STR_ExAd_HACKING_HINT_TITLE = if(isLocalized "STR_ExAd_HACKING_HINT_TITLE")then{localize "STR_ExAd_HACKING_HINT_TITLE"}else{"Hack Activity"};
-
-STR_ExAd_HACKING_HINT_HACK_START = if(isLocalized "STR_ExAd_HACKING_HINT_HACK_START")then{localize "STR_ExAd_HACKING_HINT_HACK_START"}else{"A brute force hack is detected on the grid!"};
-
-STR_ExAd_HACKING_NOTI_VG_SUCCESS = if(isLocalized "STR_ExAd_HACKING_NOTI_VG_SUCCESS")then{localize "STR_ExAd_HACKING_NOTI_VG_SUCCESS"}else{"Hack successful! The Virtual Garage unloaded a %1"};
-
-STR_ExAd_HACKING_NOTI_VG_NO_VEH = if(isLocalized "STR_ExAd_HACKING_NOTI_VG_NO_VEH")then{localize "STR_ExAd_HACKING_NOTI_VG_NO_VEH"}else{"Hack successful! No vehicles were stored in the Virtual Garage."};
-
-STR_ExAd_HACKING_NOTI_SAFE_SUCCESS = if(isLocalized "STR_ExAd_HACKING_NOTI_SAFE_SUCCESS")then{localize "STR_ExAd_HACKING_NOTI_SAFE_SUCCESS"}else{"Hack successful! The safe is now unlocked."};
-
-STR_ExAd_HACKING_NOTI_INTERUPTED = if(isLocalized "STR_ExAd_HACKING_NOTI_INTERUPTED")then{localize "STR_ExAd_HACKING_NOTI_INTERUPTED"}else{"Hack has been interupted"};
-
-STR_ExAd_HACKING_NOTI_FAILED = if(isLocalized "STR_ExAd_HACKING_NOTI_FAILED")then{localize "STR_ExAd_HACKING_NOTI_FAILED"}else{"Hack failed! Circuits overloaded!"};
+["STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED", "Connection failed! Territory Wi-Fi is down!"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_TERRITORY_ONE_HACK", "Wi-Fi occupied!!"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS", "The laptop overloaded and got destroyed! Another hacker is already using the grid."] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_HINT_TITLE", "Hack Activity"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_HINT_HACK_START", "A brute force hack is detected on the grid!"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_VG_SUCCESS", "Hack successful! The Virtual Garage unloaded a %1"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_VG_NO_VEH", "Hack successful! No vehicles were stored in the Virtual Garage."] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_SAFE_SUCCESS", "Hack successful! The safe is now unlocked."] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_INTERUPTED", "Hack has been interupted"] call ExAd_fnc_localize;
+["STR_ExAd_HACKING_NOTI_FAILED", "Hack failed! Circuits overloaded!"] call ExAd_fnc_localize;
