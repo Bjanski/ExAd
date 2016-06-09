@@ -1,6 +1,18 @@
 #<img src="logo.png" alt="ExAd" width="200" />
-
 # Changelog:  
+
+## 160610 01:20 . v0.7.6  
+###Fixed
+* Quick-fix - VG App scroll for stored list(Virtual Garage)
+* The configuration file could be reed after the postInit script (All) - IMPORTANT TO UPDATE ALL PLUGINS.
+
+###Added
+* Extra loggin functionality (All) 
+* Progress bar height customizable (Grinding)
+* Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones. (All)
+* Added vehicle details to VirtualGarage DetailsView (Virtual Garage)
+* Added function ExAd_fnc_territoryPlayerPresent, to see if a player with permissions for a specific flag is online (Core)
+* Added a feature so the server owner can decide if hacking should require a player with premissions to be online.(Hacking)
 
 ## 160510 21:00 . v0.7.5  
 ###Fixed 

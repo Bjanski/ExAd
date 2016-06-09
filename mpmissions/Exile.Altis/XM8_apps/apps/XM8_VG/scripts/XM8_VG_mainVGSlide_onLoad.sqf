@@ -113,7 +113,7 @@ _unloadScript = '
 	if (ExileClientXM8CurrentSlide == "mainVGSlide") then {
 		ExileClientXM8CurrentSlide = "sideApps";
 	};
-	ExAd_Cur_Flag_NetId = nil;
+	ExAdCurFlagNetId = nil;
 ';
 _display displayAddEventHandler ["unload",_unloadScript];
 
@@ -121,10 +121,10 @@ XM8_VG_mainVGSlideIDCmap = [];
 
 _thisSlide = _display ctrlCreate ["RscExileXM8Slide",("mainVGSlide" call _getNextIDC),_slides];
 
-[_thisSlide,("backButton" call _getNextIDC),[27.6 * _pW, 17.7 * _pH, 6 * _pW, 1 * _pH],'["sideApps", 1] call ExileClient_gui_xm8_slide;',"GO BACK",""] call _makeButton;
+[_thisSlide,("backButton" call _getNextIDC),[27.6 * _pW, 17.7 * _pH, 6 * _pW, 1 * _pH],'["sideApps", 1] call ExileClient_gui_xm8_slide;',STR_ExAd_VG_APP_BTN_BACK,""] call _makeButton;
 
 /*Stored Vehicle Details*/
-[_thisSlide,("InfoTitle" call _getNextIDC),[_rightCol * _pW, 2.75 * _pH, _rightColW * _pW, 1 * _pH],"Stored Vehicle Detail","PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
+[_thisSlide,("InfoTitle" call _getNextIDC),[_rightCol * _pW, 2.75 * _pH, _rightColW * _pW, 1 * _pH],STR_ExAd_VG_APP_TTL_DETAILS,"PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
 
 [_thisSlide,("InfoBgBox" call _getNextIDC),[_rightCol * _pW, 4 * _pH, _rightColW * _pW, 13.5 * _pH]] call _makeBackgroundGUI;
 
@@ -134,24 +134,24 @@ _idcInfoPic = "InfoPic" call _getNextIDC;
 _idcInfoStr = "InfoVehStr" call _getNextIDC;
 [_thisSlide,_idcInfoStr,[(_rightCol + _margin) * _pW, (4 + _margin) * _pH, (_rightColW - 2 * _margin) * _pW, (13.5 - 2 * _margin) * _pH],"","PuristaMedium",0.75,"#ffffff","left",1] call _makeStructuredText;
 
-[_thisSlide,("InfoCBStr" call _getNextIDC),[(_rightCol + _margin + 0.4) * _pW, (16.5 - _margin + 0.25	) * _pH, (_rightColW - 2 * _margin) * _pW, (13.5 - 2 * _margin) * _pH],"Stream friendly UI","PuristaMedium",0.65,"#ffffff","left",1] call _makeStructuredText;
+[_thisSlide,("InfoCBStr" call _getNextIDC),[(_rightCol + _margin + 0.4) * _pW, (16.5 - _margin + 0.25	) * _pH, (_rightColW - 2 * _margin) * _pW, (13.5 - 2 * _margin) * _pH],STR_ExAd_VG_APP_CB_SECRET,"PuristaMedium",0.65,"#ffffff","left",1] call _makeStructuredText;
 
 [_thisSlide,("InfoCB" call _getNextIDC),[(_rightCol + _margin) * _pW, (16.5 - _margin + 0.2) * _pH, 0.75 * _pW, 0.75 * _pH],'profileNamespace setVariable["ExAd_StreamFriendlyUI",_this select 1]',"Toogle - Stream friendly UI"] call _makeCheckBox;
 
 /*Stored Vehicles*/
-[_thisSlide,("SubTitle1" call _getNextIDC),[_leftCol * _pW, 2.75 * _pH, _leftColW * _pW, 1 * _pH],"Stored","PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
+[_thisSlide,("SubTitle1" call _getNextIDC),[_leftCol * _pW, 2.75 * _pH, _leftColW * _pW, 1 * _pH],STR_ExAd_VG_APP_TTL_STORED,"PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
 
 [_thisSlide,("SubTitle1Cnt" call _getNextIDC),[_leftCol * _pW, 3 * _pH, _leftColW * _pW, 1 * _pH],"","PuristaMedium",1,"#ffffff","right",1] call _makeStructuredText;
 
 _idcStoredVehList = "StoreVehList" call _getNextIDC;
 [_thisSlide,_idcStoredVehList,[_leftCol * _pW, 4 * _pH, _leftColW * _pW, 5 * _pH],format["[_this select 0,%1,%2] call XM8_VG_elChanged",_idcInfoPic,_idcInfoStr],""] call _makeList;
 
-[_thisSlide,("fetchButton" call _getNextIDC),[_leftCol*_pW, 9*_pH, _leftColW*_pW, 1*_pH],format["disableUserInput true;['VGLoad', %1] call ExAd_fnc_onBtnClickVG",_idcStoredVehList],"Fetch",""] call _makeButton;
+[_thisSlide,("fetchButton" call _getNextIDC),[_leftCol*_pW, 9*_pH, _leftColW*_pW, 1*_pH],format["disableUserInput true;['VGLoad', %1] call ExAd_fnc_onBtnClickVG",_idcStoredVehList],STR_ExAd_VG_APP_BTN_FETCH,""] call _makeButton;
 
 /*Nearby vehicles*/
-[_thisSlide,("SubTitle2" call _getNextIDC),[_leftCol * _pW, 10.25 * _pH, _leftColW * _pW, 1 * _pH],"In Radius","PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
+[_thisSlide,("SubTitle2" call _getNextIDC),[_leftCol * _pW, 10.25 * _pH, _leftColW * _pW, 1 * _pH],STR_ExAd_VG_APP_TTL_NEAR,"PuristaMedium",1.2,"#ffffff","left",1] call _makeStructuredText;
 
 _idcNearVehList = "NearVehicleList" call _getNextIDC;
 [_thisSlide,_idcNearVehList,[_leftCol * _pW, 11.5 * _pH, _leftColW * _pW, 5 * _pH],"",""] call _makeList;
 
-[_thisSlide,("storeButton" call _getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] call ExAd_fnc_onBtnClickVG}else{['Whoops', ['%2']] call ExileClient_gui_notification_event_addNotification}",_idcNearVehList,localize "STR_ExAd_VIRTUALGARAGE_NOTI_FULL"],"Store",""] call _makeButton;
+[_thisSlide,("storeButton" call _getNextIDC),[_leftCol * _pW, 16.5 * _pH, _leftColW * _pW, 1 * _pH],format["if(call ExAd_fnc_allowVGStore)then{disableUserInput true;['VGStore', %1] call ExAd_fnc_onBtnClickVG}else{['Whoops', ['%2']] call ExileClient_gui_notification_event_addNotification}",_idcNearVehList,STR_ExAd_VG_NOTI_FULL],STR_ExAd_VG_APP_BTN_STORE,""] call _makeButton;

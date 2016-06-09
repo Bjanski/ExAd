@@ -31,25 +31,27 @@ player playActionNow "medicStart";
 ExAd_DRAW3D_HANDLER = addMissionEventHandler ["Draw3D", {
 	private ["_object","_progress"];
 	
+	_height = ExAd_GRINDING_PROGRESSBAR_POS;
+	
 	_object = if(isNil "ExAd_GRINDING_OBJECT")then{cursorTarget}else{ExAd_GRINDING_OBJECT};
 	_progress = 1 min ((_object getVariable ["ExAd_Grinding_progress", 1]) / ExAd_GRINDING_OBJECT_MAX);
 	
-	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 1], cursorTarget modelToWorld [0.5, -0.15, 1], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 0.95], cursorTarget modelToWorld [0.5, -0.15, 0.95], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, 1], cursorTarget modelToWorld [0.5, 0.15, 1], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, 0.95], cursorTarget modelToWorld [0.5, 0.15, 0.95], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, _height], cursorTarget modelToWorld [0.5, -0.15, _height], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, _height - 0.05], cursorTarget modelToWorld [0.5, -0.15, _height - 0.05], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, _height], cursorTarget modelToWorld [0.5, 0.15, _height], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, _height - 0.05], cursorTarget modelToWorld [0.5, 0.15, _height - 0.05], [0,0,0,1]];
 	
-	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 1], cursorTarget modelToWorld [-0.5, -0.15, 0.95], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [0.5, -0.15, 1], cursorTarget modelToWorld [0.5, -0.15, 0.95], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, 1], cursorTarget modelToWorld [-0.5, 0.15, 0.95], [0,0,0,1]];
-	drawLine3D [cursorTarget modelToWorld [0.5, -0.15, 1], cursorTarget modelToWorld [0.5, -0.15, 0.95], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, _height], cursorTarget modelToWorld [-0.5, -0.15, _height - 0.05], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [0.5, -0.15, _height], cursorTarget modelToWorld [0.5, -0.15, _height - 0.05], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, _height], cursorTarget modelToWorld [-0.5, 0.15, _height - 0.05], [0,0,0,1]];
+	drawLine3D [cursorTarget modelToWorld [0.5, -0.15, _height], cursorTarget modelToWorld [0.5, -0.15, _height - 0.05], [0,0,0,1]];
 
 	for "_i" from 1 to 49 do {
-		drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, 1 - (0.001 * _i)], cursorTarget modelToWorld [((-0.5) + _progress), -0.15, 1 - (0.001 * _i)], [1,0.482,0,1]];	
-		drawLine3D [cursorTarget modelToWorld [0.5, 0.15, 1 - (0.001 * _i)], cursorTarget modelToWorld [((0.5) - _progress), 0.15, 1 - (0.001 * _i)], [1,0.482,0,1]];
+		drawLine3D [cursorTarget modelToWorld [-0.5, -0.15, _height - (0.001 * _i)], cursorTarget modelToWorld [((-0.5) + _progress), -0.15, _height - (0.001 * _i)], [1,0.482,0,1]];	
+		drawLine3D [cursorTarget modelToWorld [0.5, 0.15, _height - (0.001 * _i)], cursorTarget modelToWorld [((0.5) - _progress), 0.15, _height - (0.001 * _i)], [1,0.482,0,1]];
 
-		drawLine3D [cursorTarget modelToWorld [0.5, -0.15, 1 - (0.001 * _i)], cursorTarget modelToWorld [((-0.5) + _progress), -0.15, 1 - (0.001 * _i)], [0.55,0.55,0.55,1]];	
-		drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, 1 - (0.001 * _i)], cursorTarget modelToWorld [((0.5) - _progress), 0.15, 1 - (0.001 * _i)], [0.55,0.55,0.55,1]];
+		drawLine3D [cursorTarget modelToWorld [0.5, -0.15, _height - (0.001 * _i)], cursorTarget modelToWorld [((-0.5) + _progress), -0.15, _height - (0.001 * _i)], [0.55,0.55,0.55,1]];	
+		drawLine3D [cursorTarget modelToWorld [-0.5, 0.15, _height - (0.001 * _i)], cursorTarget modelToWorld [((0.5) - _progress), 0.15, _height - (0.001 * _i)], [0.55,0.55,0.55,1]];
 	}
 }];
 

@@ -24,4 +24,6 @@ ExAd_VG_ACCESS_LEVEL = 1; 				//SCALAR - Lowest level that can access the Virtua
 
 ExAd_VG_CLEAN_ON_STORE = true;			//BOOLEAN - If vehicle inventory should reset when stored.
 
-ExAd_VG_SHOW_ADVHINT = false 			//BOOLEAN - If the virtual garage should display an Advanced hint upon store and fetch.
+ExAd_VG_SHOW_ADVHINT = false; 			//BOOLEAN - If the virtual garage should display an Advanced hint upon store and fetch.
+
+ExAd_VG_ALLOWED_VEH_TYPE = ["Car","Air"];//ARRAY - Array with allowed vehicle types for the virtual garage. | "Car", "Tank", "Helicopter", "Plane" or "Air" for both WARNING DON'T USE "LandVehicle" Can crash the Exile system.  

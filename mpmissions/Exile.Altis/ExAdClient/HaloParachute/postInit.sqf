@@ -17,9 +17,9 @@
 
 */
 
-ExAd_HALOPARACHUTE_VERSION = "v0.7.4";
+_path = "ExAdClient\HaloParachute\customize.sqf";
+call compile preprocessFileLineNumbers _path;
 
-execVM "ExAdClient\HaloParachute\customize.sqf";
 
 if(isNil "ExAd_HALOPARACHUTE_SAFE_MODE")then{ExAd_HALOPARACHUTE_SAFE_MODE = false;};
 if(isNil "ExAd_HALOPARACHUTE_USE_ACTIONS")then{ExAd_HALOPARACHUTE_USE_ACTIONS = true;};

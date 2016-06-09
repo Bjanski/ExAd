@@ -22,6 +22,8 @@ ExAd_GRINDING_PROGRESS = 30;			//SCALAR - Damage each finished interval will tak
 
 ExAd_GRINDING_OBJECT_MAX = 900;			//SCALAR - Code lock sustainability.
 
+ExAd_GRINDING_PROGRESSBAR_POS = "Mid";	//SCALAR/STRING - You can use values between 0.3-2 or using "LOW"|"MID"|"HIGH"
+
 /*
 The default values above means that a full succesful grind will take (900 / 30) * 60 = 1800 = 20 minutes
 */

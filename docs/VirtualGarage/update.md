@@ -1,18 +1,22 @@
 #VirtualGarage  
 ## Instructions:   
  
-### 160507 16:00 . v0.7.3  
-#### Update
+### v0.7.6 
+* Replace or merge "mpmissions\Exile.<map>\ExAdClient\VG\customize.sqf"
+* Replace or merge "mpmissions\Exile.<map>\stringtable.xml"
+* Replace "mpmissions\Exile.<map>\ExAdClient\VG" - Big update
+* Replace "mpmissions\Exile.<map>\XM8_apps\apps\XM8_VG"
+* Replace and pack "@ExileServer\addons\exad_vg"  
+  
+### v0.7.3  
 * Replace "mpmissions\Exile.<map>\ExAdClient\VirtualGarage\postInit.sqf"
  
-### 160506 09:00 . v0.7.0  
-#### Update 
+### v0.7.0  
 * Copy over the new VirtualGarage Package in "stringtable.xml"  
 * Replace and pack "@ExileServer\addons\exad_vg"
 
  
-### 160505 01:40 . v0.6.1  
-#### Update 
+### v0.6.1  
 * Modify config.cpp ("CfgInteractionMenus" >> "Flag")
 ```cpp
 class VG : ExileAbstractAction
@@ -24,12 +28,11 @@ class VG : ExileAbstractAction
 ```
 
 
-### 160429 14:04 . v0.5.1  
-#### Update  
+### v0.5.1  
 * Add battleye exceptions  
 * Replace "ExAdClient\VirtualGarage\Functions"
 * Replace "ExAdClient\VirtualGarage\CfgHints.cpp"
 * Replace "XM8_apps\apps\XM8_VG"
  
 ### 160428 12:00 . v0.5.0  
-#### Full installation
+* Full installation

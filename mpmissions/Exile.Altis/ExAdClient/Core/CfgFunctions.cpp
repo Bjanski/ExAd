@@ -30,4 +30,5 @@ class Utilities
 	class advancedHint {};
 	class call {};
 	class getNearByLocalVeh {};
+	class localize {};
 };

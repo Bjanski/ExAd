@@ -1,15 +1,24 @@
-#VirtualGarage  
+#Grinding  
 ## Changelog:    
 
-### 160510 16:00 . v0.7.3  
+### v0.7.6  
+####Fixed
+* The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.
+
+###Added
+* Extra loggin functionality
+* Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones.
+* Progress bar height customizable
+
+### v0.7.3  
 #### Fixed  
 * Declaration of un custamized variables   
 
-### 160505 01:40 . v0.6.1  
+### v0.6.1  
 #### Fixed 
 * Sound error for grinding, tmp fix, sound will work on Chernarus
 
-### 160502 23:15 . v0.6.0   
+### v0.6.0   
 #### Added  
 * Grinding introduced  
 * Grinding battleye scripts  

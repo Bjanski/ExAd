@@ -1,13 +1,17 @@
-#VirtualGarage  
+#Grinding  
 ## Instructions:   
+
+### v0.7.6 
+* Replace or merge "mpmissions\Exile.<map>\ExAdClient\Grinding\customize.sqf"
+* Replace or merge "mpmissions\Exile.<map>\stringtable.xml"
+* Replace "mpmissions\Exile.<map>\ExAdClient\Grinding" - Big update
+* Replace and pack "@ExileServer\addons\exad_grinding"  
   
-### 160507 16:00 . v0.7.3  
-#### Update
+### v0.7.3 
 * Replace "mpmissions\Exile.<map>\ExAdClient\Grinding\postInit.sqf"
  
-### 160505 01:40 . v0.6.1  
-#### Update 
+### v0.6.1  
 * Replace "ExAdClient\Grinding\Functions"
  
-### 160502 23:15 . v0.6.0  
-#### Full installation
+### v0.6.0  
+* Full installation

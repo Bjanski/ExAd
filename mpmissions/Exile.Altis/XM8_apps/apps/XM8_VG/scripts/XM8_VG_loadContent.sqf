@@ -29,7 +29,7 @@ _getControl = {
 
 _flag = if(typeName ExAdCurFlagNetId == "STRING")then{objectFromNetId ExAdCurFlagNetId}else{ExAdCurFlagNetId};
 
-_allowedVeh = ExAd_VG_MIN_ALLOWED_VEH + ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR * (_flag getVariable ["ExileTerritoryLevel", 1]);
+_allowedVeh = _flag call ExAd_fnc_allowedVGVeh;
 _storedVeh = count (_flag getVariable ["ExAdVGVeh", []]);
 _strTxtVehCntColor = if(_allowedVeh > _storedVeh)then{"#FFFFFF"}else{"#B22400"};
 
@@ -37,7 +37,10 @@ _strTxtVehCnt = "SubTitle1Cnt" call _getControl;
 _strTxtVehCnt ctrlSetStructuredText parseText format ["<t size='1' align='right' color='%1'>%2/%3</t>",_strTxtVehCntColor,_storedVeh,_allowedVeh];
 
 [(objectFromNetId ExAdCurFlagNetId) getVariable ["ExAdVGVeh", []],ctrlIDC ("StoreVehList" call _getControl)] call ExAd_fnc_fillVGList;
+for "_i" from 0 to 3 do {
+	_index = lbAdd[ctrlIDC ("StoreVehList" call _getControl),""];
+};
 
-[[_flag, ["Car","Air"],_flag getVariable ["ExileTerritorySize", 50]] call ExAd_fnc_getNearByLocalVeh,ctrlIDC ("NearVehicleList" call _getControl)] call ExAd_fnc_fillVGList;
+[[_flag, ExAd_VG_ALLOWED_VEH_TYPE,_flag getVariable ["ExileTerritorySize", 50]] call ExAd_fnc_getNearByLocalVeh,ctrlIDC ("NearVehicleList" call _getControl)] call ExAd_fnc_fillVGList;
 
 ("InfoCB" call _getControl) cbSetChecked ((profileNamespace getVariable["ExAd_StreamFriendlyUI",0]) == 1);

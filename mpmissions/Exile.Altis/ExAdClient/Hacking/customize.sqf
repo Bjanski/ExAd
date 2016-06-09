@@ -30,4 +30,6 @@ ExAd_HACKING_MARKER_COLOR = "ColorOrange";		//STRING - What color should the map
 
 ExAd_HACKING_MARKER_TITLE = "Hacker activity";	//STRING - What title should the map marker have.
 
-ExAd_HACKING_FAILED_HACK = 0.15;					//SCALAR - 0-1 The possability for the hack to fail once finished.
+ExAd_HACKING_FAILED_HACK = 0.15;				//SCALAR - 0-1 The possability for the hack to fail once finished.
+
+ExAd_HACKING_PLAYER_ONLINE = false;				//BOLLEAN - True if a player with build permissions for a base needs to be online for a hack to be possible.

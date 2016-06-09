@@ -1,5 +1,5 @@
 /*  
-	config.cpp
+	fn_allowedVGVeh.sqf
 
 	Copyright 2016 Jan Babor
 
@@ -15,32 +15,8 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
+params ["_flag"];
 
-class CfgPatches {
-	class ExAd_Core {
-		requiredVersion = 0.1;
-		requiredAddons[] = {"exile_server"};
-	};
-};
+_res = ExAd_VG_MIN_ALLOWED_VEH + round(ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR * (_flag getVariable ["ExileTerritoryLevel", 1]));
 
-class CfgFunctions {
-	class ExAdServer {
-		class Debug {
-		file = "exad_core\Functions\Debug";
-			class log {};
-		};
-		class System {
-		file = "exad_core\Functions\System";
-			class clientDispatch {};
-			class clientRequest {};
-		};
-		class Utils {
-		file = "exad_core\Functions\Utils";
-			class createArray {};
-			class createCrate {};
-			class createMarker {};
-			class putInContainer {};
-			class territoryPlayerPresent {};
-		};
-	};
-};
+_res

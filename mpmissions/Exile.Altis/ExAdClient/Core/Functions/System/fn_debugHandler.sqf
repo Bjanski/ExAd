@@ -15,8 +15,8 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-params ["_fnc","_exception",["_server", false]];
+params ["_fnc","_exception"];
 
 if(ExAd_Debug)then{
-	diag_log format["ExAd%3 Debugger: Error in %1 - '%2'",_fnc, _exception, (if(_server)then{"Server"}else{""})]
+	diag_log format["ExAd%3 Debugger: Error in %1 - '%2'",_fnc, _exception, (if(isDedicated)then{"Server"}else{""})]
 }

@@ -1,6 +1,6 @@
-/*  
-	CfgFunctions.cpp
-
+/*
+	fn_log.sqf
+  
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,14 +16,8 @@
 	limitations under the License.
 */
 
+params ["_file","_msg"];
 
-class VirtualGarage
-{
-	file = "ExAdClient\VirtualGarage\Functions";
-	class allowedVGVeh {};
-	class allowVGStore {};
-	class fillVGList {};
-	class loadVGDetailView {};
-	class onBtnClickVG {};
-	class postInitVG {file = "ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};
-};
+if(ExAd_Logging)then{
+	"Arma_Log" callExtension format['%1\%2:%3',ExAd_Log_Folder,_file,_msg];
+}
