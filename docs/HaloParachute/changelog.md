@@ -1,6 +1,14 @@
 #HaloParachute  
 ## Changelog:    
 
+### v0.7.6  
+####Fixed
+* The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.
+
+###Added
+* Extra loggin functionality
+* Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones.
+
 ## v0.7.5  
 ###Fixed 
 * Syntax error in postInit.sqf

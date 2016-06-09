@@ -22,7 +22,8 @@ _player = objectFromNetId ([_this, 1, "",[""]] call BIS_fnc_param);
 
 if(isNull _object || isNull _player)exitWith{false};
 
-if(((((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0) getVariable ["ExAd_HACKS_SUCCEEDED",0]) >= ExAd_HACKING_TERRITORY_MAX)exitWith{
+_flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
+if(_flag getVariable ["ExAd_HACKS_SUCCEEDED",0] >= ExAd_HACKING_TERRITORY_MAX)exitWith{
 	[STR_ExAd_HACKING_NOTI_MAX_TERRITORY_HACKS_REACHED ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 };
 
@@ -36,6 +37,8 @@ if(isNil "ExAd_HACKS_IN_PROGRESS")then{
 	ExAd_HACKS_IN_PROGRESS = 0;
 };
 
+["Hacking", format["Hack started: Player - %1(%2)|Territory - %3|Hacks in motion - %4",name _player, getPlayerUID _player, _flag getVariable ["ExileTerritoryName", "Unknown"], ExAd_HACKS_IN_PROGRESS]] call ExAdServer_fnc_log;
+
 _pos = _player modelToWorld [0, +0.5, 0];
 _pos set [2,((getPosATL _player) select 2)];
 
@@ -47,8 +50,8 @@ _laptop animate ["LaptopLidRotation", 1];
 
 _player removeItem "Exile_Item_Laptop";
 
-[_object, _player, _laptop] spawn {
-	params ["_object","_player","_laptop","_markers","_marker","_success","_ticks","_newSize","_destroy","_msg"];
+[_object, _player, _laptop, _flag] spawn {
+	params ["_object","_player","_laptop","_flag","_markers","_marker","_success","_ticks","_newSize","_destroy","_msg"];
 	UISleep 2;
 	
 	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_HACK_START])) remoteExec ["hint", -2];
@@ -86,7 +89,6 @@ _player removeItem "Exile_Item_Laptop";
 	_destroy = false;
 	
 	_msg = if(_success && ((random 1) > ExAd_HACKING_FAILED_HACK))then{
-		_flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
 		_flag setVariable ["ExAd_HACKS_SUCCEEDED", (_flag getVariable ["ExAd_HACKS_SUCCEEDED",0]) + 1];
 		if(_object isKindOf "Exile_Construction_Flag_Static")then{
 			if(!isClass(configFile >> "CfgPatches" >> "ExAd_VG"))then{
@@ -113,20 +115,28 @@ _player removeItem "Exile_Item_Laptop";
 					_vehObj setPosATL _pos;			
 					_vehObj lock 0;
 					
-					format[STR_ExAd_HACKING_NOTI_VG_SUCCESS, (getText(ConfigFile >> "CfgVehicles" >> typeOf _vehObj >> "displayName"))]
+					_displayName = getText(ConfigFile >> "CfgVehicles" >> typeOf _vehObj >> "displayName");
+					["Hacking", format["Hack Successful: Territory - %1| Virtual Garage - %2(%3)",_flag getVariable ["ExileTerritoryName", "Unknown"], _displayName, _objId]] call ExAdServer_fnc_log;
+					
+					format[STR_ExAd_HACKING_NOTI_VG_SUCCESS, _displayName]
 				}else{
+					["Hacking", format["Hack Successful: Territory - %1| Virtual Garage - No Vehicle",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
 					STR_ExAd_HACKING_NOTI_VG_NO_VEH
 				}
 			}
 		}else{
+			["Hacking", format["Hack Successful: Territory - %1| Safe(%2) opened",_flag getVariable ["ExileTerritoryName", "Unknown"], _object getVariable ["ExileDatabaseID", -1]]] call ExAdServer_fnc_log;
+		
 			_object setVariable ["ExileIsLocked",0,true];
 			STR_ExAd_HACKING_NOTI_SAFE_SUCCESS
 		}
 	}else{
 		if(_laptop getVariable ["ExAd_HACK_INTERUPTED",false])then{
+			["Hacking", format["Hack Interupted: Territory - %1",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
 			STR_ExAd_HACKING_NOTI_INTERUPTED
 		}else{
 			_destroy = true;
+			["Hacking", format["Hack Failed: Territory - %1",_flag getVariable ["ExileTerritoryName", "Unknown"]]] call ExAdServer_fnc_log;
 			STR_ExAd_HACKING_NOTI_FAILED
 		}
 	};

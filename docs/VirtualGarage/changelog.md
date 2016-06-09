@@ -5,6 +5,7 @@
 ## v0.7.6  
 ###Fixed
 * Quick-fix - VG App scroll for stored list
+* The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.
 
 ###Added
 * Extra loggin functionality 

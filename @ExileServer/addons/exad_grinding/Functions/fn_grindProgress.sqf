@@ -28,7 +28,11 @@ if((_object getVariable ["ExAd_Grinding_progress", 0]) >= ExAd_GRINDING_OBJECT_M
 	
 	_databaseID = _object getVariable ["ExileDatabaseID",0];
 	format ["addDoorLock:%1:%2","000000",_databaseID] call ExileServer_system_database_query_fireAndForget;
+	
+	["Grinding", format["Grind successful: Territory ID - %2|Object ID - %3", _object setVariable ["ExileTerritoryID", -1], _object getVariable ["ExileDatabaseID",0]]] call ExAdServer_fnc_log;
 };
+
+
 
 _object setVariable ["ExAd_Grinding_progress", (_object getVariable ["ExAd_Grinding_progress", 0]) + ExAd_GRINDING_PROGRESS, true];
 

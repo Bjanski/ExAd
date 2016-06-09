@@ -16,7 +16,8 @@
 	limitations under the License.
 */
 
-execVM "ExAdClient\Grinding\customize.sqf";
+_path = "ExAdClient\Grinding\customize.sqf";
+call compile preprocessFileLineNumbers _path;
 
 if(isNil "ExAd_GRINDING_PROGRESS_INTERVALL")then{ExAd_GRINDING_PROGRESS_INTERVALL = 60;};
 if(isNil "ExAd_GRINDING_PROGRESS")then{ExAd_GRINDING_PROGRESS = 30;};

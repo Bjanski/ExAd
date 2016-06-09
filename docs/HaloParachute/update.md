@@ -1,6 +1,11 @@
 #HaloParachute  
 ## Instructions:   
 
+### v0.7.6 
+* Replace or merge "mpmissions\Exile.<map>\ExAdClient\HaloParachute\customize.sqf"
+* Replace or merge "mpmissions\Exile.<map>\stringtable.xml"
+* Replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute" - Big update  
+
 ## v0.7.5
 * replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute\postInit.sqf"
 * replace "mpmissions\Exile.<map>\ExAdClient\HaloParachute\Functions"

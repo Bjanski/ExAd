@@ -2,9 +2,9 @@
 ## Instructions:   
 
 ### v0.7.6 
-* Replace "mpmissions\Exile.<map>\ExAdClient\Core\postInit.sqf"
 * Replace or merge "mpmissions\Exile.<map>\ExAdClient\Core\customize.sqf"
 * Replace or merge "mpmissions\Exile.<map>\stringtable.xml"
+* Replace "mpmissions\Exile.<map>\ExAdClient\Core" - Big update
 * Replace and pack "@ExileServer\addons\exad_core"
  
 ### v0.7.3 

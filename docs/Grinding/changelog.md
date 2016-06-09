@@ -1,6 +1,15 @@
 #Grinding  
 ## Changelog:    
 
+### v0.7.6  
+####Fixed
+* The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.
+
+###Added
+* Extra loggin functionality
+* Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones.
+* Progress bar height customizable
+
 ### v0.7.3  
 #### Fixed  
 * Declaration of un custamized variables   

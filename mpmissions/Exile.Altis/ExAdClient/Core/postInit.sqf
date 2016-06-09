@@ -16,7 +16,8 @@
 	limitations under the License.
 */
 
-execVM "ExAdClient\Core\customize.sqf";
+_path = "ExAdClient\Core\customize.sqf";
+call compile preprocessFileLineNumbers _path;
 
 if(isNil "ExAd_Debug")then{ExAd_Debug = true;};
 if(isNil "ExAd_Logging")then{ExAd_Logging = true;};

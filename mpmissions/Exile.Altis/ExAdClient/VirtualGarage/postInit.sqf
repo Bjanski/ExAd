@@ -17,7 +17,8 @@
 
 */
 
-execVM "ExAdClient\VirtualGarage\customize.sqf";
+_path = "ExAdClient\VirtualGarage\customize.sqf";
+call compile preprocessFileLineNumbers _path;
 
 if(isNil "ExAd_VG_MIN_ALLOWED_VEH")then{ExAd_VG_MIN_ALLOWED_VEH = 5;};
 if(isNil "ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR")then{ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR = 3;};
