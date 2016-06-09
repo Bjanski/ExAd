@@ -1,7 +1,7 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
-## 160610 . v0.7.6  
+## 160610 01:20 . v0.7.6  
 ###Fixed
 * Quick-fix - VG App scroll for stored list(Virtual Garage)
 * The configuration file could be reed after the postInit script (All) - IMPORTANT TO UPDATE ALL PLUGINS.

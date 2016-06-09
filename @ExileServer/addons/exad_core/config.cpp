@@ -40,6 +40,7 @@ class CfgFunctions {
 			class createCrate {};
 			class createMarker {};
 			class putInContainer {};
+			class territoryPlayerPresent {};
 		};
 	};
 };

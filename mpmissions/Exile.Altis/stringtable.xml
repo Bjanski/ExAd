@@ -86,6 +86,9 @@
 			<Key ID="STR_ExAd_HACKING_NOTI_MAX_SIM_HACKS">
 				<Original>The laptop overloaded and got destroyed! Another hacker is already using the grid.</Original>
 			</Key>
+			<Key ID="STR_ExAd_HACKING_NOTI_NO_PLAYER_PRESENT">
+				<Original>No Wi-Fi available!</Original>
+			</Key>
 			<Key ID="STR_ExAd_HACKING_NOTI_VG_SUCCESS">
 				<Original>Hack successful! The Virtual Garage unloaded a %1</Original> <!-- %1 indicates the vehicle class name that's going to be shown-->
 			</Key>

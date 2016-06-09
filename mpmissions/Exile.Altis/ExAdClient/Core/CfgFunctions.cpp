@@ -31,5 +31,4 @@ class Utilities
 	class call {};
 	class getNearByLocalVeh {};
 	class localize {};
-	class territoryPlayerPresent {};
 };
