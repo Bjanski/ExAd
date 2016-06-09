@@ -24,6 +24,6 @@ if(isNull _object)exitWith{false};
 
 _object setVariable ["ExAd_Grinding_progress", 0, true];
 
-["Grinding", format["Lock restored: Territory ID - %2|Object ID - %3", _object setVariable ["ExileTerritoryID", -1], _object getVariable ["ExileDatabaseID",0]]] call ExAdServer_fnc_log;
+["Grinding", format["Lock restored: Territory ID - %1|Object ID - %2", _object setVariable ["ExileTerritoryID", -1], _object getVariable ["ExileDatabaseID",0]]] call ExAdServer_fnc_log;
 
 true
