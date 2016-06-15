@@ -30,7 +30,8 @@ After you have installed the entire or parts of the ExAd Package you will easies
     * Core
     * [Infistar](https://infistar.de/)
 * Hacking
-    * Virtual Garage
+    * Core
+    * (Virtual Garage)
 * Grinding
     * Core
 * Halo & Parachute
