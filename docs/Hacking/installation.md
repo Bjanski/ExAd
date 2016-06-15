@@ -2,7 +2,7 @@
 
 Remember for this plugin to work you first need to install  
 * [Core](https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)
-* [VirtualGarage](https://github.com/Bjanski/ExAd/blob/master/docs/VirtualGarage/installation.md)
+* [(VirtualGarage)](https://github.com/Bjanski/ExAd/blob/master/docs/VirtualGarage/installation.md) - Only necessary if you want to be able to hack it
   
 ## Client
 
