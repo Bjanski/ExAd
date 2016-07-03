@@ -1,6 +1,22 @@
+class CfgXM8
+{
+	extraApps[] = {"ExAd_VG"};
+	
+	class ExAd_VG 
+	{
+		title = "Virtual Garage";
+		controlID = 50000;					//IDC:50000 -> 50014
+		onLoad = "ExAdClient\XM8\Apps\VG\onLoad.sqf";
+		onOpen = "ExAdClient\XM8\Apps\VG\onOpen.sqf";
+		onClose = "ExAdClient\XM8\Apps\VG\onClose.sqf";
+	};
+};
+
 class CfgExileCustomCode 
 {
 	ExileServer_system_territory_database_load = "ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
+	ExileClient_gui_xm8_slide = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
+	ExileClient_gui_xm8_show = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
 };
 
 class CfgInteractionMenus
@@ -11,12 +27,6 @@ class CfgInteractionMenus
 		target = "Exile_Construction_Flag_Static";
 		class Actions
 		{
-			class VG : ExileAbstractAction
-			{
-				title = "Virtual Garage";
-				condition = "(([_object, getPlayerUID player] call ExileClient_util_territory_getAccessLevel) select 0) >= ExAd_VG_ACCESS_LEVEL";
-				action = "[] spawn {[] call ExileClient_gui_xm8_show; UISleep 1; call XM8_VG_checkNearByFlags}";
-			};
 			class HackVG : ExileAbstractAction
 			{
 				title = "Hack Virtual Garage";

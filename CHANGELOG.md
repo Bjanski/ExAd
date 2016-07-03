@@ -1,6 +1,17 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
+## 160703 20:15 . v0.7.7  
+###Fixed
+* Made the ExAd system compatible with Exile 0.9.8 (All)
+
+###Added
+* XM8 - a feature to add apps to the XM8 "More" button
+* App for XM8 (Virtual Garage)
+
+###Removed
+* Support for Improved_XM8_Apps by Vitaly
+
 ## 160610 01:20 . v0.7.6  
 ###Fixed
 * Quick-fix - VG App scroll for stored list(Virtual Garage)

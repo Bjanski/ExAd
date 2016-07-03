@@ -1,6 +1,10 @@
 #Grinding  
 ## Changelog:    
 
+### v0.7.7  
+####Fixed
+* Made the ExAd system compatible with Exile 0.9.8
+
 ### v0.7.6  
 ####Fixed
 * The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.

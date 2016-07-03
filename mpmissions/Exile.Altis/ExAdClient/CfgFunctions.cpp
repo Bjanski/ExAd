@@ -26,4 +26,5 @@ class ExAd
 	//#include "Hacking\CfgFunctions.cpp"
 	//#include "Grinding\CfgFunctions.cpp"
 	//#include "HaloParachute\CfgFunctions.cpp"	
+	//#include "XM8\CfgFunctions.cpp"	
 };

@@ -1,6 +1,9 @@
 #Core  
 ## Instructions:   
 
+### v0.7.7 
+* Replace "mpmissions\Exile.<map>\ExAdClient\Core"
+
 ### v0.7.6 
 * Replace or merge "mpmissions\Exile.<map>\ExAdClient\Core\customize.sqf"
 * Replace or merge "mpmissions\Exile.<map>\stringtable.xml"

@@ -32,9 +32,23 @@ _To_
 
 ### XM8 App
 
-* Copy over "XM8_apps\apps\XM8_VG"  
-* Add the app inside "XM8_apps\XM8_apps_config.sqf"
-* Add "mainVGSlide" in "XM8_apps\XM8_apps\XM8_apps_sliders.hpp"
+* Copy over "ExileClient\XM8\Apps\VG"  
+* Add ("CfgXM8" >> "Exad_VG") to "mpmissions\exile.<MAP>\config.cpp"
+```
+class CfgXM8
+{
+	extraApps[] = {"ExAd_VG"};
+	
+	class ExAd_VG 
+	{
+		title = "Virtual Garage";
+		controlID = 50000;					//These need to be unique
+		onLoad = "ExAdClient\XM8\Apps\VG\onLoad.sqf";
+		onOpen = "ExAdClient\XM8\Apps\VG\onOpen.sqf";
+		onClose = "ExAdClient\XM8\Apps\VG\onClose.sqf";
+	};
+}; 
+```
 
 ## Server 
 

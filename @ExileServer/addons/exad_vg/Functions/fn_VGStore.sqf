@@ -24,7 +24,7 @@ _flag = objectFromNetId _flagNetId;
 _owner = owner _objVeh;
 _player = {if(owner _x == _owner)exitWith{_x}}forEach playableUnits;
 
-if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_owner, "notificationRequest", ["Whoops", [STR_ExAd_VG_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to; false};
+if!(_objVeh getVariable ["ExileIsPersistent", false])exitWith{[_owner, "toastRequest", ["ErrorTitleAndText", ["ExAd - Virtual Garage", STR_ExAd_VG_NOTI_NOT_PERSISTENT]]] call ExileServer_system_network_send_to;false};
 
 if!(_objVeh setOwner 2)exitWith{format["Get out of the vehicle before storing it."] remoteExec ["hint", _owner]; false};
 
