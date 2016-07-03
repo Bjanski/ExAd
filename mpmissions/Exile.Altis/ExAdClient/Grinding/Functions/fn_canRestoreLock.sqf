@@ -16,4 +16,4 @@
 	limitations under the License.
 */
 
-(('Exile_Item_Codelock' in (magazines player)) && (ExileClientInteractionObject getVariable ['ExAd_Grinding_progress', 0] > 0))
+(('Exile_Item_Codelock' in (magazines player)) && (ExileClientInteractionObject getVariable ['ExAd_Grinding_progress', 0] > 0) && (ExileClientInteractionObject getVariable ['ExAd_Grinding_progress', 0] < ExAd_GRINDING_OBJECT_MAX))
