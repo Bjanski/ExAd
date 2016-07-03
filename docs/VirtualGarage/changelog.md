@@ -1,13 +1,22 @@
 #VirtualGarage  
 ## Changelog:    
 
-# Changelog:  
-## v0.7.6  
-###Fixed
+### v0.7.7  
+####Fixed
+* Made the ExAd system compatible with Exile 0.9.8 
+
+####Added
+* App for XM8
+
+####Removed
+* Support for Improved_XM8_Apps by Vitaly
+  
+### v0.7.6  
+####Fixed
 * Quick-fix - VG App scroll for stored list
 * The configuration file could be reed after the postInit script - IMPORTANT TO UPDATE ALL PLUGINS.
 
-###Added
+####Added
 * Extra loggin functionality 
 * Added a lot of new custom UI Display texts - Check stringtabl.xml for new ones. 
 * Added a more detailed description of the vehicle for the App    

@@ -1,6 +1,12 @@
 #VirtualGarage  
 ## Instructions:   
  
+### v0.7.7 
+* Remove XM8_Apps 
+* Install [XM8](https://github.com/Bjanski/ExAd/tree/master/docs/XM8)
+* Replace "mpmissions\Exile.<map>\ExAdClient\VG"
+* Replace and pack "@ExileServer\addons\exad_vg"   
+
 ### v0.7.6 
 * Replace or merge "mpmissions\Exile.<map>\ExAdClient\VG\customize.sqf"
 * Replace or merge "mpmissions\Exile.<map>\stringtable.xml"

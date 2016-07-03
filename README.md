@@ -25,7 +25,7 @@ After you have installed the entire or parts of the ExAd Package you will easies
     * [Exile](http://www.exilemod.com/downloads/)
 * Virtual Garage
     * Core
-	* [XM8 Apps Improved](https://github.com/vitalymind/XM8_apps_improved)
+	* XM8
 * Admin Events
     * Core
     * [Infistar](https://infistar.de/)
