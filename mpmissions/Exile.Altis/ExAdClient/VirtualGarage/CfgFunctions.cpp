@@ -23,6 +23,7 @@ class VirtualGarage
 	class allowedVGVeh {};
 	class allowVGStore {};
 	class fillVGList {};
+	class loadVGContent {};
 	class loadVGDetailView {};
 	class onBtnClickVG {};
 	class postInitVG {file = "ExAdClient\VirtualGarage\postInit.sqf"; postInit = 1;};

@@ -1,6 +1,6 @@
 /*  
-	customize.sqf
-	
+	CfgFunctions.cpp
+
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,14 +16,19 @@
 	limitations under the License.
 */
 
-ExAd_GRINDING_PROGRESS_INTERVALL = 5;	//SCALAR - Grinding, interval time measured in seconds.
-
-ExAd_GRINDING_PROGRESS = 30;			//SCALAR - Damage each finished interval will take from the code lock.
-
-ExAd_GRINDING_OBJECT_MAX = 300;			//SCALAR - Code lock sustainability.
-
-ExAd_GRINDING_PROGRESSBAR_POS = "Mid";	//SCALAR/STRING - You can use values between 0.3-2 or using "LOW"|"MID"|"HIGH"
-
-/*
-The default values above means that a full succesful grind will take (900 / 30) * 60 = 1800 = 20 minutes
-*/
+class XM8_Apps
+{
+file = "ExAdClient\XM8\Functions";
+	class addApps {};
+	class createBackgroundGUI {};
+	class createButton {};
+	class createCheckBox {};
+	class createExtraApps {};
+	class createFrame {};
+	class createList {};
+	class createPicture {};
+	class createStructuredText {};
+	class getAppCtrl {};
+	class getNextIDC {};
+	class postInitXM8 {file = "ExAdClient\XM8\postInit.sqf"; postInit = 1;};
+};

@@ -35,7 +35,7 @@ _vehList = _flag getVariable ["ExAdVGVeh", []];
 	}
 }forEach _vehList;
 
-if(!_proceed)exitWith{[_requestFrom, "notificationRequest", ["Whoops", [STR_ExAd_VG_NOTI_NOT_AVAILABLE]]] call ExileServer_system_network_send_to};
+if(!_proceed)exitWith{[_owner, "toastRequest", ["ErrorTitleAndText", ["ExAd - Virtual Garage", STR_ExAd_VG_NOTI_NOT_AVAILABLE]]] call ExileServer_system_network_send_to};
 
 _flag setVariable ["ExAdVGVeh", _vehList, true];
 
