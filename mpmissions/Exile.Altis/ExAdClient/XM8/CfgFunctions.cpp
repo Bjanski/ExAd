@@ -23,6 +23,7 @@ file = "ExAdClient\XM8\Functions";
 	class createBackgroundGUI {};
 	class createButton {};
 	class createCheckBox {};
+	class createCtrlGrp {};
 	class createExtraApps {};
 	class createFrame {};
 	class createList {};
