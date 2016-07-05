@@ -49,7 +49,9 @@ if (ExileClientXM8CurrentSlide isEqualTo "party") then
 	};
 };
 
+//Add configured controls and add them to "More"
 call ExAd_fnc_createExtraApps;
+call ExAd_fnc_addApps;
 {
 	_slideControlID = getNumber (_x >> "controlID");
 	_slideName = configName _x;

@@ -23,10 +23,6 @@ if !(ExileClientXM8CurrentSlide isEqualTo _toSlideName) then
 	_toSlideControlID = getNumber (_src >> "CfgXM8" >> _toSlideName >> "controlID");
 	_toSlideControl = _display displayCtrl _toSlideControlID;
 	
-	//Add extra apps
-	if(_toSlideName == "extraApps")then{
-		call ExAd_fnc_addApps;
-	};
 	_toSlideTitle = getText (_src >> "CfgXM8" >> _toSlideName >> "title");
 	
 	_titleControl = _display displayCtrl 4004;

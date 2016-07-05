@@ -1,8 +1,9 @@
-private["_display","_message","_strTxt"];
+private["_display","_message","_strTxt","_pos"];
 
 try
 {
-	_message = loadFile "ExAdClient\XM8\Apps\Info\message.txt";
+	_message = preprocessFileLineNumbers "ExAdClient\XM8\Apps\Info\message.sqf";
+	_message = _message select [(_message find "ExAdClient") + (count "ExAdClient\XM8\Apps\Info\message.sqf") + 1];
 	
 	if(count _message == 0)exitWith{
 		throw "No server info provided";
@@ -19,7 +20,7 @@ try
 	_pos = ctrlPosition _strTxt;
 	_strTxt ctrlSetPosition [_pos select 0, _pos select 1, _pos select 2, ctrlTextHeight _strTxt];
 	_strTxt ctrlcommit 0;
-	ctrlSetFocus ([_display,"ExAd_Info","ctrlGrp"] call ExAd_fnc_getAppCtrl);
+	([_display,"ExAd_Info","ctrlGrp"] call ExAd_fnc_getAppCtrl) ctrlEnable true;
 }
 catch
 {
