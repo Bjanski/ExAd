@@ -17,6 +17,7 @@ After you have installed the entire or parts of the ExAd Package you will easies
   * Virtual Garage
   * Grinding
   * Hacking
+  * XM8
   * Admin Events .. *Coming Soon*
   * VehicleUpgrade -- *Coming Soon*
 
@@ -25,7 +26,9 @@ After you have installed the entire or parts of the ExAd Package you will easies
     * [Exile](http://www.exilemod.com/downloads/)
 * Virtual Garage
     * Core
-	* XM8
+    * XM8
+* XM8
+    * Core
 * Admin Events
     * Core
     * [Infistar](https://infistar.de/)
