@@ -5,7 +5,8 @@ class CfgXM8
 	class ExAd_VG 
 	{
 		title = "Virtual Garage";
-		controlID = 50000;					//IDC:50000 -> 50014 || These need to be unique
+		controlID = 50000;					//IDC:50000 -> 50015 || These need to be unique and out of range from each other 
+		logo = "ExadClient\XM8\Apps\VG\Icon_VG.paa";
 		onLoad = "ExAdClient\XM8\Apps\VG\onLoad.sqf";
 		onOpen = "ExAdClient\XM8\Apps\VG\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\VG\onClose.sqf";
@@ -13,12 +14,13 @@ class CfgXM8
 	class ExAd_Info 
 	{
 		title = "Server Info";
-		controlID = 50100;					//IDC:50100 -> 50101 || These need to be unique
+		controlID = 50100;					//IDC:50100 -> 50102 || These need to be unique and out of range from each other
+		logo = "ExadClient\XM8\Apps\Info\Icon_SI.paa";
 		onLoad = "ExAdClient\XM8\Apps\Info\onLoad.sqf";
 		onOpen = "ExAdClient\XM8\Apps\Info\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\Info\onClose.sqf";
 	};
-};
+}; 
 
 class CfgExileCustomCode 
 {
