@@ -2,7 +2,7 @@
 
 Remember for this plugin to work you first need to install  
 * [Core](https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)  
-* [XM8](https://github.com/Bjanski/ExAd/blob/master/docs/xm8/installation.md)
+* [XM8](https://github.com/Bjanski/ExAd/blob/master/docs/XM8/installation.md)
   
 ## Client
 
