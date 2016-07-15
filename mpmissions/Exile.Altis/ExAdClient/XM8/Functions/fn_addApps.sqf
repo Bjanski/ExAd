@@ -44,7 +44,7 @@ _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 _pW = 0.025; _pH = 0.04;
 
 {
-	private["_ctrl","_pos","logo"];
+	private["_ctrl","_pos","_logo"];
 	_ctrl = (_display displayCtrl _count2);
 	_pos = ctrlPosition _ctrl;
 	_slide = ctrlParentControlsGroup _ctrl;

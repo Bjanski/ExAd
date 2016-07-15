@@ -1,5 +1,5 @@
 /*  
-	fn_createExtraApps.sqf
+	onLoad.sqf
 
 	Copyright 2016 Jan Babor
 

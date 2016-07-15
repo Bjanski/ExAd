@@ -35,7 +35,7 @@
 				<Original>%2 %1Pin code: %3 %1Fuel: %4 %1Damage: %5 %1Texture: %6 %1Items: %7 %1Magazines: %8 %1Weapons: %9</Original> <!-- %1 - New line | %2 - Vehicle class display name | %3 - Pin Code | %4 - Fuel | %5 - Damage | %6 - Texture | %7 - Items | %8 - Magazines | %9 - Weapons -->
 			</Key>
 			<Key ID="STR_ExAd_VG_APP_BTN_BACK">
-				<Original>Go Back</Original>
+				<Original>GO BACK</Original>
 			</Key>
 			<Key ID="STR_ExAd_VG_APP_BTN_FETCH">
 				<Original>Fetch</Original>
