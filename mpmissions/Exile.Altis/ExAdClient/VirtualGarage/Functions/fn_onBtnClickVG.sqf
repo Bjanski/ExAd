@@ -21,13 +21,13 @@ private ["_fnc","_idc","_data"];
 _fnc = [_this,0,nil] call BIS_fnc_param;
 _idc = [_this,1,nil] call BIS_fnc_param;
 
-diag_log str _this;
-
-if(isNil "ExAdCurFlagNetId" || isNil "_fnc" || isNil "_idc")exitWith{false};
+if(isNil "ExAdCurFlagNetId" || isNil "_fnc" || isNil "_idc")exitWith{
+	disableUserInput false;
+	["extraApps", 1] call ExileClient_gui_xm8_slide;
+	false
+};
 
 _data = lbData [_idc, lbCurSel _idc];
-
-diag_log str _data;
 
 if(count _data == 0)then{
 	["ErrorTitleAndText", ["ExAd - Virtual Garage", "You have to choose a vehicle in the proper list!!"]] call ExileClient_gui_toaster_addTemplateToast;

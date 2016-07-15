@@ -34,6 +34,7 @@ if!(isNil "ExAd_VG_CLEAN_ON_STORE")then{
 		clearItemCargoGlobal _objVeh;
 		clearMagazineCargoGlobal _objVeh;
 		clearWeaponCargoGlobal _objVeh;
+		_objVeh setVariable ["ExileMoney", 0, true];
 	}
 };
 
