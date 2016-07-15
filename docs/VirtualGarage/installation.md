@@ -2,7 +2,7 @@
 
 Remember for this plugin to work you first need to install  
 * [Core](https://github.com/Bjanski/ExAd/blob/master/docs/core/installation.md)  
-* [XM8 Apps Improved](https://github.com/vitalymind/XM8_apps_improved)
+* [XM8](https://github.com/Bjanski/ExAd/blob/master/docs/XM8/installation.md)
   
 ## Client
 
@@ -22,7 +22,7 @@ _To_
 
 * In "config.cpp" in the mission root folder, find class CfgExileCustomCode  and add the following row
 ```js
-	ExileServer_system_territory_database_load = "ExAdClient\CustomCode\ExileServer_system_territory_database_load.sqf";  
+	ExileServer_system_territory_database_load = "ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";  
 ```
 * In "config.cpp" you can also add the ("CfgInteractionMenus" >> "Flag" >> "VG") class if you want to be able to fast load the app through your flag pole.  
 
