@@ -1,6 +1,6 @@
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD"};
 	
 	class ExAd_VG 
 	{
@@ -19,6 +19,16 @@ class CfgXM8
 		onLoad = "ExAdClient\XM8\Apps\Info\onLoad.sqf";
 		onOpen = "ExAdClient\XM8\Apps\Info\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\Info\onClose.sqf";
+	};	
+	class ExAd_CHVD 
+	{
+		title = "View Distance Settings";
+		controlID = 50200;					//IDC:50200 -> 50250 || These need to be unique and out of range from each other
+		config = "ExadClient\XM8\Apps\CHVD\config.sqf";
+		logo = "ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
+		onLoad = "ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
+		onOpen = "ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
+		onClose = "ExAdClient\XM8\Apps\CHVD\onClose.sqf";
 	};
 }; 
 
