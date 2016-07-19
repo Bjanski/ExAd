@@ -11,7 +11,7 @@ try
 	
 	_display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 	if(isNull _display)exitWith{
-		throw "No server info provided!";
+		throw "XM8 not loaded!";
 	};
 	
 	_strTxt = [_display,"ExAd_Info","strTxt"] call ExAd_fnc_getAppCtrl;
@@ -20,7 +20,6 @@ try
 	_pos = ctrlPosition _strTxt;
 	_strTxt ctrlSetPosition [_pos select 0, _pos select 1, _pos select 2, ctrlTextHeight _strTxt];
 	_strTxt ctrlcommit 0;
-	([_display,"ExAd_Info","ctrlGrp"] call ExAd_fnc_getAppCtrl) ctrlEnable true;
 }
 catch
 {

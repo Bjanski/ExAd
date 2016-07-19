@@ -1,6 +1,6 @@
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal"};
 	
 	class ExAd_VG 
 	{
@@ -30,6 +30,16 @@ class CfgXM8
 		onOpen = "ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\CHVD\onClose.sqf";
 	};
+	class ExAd_Journal 
+	{
+		title = "Journal";
+		controlID = 50300;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
+		config = "ExadClient\XM8\Apps\Journal\config.sqf";
+		logo = "ExadClient\XM8\Apps\Journal\Icon_Journal.paa";
+		onLoad = "ExAdClient\XM8\Apps\Journal\onLoad.sqf";
+		onOpen = "ExAdClient\XM8\Apps\Journal\onOpen.sqf";
+		onClose = "ExAdClient\XM8\Apps\Journal\onClose.sqf";
+	};	
 }; 
 
 class CfgExileCustomCode 
