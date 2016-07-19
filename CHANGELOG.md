@@ -1,6 +1,14 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
+## 160720 01:15 . v0.7.9  
+### Fixed 
+* Some design flaws in the Apps functions. (XM8)
+* Added ExAd_Journal class to config.cpp (XM8)
+
+### Added 
+* New App, which is a tutorial app on YouTube (XM8)
+
 ## 160703 20:15 . v0.7.7  
 ###Fixed
 * Made the ExAd system compatible with Exile 0.9.8 (All)

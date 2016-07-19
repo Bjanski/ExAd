@@ -1,6 +1,6 @@
 params ["_display","_parent","_idc","_position","_actionOnSelChanged","_tooltip","_ctrl"];
 
-_ctrl = _display ctrlCreate ["RscListBox",_idc,_parent];
+_ctrl = _display ctrlCreate ["RscExileXM8ListBox",_idc,_parent];
 _ctrl ctrlSetPosition _position;
 _ctrl ctrlSetEventHandler ["LBSelChanged",_actionOnSelChanged];
 _ctrl ctrlSetTooltip _tooltip;
