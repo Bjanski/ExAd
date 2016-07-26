@@ -27,9 +27,8 @@ _vehObj call ExileServer_system_vehicleSaveQueue_removeVehicle;
 _vehObj call ExileServer_system_simulationMonitor_removeVehicle;
 deleteVehicle _vehObj;
 
-_subClasses = (missionConfigfile >> "CfgXM8") call BIS_fnc_getCfgSubClasses;
 {
-	if(getText(missionConfigFile >> "CfgXM8" >> _x "vehicleClass") == _vehClass)exitWith{
+	if(getText(missionConfigFile >> "CfgXM8" >> _x >> "vehicleClass") == _vehClass)exitWith{
 
 		_lootHolder = createVehicle ["LootWeaponHolder", _vehPos, [], 0, "CAN_COLLIDE"];
 		_lootHolder setDir (random 360);
@@ -38,7 +37,8 @@ _subClasses = (missionConfigfile >> "CfgXM8") call BIS_fnc_getCfgSubClasses;
 		{
 			_amount = if(count _x > 1)then{_x select 1}else{1};
 			if(_amount > 0)then{
-				_cargoType = (_x select 0) call ExileClient_util_cargo_getType;
+				_itemClassName = _x select 0;
+				_cargoType = _itemClassName call ExileClient_util_cargo_getType;
 				switch (_cargoType) do
 				{
 					case 1: 	
@@ -62,12 +62,12 @@ _subClasses = (missionConfigfile >> "CfgXM8") call BIS_fnc_getCfgSubClasses;
 					};
 					default
 					{ 
-						_lootHolder addItemCargoGlobal [_itemClassName, _amount; 
+						_lootHolder addItemCargoGlobal [_itemClassName, _amount]; 
 					};
 				};
 			};
-		}forEach getArray(missionConfigFile >> CfgXM8 >> _x >> "recipe");
+		}forEach getArray(missionConfigFile >> "CfgXM8" >> _x >> "recipe");
 	};
-}forEach _subClasses;
+}forEach ((missionConfigfile >> "CfgXM8") call BIS_fnc_getCfgSubClasses);
 
 true

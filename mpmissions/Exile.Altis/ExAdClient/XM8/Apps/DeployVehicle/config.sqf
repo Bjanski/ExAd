@@ -47,8 +47,19 @@ ExAd_XM8_DV_fnc_canPack = {
 };
 
 ExAd_XM8_DV_fnc_pack = {
-	["despawnDeployableVehicle", [netId ExileClientInteractionObject]] call ExAd_fnc_serverDispatch;
-		
+	[ExileClientInteractionObject] spawn {
+		params["_obj"];
+	
+		disableUserInput true;
+		player playActionNow "Medic";
+
+		uiSleep 3;
+		["despawnDeployableVehicle", [netId _obj]] call ExAd_fnc_serverDispatch;
+		uiSleep 1;
+
+		["SuccessTitleAndText", ["Vehicle Packed"]] call ExileClient_gui_toaster_addTemplateToast;
+		disableUserInput false;
+	};
 };
 
 ExAd_XM8_DV_fnc_spawnVehicle = {
