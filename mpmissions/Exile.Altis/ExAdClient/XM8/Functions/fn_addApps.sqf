@@ -53,7 +53,10 @@ _pW = 0.025; _pH = 0.04;
 	[_display,_slide,([_x,format["AppIcon%1",_count2]] call ExAd_fnc_getNextIDC),[(_pos select 0) + 1.5 * _pW, (_pos select 1) + 0.625 * _pH, 3 * _pW, 3 * _pH],_logo,[1,1,1,1],false,true,""] call ExAd_fnc_createPicture;
 	
 	_ctrl ctrlSetText getText(missionConfigFile >> "CfgXM8" >> _x >> "title");
-	_ctrl ctrlSetEventHandler ["ButtonClick", format["['%1', 0] call ExileClient_gui_xm8_slide",_x]];
+	_function = if(isText(missionConfigFile >> "CfgXM8" >> _x >> "quickFunction"))then{
+		getText(missionConfigFile >> "CfgXM8" >> _x >> "quickFunction")
+	} else {format["['%1', 0] call ExileClient_gui_xm8_slide",_x]};
+	_ctrl ctrlSetEventHandler ["ButtonClick", _function];
 	
 	_count2 = _count2 + 1;
 }forEach _apps;
