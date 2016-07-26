@@ -25,7 +25,7 @@ ExAd_XM8_DV_fnc_itemsMissing = {
 		private["_amount","_configName","_displayName","_text"];
 		_amount = if(count _x > 1)then{_x select 1}else{1};
 		_text = [_x select 0] call ExAd_XM8_DV_fnc_getDisplayName;
-		_recipeStr = _recipeStr + format["%1x : %2<br />",_amount, _text];
+		_recipeStr = _recipeStr + format["%1x : %2<br />",(if(_amount < 0)then{((-1) * _amount)}else{_amount}), _text];
 	}forEach _recipe;
 	
 	_response = format["You need <br />%1",_recipeStr];
