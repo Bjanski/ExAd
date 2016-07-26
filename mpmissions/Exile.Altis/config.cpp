@@ -1,6 +1,6 @@
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad"};
 	
 	class ExAd_VG 
 	{
@@ -23,13 +23,13 @@ class CfgXM8
 	class ExAd_CHVD 
 	{
 		title = "View Distance Settings";
-		controlID = 50200;					//IDC:50200 -> 50250 || These need to be unique and out of range from each other
+		controlID = 50200;					//IDC:50200 -> 50102 || These need to be unique and out of range from each other
 		config = "ExadClient\XM8\Apps\CHVD\config.sqf";
 		logo = "ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
 		onLoad = "ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
 		onOpen = "ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\CHVD\onClose.sqf";
-	};
+	};		
 	class ExAd_Journal 
 	{
 		title = "Journal";
@@ -39,7 +39,27 @@ class CfgXM8
 		onLoad = "ExAdClient\XM8\Apps\Journal\onLoad.sqf";
 		onOpen = "ExAdClient\XM8\Apps\Journal\onOpen.sqf";
 		onClose = "ExAdClient\XM8\Apps\Journal\onClose.sqf";
-	};	
+	};
+	class ExAd_Bike
+	{
+		title = "Deploy Bike";
+		config = "ExadClient\XM8\Apps\DeployVehicle\config.sqf";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_MountainBike";
+		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
+		packable = 1;
+		autoCleanUp = 1;
+		quickFunction = "['ExAd_Bike'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class ExAd_Quad
+	{
+		title = "Deploy Quad";
+		bambiState = 0;
+		vehicleClass = "Exile_Bike_QuadBike_Fia";
+		recipe[] = {{"Exile_Item_ExtensionCord",1}};
+		packable = 1;
+		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
 }; 
 
 class CfgExileCustomCode 
@@ -51,6 +71,36 @@ class CfgExileCustomCode
 
 class CfgInteractionMenus
 {
+	class Car 
+	{
+		targetType = 2;
+		target = "Car";
+
+		class Actions 
+		{
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Vehicle";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
+			};
+		};
+	};
+	class Bikes
+	{
+		targetType = 2;
+		target = "Bicycle";
+
+		class Actions
+		{
+			class PackDeployedVehicle: ExileAbstractAction
+			{
+				title = "Pack Bike";
+				condition = "call ExAd_XM8_DV_fnc_canPack";
+				action = "call ExAd_XM8_DV_fnc_pack";
+			};
+		};
+	};
 	class Flag
 	{
 		targetType = 2;
