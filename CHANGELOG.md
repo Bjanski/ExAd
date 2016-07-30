@@ -1,6 +1,13 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
+## 1607330 11:00 . v0.7.11  
+### Fixed 
+* Modified fn_addApps. (XM8)
+
+### Added 
+* New App function , fn_createCombo (XM8)
+
 ## 160726 17:15 . v0.7.10  
 ### Fixed 
 * Apply custom functions to "More" app buttons. (XM8)

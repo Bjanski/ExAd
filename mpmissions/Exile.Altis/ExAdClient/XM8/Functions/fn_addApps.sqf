@@ -42,13 +42,13 @@ while {_title != ""} do
 
 _display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 _pW = 0.025; _pH = 0.04;
+_slide = ctrlParentControlsGroup (_display displayCtrl _count2);	
 
 {
-	private["_ctrl","_pos","_logo"];
-	_ctrl = (_display displayCtrl _count2);
+	private["_ctrl","_pos","_logo","_function"];
+	_ctrl = _display displayCtrl _count2;
 	_pos = ctrlPosition _ctrl;
-	_slide = ctrlParentControlsGroup _ctrl;
-	
+		
 	_logo = if(isText(missionConfigFile >> "CfgXM8" >> _x >> "logo"))then{getText(missionConfigFile >> "CfgXM8" >> _x >> "logo")}else{"ExAdClient\Core\Img\logo.paa"};	
 	[_display,_slide,([_x,format["AppIcon%1",_count2]] call ExAd_fnc_getNextIDC),[(_pos select 0) + 1.5 * _pW, (_pos select 1) + 0.625 * _pH, 3 * _pW, 3 * _pH],_logo,[1,1,1,1],false,true,""] call ExAd_fnc_createPicture;
 	
