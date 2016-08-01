@@ -1,6 +1,6 @@
 /*  
-	CfgFunctions.cpp
-
+	fn_getGridStr.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,18 +14,13 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
 */
+private["_img","_grid","_text"];
 
+_grid = mapGridPosition player;
 
-class ExAd
-{
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	//#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	//#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	//#include "HaloParachute\CfgFunctions.cpp"	
-	//#include "XM8\CfgFunctions.cpp"	
-	//#include "StatsBar\CfgFunctions.cpp"	
-};
+_img = [ExAd_SB_ICON_GRID, 1.4] call ExAd_fnc_formatSBImage;
+_text = format["%1|%2",_grid select [0,3],_grid select [3,3]];
+
+[[_img, _text]] call ExAd_fnc_formatSBOutput

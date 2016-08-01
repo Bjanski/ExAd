@@ -17,15 +17,28 @@
 */
 
 
-class ExAd
+class StatsBar
 {
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	//#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	//#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	//#include "HaloParachute\CfgFunctions.cpp"	
-	//#include "XM8\CfgFunctions.cpp"	
-	//#include "StatsBar\CfgFunctions.cpp"	
+	file = "ExAdClient\StatsBar\Functions";
+	class formatSBImage {};
+	class formatSBOutput {};
+	class getBankStr {};
+	class getClanStr {};
+	class getCompassStr {};
+	class getFPSStr {};
+	class getGridStr {};
+	class getHPStr {};
+	class getHungerStr {};
+	class getKDStr {};
+	class getPlayersStr {};
+	class getRespectStr {};
+	class getTempStr {};
+	class getThirstStr {};
+	class getTimerStr {};
+	class getSBColor {};
+	class getWalletStr {};
+	class loadSB {};
+	class sbThread {};
+	class toggleExileHUD {};
+	class postInitSB {file = "ExAdClient\StatsBar\postInit.sqf"; postInit = 1;};
 };

@@ -27,7 +27,7 @@ _margin = 0.2;
 
 _slideClass = "ExAd_Info";
 
-[_display,_slide,([_slideClass,"backButton"] call ExAd_fnc_getNextIDC),[27 * _pW, 17 * _pH, 6 * _pW, 1 * _pH],'["extraApps", 1] call ExileClient_gui_xm8_slide;',STR_ExAd_VG_APP_BTN_BACK] call ExAd_fnc_createButton;
+[_display,_slide,([_slideClass,"backButton"] call ExAd_fnc_getNextIDC),[27 * _pW, 17 * _pH, 6 * _pW, 1 * _pH],'["extraApps", 1] call ExileClient_gui_xm8_slide;',"Go Back"] call ExAd_fnc_createButton;
 
 _newParent = [_display,_slide,([_slideClass,"ctrlGrp"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 1 * _pH, (_leftColW + _rightCol + 6) * _pW, 16 * _pH]] call ExAd_fnc_createCtrlGrp;
 [_display,_newParent,([_slideClass,"strTxt"] call ExAd_fnc_getNextIDC),[_leftCol * _pW, 1.5 * _pH, (_leftColW + _rightCol + 5) * _pW, 15 * _pH],"","PuristaMedium",1,"#ffffff","right",1] call ExAd_fnc_createStructuredText;

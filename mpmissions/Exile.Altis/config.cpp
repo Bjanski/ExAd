@@ -1,6 +1,6 @@
 class CfgXM8
 {
-	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad"};
+	extraApps[] = {"ExAd_VG","ExAd_Info","ExAd_CHVD","ExAd_Journal","ExAd_Bike","ExAd_Quad","ExAd_SB"};
 	
 	class ExAd_VG 
 	{
@@ -59,6 +59,14 @@ class CfgXM8
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
 		quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+	};
+	class ExAd_SB 
+	{
+		title = "Statsbar Settings";
+		controlID = 50400;					//IDC:50300 -> 50305 || These need to be unique and out of range from each other
+		config = "ExadClient\XM8\Apps\SB_Settings\config.sqf";
+		logo = "ExadClient\XM8\Apps\SB_Settings\Icon_SB.paa";
+		onLoad = "ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
 	};
 }; 
 
