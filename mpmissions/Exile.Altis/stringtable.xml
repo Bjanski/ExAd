@@ -112,8 +112,93 @@
 			<Key ID="STR_ExAd_HACKING_HINT_HACK_START">
 				<Original>A brute force hack is detected on the grid!</Original>
 			</Key>
-			<Key ID="">
-				<Original></Original>
+		</Container>
+	</Package>
+	<Package name="StatsBar">
+		<Container name="App">
+			<Key ID="STR_ExAd_SB_APP_GO_BACK">
+				<Original>Go Back</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_KD">
+				<Original>Kill/Death Ratio</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_HP">
+				<Original>Health</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_THIRST">
+				<Original>Thirst</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_HUNGER">
+				<Original>Hunger</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_WALLET">
+				<Original>POP TABS in wallet</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_BANK">
+				<Original>POP TABS in bank</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_RESPECT">
+				<Original>Respect</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_COLORS">
+				<Original>Use color indications</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_FPS">
+				<Original>FPS</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_TIMER">
+				<Original>Restart time</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_TEMP">
+				<Original>Body Temperature</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_GRID">
+				<Original>Grid location</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_COMPASS">
+				<Original>Compass</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_PLAYERS">
+				<Original>Players online</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_CLAN_MEMBERS">
+				<Original>Family members online</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_CB_HIDE_EXILE_SB">
+				<Original>Hide Exile Status bar</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_BG_COLOR">
+				<Original>Background Color</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_POS_SIZE">
+				<Original>Position/Size</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_COMBO_FONT">
+				<Original>Font</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_COMBO_TOOLTIP_FONT">
+				<Original>Font</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_COLOR">
+				<Original>Text Color</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_UPDATE_RATE">
+				<Original>Update Rate</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_SIZE">
+				<Original>Text Size</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_MARGIN">
+				<Original>Margin</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_PADDING">
+				<Original>Padding</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_BTN_SHOW">
+				<Original>Show</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_BTN_HIDE">
+				<Original>Hide</Original>
 			</Key>
 		</Container>
 	</Package>

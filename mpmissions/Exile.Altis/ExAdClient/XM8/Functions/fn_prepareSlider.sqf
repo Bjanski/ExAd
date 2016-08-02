@@ -1,5 +1,5 @@
 /*  
-	fn_loadSB.sqf
+	fn_prepareSlider.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -14,23 +14,11 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
-
 */
-private["_display"];
+params["_ctrl","_range","_pos"];
 
-disableSerialization;
-
-ExAd_SB_Dialog_Layer cutRsc ["ExAd_STATSBAR", "PLAIN", 1];
-	
-_display = uiNameSpace getVariable ["ExAd_STATSBAR",displayNull];	
-_logoCtrl = _display displayCtrl ExAd_SB_Dialog_CtrlLogo_IDC;
-
-if(count ExAd_SB_ICON_LOGO > 0)then{
-	_logoCtrl ctrlSetText ExAd_SB_ICON_LOGO;
-};
-
-call ExAd_fnc_updateSB;
-
-ExAd_SB_Thread = [ExAd_SB_Update_Rate, ExAd_fnc_sbThread, [], true] call ExileClient_system_thread_addtask;
+_ctrl sliderSetRange _range;
+_ctrl sliderSetSpeed [500, 500];
+_ctrl sliderSetPosition _pos;
 
 true

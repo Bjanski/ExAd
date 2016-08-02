@@ -1,5 +1,5 @@
 /*  
-	fn_loadSB.sqf
+	fn_sbThread.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -16,21 +16,13 @@
 	limitations under the License.
 
 */
-private["_display"];
-
-disableSerialization;
-
-ExAd_SB_Dialog_Layer cutRsc ["ExAd_STATSBAR", "PLAIN", 1];
-	
+private ["_display","_statsBarCtrl"];
 _display = uiNameSpace getVariable ["ExAd_STATSBAR",displayNull];	
-_logoCtrl = _display displayCtrl ExAd_SB_Dialog_CtrlLogo_IDC;
+_statsBarCtrl = _display displayCtrl ExAd_SB_Dialog_CtrlBar_IDC;
 
-if(count ExAd_SB_ICON_LOGO > 0)then{
-	_logoCtrl ctrlSetText ExAd_SB_ICON_LOGO;
-};
-
-call ExAd_fnc_updateSB;
-
-ExAd_SB_Thread = [ExAd_SB_Update_Rate, ExAd_fnc_sbThread, [], true] call ExileClient_system_thread_addtask;
+_statsBarCtrl ctrlSetPosition ExAd_SB_GUI_POS;
+_statsBarCtrl ctrlSetBackgroundColor ExAd_SB_GUI_BgColor;
+_statsBarCtrl ctrlSetTextColor ExAd_SB_GUI_TextColor;
+_statsBarCtrl ctrlCommit 0;	
 
 true

@@ -1,5 +1,5 @@
 /*  
-	fn_loadSB.sqf
+	fn_sbPowerToggle.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -15,22 +15,17 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 
-*/
-private["_display"];
+*/	
 
-disableSerialization;
-
-ExAd_SB_Dialog_Layer cutRsc ["ExAd_STATSBAR", "PLAIN", 1];
-	
-_display = uiNameSpace getVariable ["ExAd_STATSBAR",displayNull];	
-_logoCtrl = _display displayCtrl ExAd_SB_Dialog_CtrlLogo_IDC;
-
-if(count ExAd_SB_ICON_LOGO > 0)then{
-	_logoCtrl ctrlSetText ExAd_SB_ICON_LOGO;
+if(ExAd_SB_Active)then{
+	call ExAd_fnc_sbStop
+}else{
+	call ExAd_fnc_loadSB
 };
 
-call ExAd_fnc_updateSB;
+ExAd_SB_Active = !ExAd_SB_Active;
 
-ExAd_SB_Thread = [ExAd_SB_Update_Rate, ExAd_fnc_sbThread, [], true] call ExileClient_system_thread_addtask;
+(_this select 0) ctrlSetText (if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE});
+call ExAd_SB_fnc_thread;
 
 true

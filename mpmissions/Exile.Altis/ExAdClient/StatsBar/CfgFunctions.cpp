@@ -38,7 +38,11 @@ class StatsBar
 	class getSBColor {};
 	class getWalletStr {};
 	class loadSB {};
+	class sbPowerToggle {};
+	class sbSave {};
+	class sbStop {};
 	class sbThread {};
 	class toggleExileHUD {};
+	class updateSB {};
 	class postInitSB {file = "ExAdClient\StatsBar\postInit.sqf"; postInit = 1;};
 };
