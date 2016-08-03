@@ -1,6 +1,6 @@
 /*  
-	CfgFunctions.cpp
-
+	fn_sbPowerToggle.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,18 +14,18 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
-*/
 
+*/	
 
-class ExAd
-{
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	//#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	//#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	//#include "HaloParachute\CfgFunctions.cpp"	
-	//#include "XM8\CfgFunctions.cpp"	
-	//#include "StatsBar\CfgFunctions.cpp"	
+if(ExAd_SB_Active)then{
+	call ExAd_fnc_sbStop
+}else{
+	call ExAd_fnc_loadSB
 };
+
+ExAd_SB_Active = !ExAd_SB_Active;
+
+(_this select 0) ctrlSetText (if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE});
+call ExAd_SB_fnc_thread;
+
+true

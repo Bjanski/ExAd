@@ -1,6 +1,22 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
+## 160801 17:00 . v0.8.0  
+### Fixed
+* "ExadClient\CfgFunctions.cpp" to work with StatsBar (Core)
+* "ExadClient\RscTitles.cpp" to work with StatsBar (Core)
+* Go Back button didn't show text when VG wasn't loaded in the package (Apps; Info, Journal)
+* Loading before ExileClientLoadedIn was declared
+
+### Added 
+* New plugin - StatsBar (StatsBar)
+* New App to configure the StatsBar (XM8)
+* New functions (XM8)
+* Stringtable compability (StatsBar)
+
+### Removed
+* removed all individual changelogs - took to much time to update. 
+
 ## 1607330 11:00 . v0.7.11  
 ### Fixed 
 * Modified fn_addApps. (XM8)

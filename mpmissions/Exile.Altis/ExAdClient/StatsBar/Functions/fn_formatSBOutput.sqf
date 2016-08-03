@@ -1,6 +1,6 @@
 /*  
-	CfgFunctions.cpp
-
+	fn_formatSBOutput.sqf
+	
 	Copyright 2016 Jan Babor
 
 	Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,18 +14,13 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
 */
+params [["_elements", [], [[]]], ["_color","",[""]], ["_text",""]];
 
-
-class ExAd
 {
-	tag = "ExAd";
-	#include "Core\CfgFunctions.cpp"
-	//#include "VirtualGarage\CfgFunctions.cpp"
-	//#include "AdminEvents\CfgFunctions.cpp"
-	//#include "Hacking\CfgFunctions.cpp"
-	//#include "Grinding\CfgFunctions.cpp"
-	//#include "HaloParachute\CfgFunctions.cpp"	
-	//#include "XM8\CfgFunctions.cpp"	
-	//#include "StatsBar\CfgFunctions.cpp"	
-};
+	_text = format["%1%3%2", _text, _x, ExAd_SB_Text_InnerMargin];
+}forEach _elements;
+
+_color = if(count _color > 0)then{format["color='%1'",_color]}else{_color};
+format["<t %3>%1%2%1</t>", ExAd_SB_Text_Margin , _text , _color ]
