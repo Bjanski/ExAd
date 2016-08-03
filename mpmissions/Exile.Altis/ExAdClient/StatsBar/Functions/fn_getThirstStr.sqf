@@ -20,7 +20,7 @@ private["_request","_img","_text"];
 
 _request = [];
 
-_img = [ExAd_SB_ICON_THIRST, 1.25] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_THIRST] call ExAd_fnc_formatSBImage;
 _text = round (ExileClientPlayerAttributes select 3);
 _request pushBack [_img,_text];
 

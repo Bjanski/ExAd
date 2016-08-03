@@ -20,7 +20,7 @@ private["_request","_img","_text"];
 
 _request = [];
 
-_img = "FPS";
+_img = format["<t size='%1'>FPS</t>", ExAd_SB_Img_Size];
 _text = floor diag_fps;
 _request pushBack [_img,_text];
 

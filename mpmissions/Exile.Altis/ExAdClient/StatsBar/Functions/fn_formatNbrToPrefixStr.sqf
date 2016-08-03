@@ -1,5 +1,5 @@
 /*  
-	fn_getClanStr.sqf
+	fn_formatNbrToPrefixStr.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -16,9 +16,8 @@
 	limitations under the License.
 
 */
-private["_img","_text"];
+params [["_nbr", 0, [0]], ["_response", ""], ["_prefix", ""]];
 
-_img = [ExAd_SB_ICON_CLAN] call ExAd_fnc_formatSBImage;
-_text = "N/A";
+if( _nbr > 1000 ) then { if( _nbr > 1000000 ) then { "K" } else { "M" } }else{ "" };
 
-[[_img, _text]] call ExAd_fnc_formatSBOutput
+format["%1%2", (str ( floor _nbr ) ) select [0, 3], _prefix]

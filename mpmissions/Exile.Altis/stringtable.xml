@@ -179,6 +179,9 @@
 			<Key ID="STR_ExAd_SB_APP_COMBO_TOOLTIP_FONT">
 				<Original>Font</Original>
 			</Key>
+			<Key ID="STR_ExAd_SB_APP_COMBO_TOOLTIP_ALIGN">
+				<Original>Align</Original>
+			</Key>
 			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_COLOR">
 				<Original>Text Color</Original>
 			</Key>
@@ -193,6 +196,9 @@
 			</Key>
 			<Key ID="STR_ExAd_SB_APP_SLIDER_TEXT_PADDING">
 				<Original>Padding</Original>
+			</Key>
+			<Key ID="STR_ExAd_SB_APP_SLIDER_IMG_SIZE">
+				<Original>Image Size</Original>
 			</Key>
 			<Key ID="STR_ExAd_SB_APP_BTN_SHOW">
 				<Original>Show</Original>

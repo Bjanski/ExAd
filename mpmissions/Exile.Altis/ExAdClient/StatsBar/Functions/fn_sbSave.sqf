@@ -28,6 +28,7 @@ profileNamespace setVariable ["ExAd_SB_Text_InnerMargin", ExAd_SB_Text_InnerMarg
 profileNamespace setVariable ["ExAd_SB_Text_Font", ExAd_SB_Text_Font];
 profileNamespace setVariable ["ExAd_SB_Text_Align", ExAd_SB_Text_Align];
 profileNamespace setVariable ["ExAd_SB_Text_Size", ExAd_SB_Text_Size];
+profileNamespace setVariable ["ExAd_SB_Img_Size", ExAd_SB_Img_Size];
 
 profileNamespace setVariable ["ExAd_SB_Show_KD", ExAd_SB_Show_KD];
 profileNamespace setVariable ["ExAd_SB_Show_HP", ExAd_SB_Show_HP];

@@ -19,6 +19,6 @@
 private["_img","_text"];
 
 _img = [ExAd_SB_ICON_Wallet] call ExAd_fnc_formatSBImage;
-_text = player getVariable ["ExileMoney", 0];
+_text = [player getVariable ["ExileMoney", 0]] call ExAd_fnc_formatNbrToPrefixStr;
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput

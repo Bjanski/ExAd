@@ -150,20 +150,20 @@ _sliderH = [_display,_newParent,([_slideClass,"sliderH"] call ExAd_fnc_getNextID
 [_sliderB,[0,1],ExAd_SB_GUI_BgColor select 2] call ExAd_fnc_prepareSlider;
 [_sliderA,[0,1],ExAd_SB_GUI_BgColor select 3] call ExAd_fnc_prepareSlider;
 
-_sliderR ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_BgColor set [0, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderG ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_BgColor set [1, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderB ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_BgColor set [2, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderA ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_BgColor set [3, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderR ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_BgColor set [0, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderG ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_BgColor set [1, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderB ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_BgColor set [2, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderA ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) * 100)) + '%1');ExAd_SB_GUI_BgColor set [3, _this select 1];call ExAd_fnc_updateSB","%"]]; 
 
 [_sliderX,[safeZoneX,safeZoneX + safeZoneW],ExAd_SB_GUI_POS select 0] call ExAd_fnc_prepareSlider;
 [_sliderY,[safeZoneY,safeZoneY + safeZoneH],ExAd_SB_GUI_POS select 1] call ExAd_fnc_prepareSlider;
 [_sliderW,[0,safeZoneW],ExAd_SB_GUI_POS select 2] call ExAd_fnc_prepareSlider;
 [_sliderH,[0,safeZoneH],ExAd_SB_GUI_POS select 3] call ExAd_fnc_prepareSlider;
 
-_sliderX ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_POS set [0, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderY ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_POS set [1, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderW ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_POS set [2, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderH ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_POS set [3, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderX ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (_this select 1);ExAd_SB_GUI_POS set [0, _this select 1];call ExAd_fnc_updateSB","%"]]; 
+_sliderY ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (_this select 1);ExAd_SB_GUI_POS set [1, _this select 1];call ExAd_fnc_updateSB","%"]]; 
+_sliderW ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) / safeZoneW * 100)) + '%1');ExAd_SB_GUI_POS set [2, _this select 1];call ExAd_fnc_updateSB","%"]]; 
+_sliderH ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) / safeZoneH * 100)) + '%1');ExAd_SB_GUI_POS set [3, _this select 1];call ExAd_fnc_updateSB","%"]]; 
 
 //Text Font 
 _textCompTop = _bgCompTop + _rowH * 6;
@@ -173,12 +173,24 @@ _comboFont = [_display,_newParent,([_slideClass,"comboFont"] call ExAd_fnc_getNe
 	private["_index"];
 	_index = _comboFont lbAdd _x;
 	_comboFont lbSetData [_index, _x]
-
 }forEach ((configfile >> "CfgFontFamilies") call BIS_fnc_getCfgSubClasses);
 
 for "_i" from 0 to lbSize _comboFont do {
 	if((_comboFont lbData _i) isEqualTo ExAd_SB_Text_Font)exitWith{
 		_comboFont lbSetCurSel _i;
+	}
+};
+
+_comboAlign = [_display,_newParent,([_slideClass,"comboAlign"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 2, _cbStrW, _rowH * 0.75],"ExAd_SB_Text_Align = ((_this select 0) lbData (_this select 1))",STR_ExAd_SB_APP_COMBO_TOOLTIP_ALIGN] call ExAd_fnc_createCombo;
+{
+	private["_index"];
+	_index = _comboAlign lbAdd _x;
+	_comboAlign lbSetData [_index, _x]
+}forEach ["Left","Center","Right"];
+
+for "_i" from 0 to lbSize _comboAlign do {
+	if((_comboAlign lbData _i) isEqualTo ExAd_SB_Text_Align)exitWith{
+		_comboAlign lbSetCurSel _i;
 	}
 };
 
@@ -196,12 +208,14 @@ _sliderFontB = [_display,_newParent,([_slideClass,"sliderFontB"] call ExAd_fnc_g
 [_display,_newParent,([_slideClass,"strTxtSliderFontA"] call ExAd_fnc_getNextIDC),[_leftCol, _textCompTop + _rowH * 4, _cbW, _cbH],"A",_cbStrTextFont,_cbS6trTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
 _sliderFontA = [_display,_newParent,([_slideClass,"sliderFontA"] call ExAd_fnc_getNextIDC),[_cbStr, _textCompTop + _rowH * 4 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
 
-[_display,_newParent,([_slideClass,"strTxtTitleTextColor"] call ExAd_fnc_getNextIDC),[_leftCol, _textCompTop + _rowH * 5, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_UPDATE_RATE,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
+[_display,_newParent,([_slideClass,"strTxtTitleUpdateRate"] call ExAd_fnc_getNextIDC),[_leftCol, _textCompTop + _rowH * 5, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_UPDATE_RATE,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
 _sliderUpdateRate = [_display,_newParent,([_slideClass,"sliderUpdateRate"] call ExAd_fnc_getNextIDC),[_cbStr, _textCompTop + _rowH * 6 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
 
+[_display,_newParent,([_slideClass,"strTxtTitleIconSize"] call ExAd_fnc_getNextIDC),[_leftCol, _textCompTop + _rowH * 7, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_IMG_SIZE,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
+_sliderIconSize = [_display,_newParent,([_slideClass,"sliderIconSize"] call ExAd_fnc_getNextIDC),[_cbStr, _textCompTop + _rowH * 8 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
 
-[_display,_newParent,([_slideClass,"strTxtTitleTextSize"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 2, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_TEXT_SIZE,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
-_sliderTextSize = [_display,_newParent,([_slideClass,"sliderTextSize"] call ExAd_fnc_getNextIDC),[_rightCbStr, _textCompTop + _rowH * 3 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
+[_display,_newParent,([_slideClass,"strTxtTitleTextSize"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 3, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_TEXT_SIZE,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
+_sliderTextSize = [_display,_newParent,([_slideClass,"sliderTextSize"] call ExAd_fnc_getNextIDC),[_rightCbStr, _textCompTop + _rowH * 4 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
 
 [_display,_newParent,([_slideClass,"strTxtTitleTextSize"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 5, _leftColW, _rowH],STR_ExAd_SB_APP_SLIDER_TEXT_MARGIN,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
 _sliderTextMargin = [_display,_newParent,([_slideClass,"sliderTextMargin"] call ExAd_fnc_getNextIDC),[_rightCbStr, _textCompTop + _rowH * 6 + _margin, _cbStrW, _rowH * _scale]] call ExAd_fnc_createXSliderH;
@@ -215,24 +229,26 @@ _sliderTextPadding = [_display,_newParent,([_slideClass,"sliderTextMargin"] call
 [_sliderFontB,[0,1],ExAd_SB_GUI_TextColor select 2] call ExAd_fnc_prepareSlider;
 [_sliderFontA,[0,1],ExAd_SB_GUI_TextColor select 3] call ExAd_fnc_prepareSlider;
 
-_sliderFontR ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_TextColor set [0, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderFontG ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_TextColor set [1, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderFontB ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_TextColor set [2, _this select 1];call ExAd_fnc_updateSB"]]; 
-_sliderFontA ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_GUI_TextColor set [3, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderFontR ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_TextColor set [0, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderFontG ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_TextColor set [1, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderFontB ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str (round ((_this select 1) * 255));ExAd_SB_GUI_TextColor set [2, _this select 1];call ExAd_fnc_updateSB"]]; 
+_sliderFontA ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) * 100)) + '%1');ExAd_SB_GUI_TextColor set [3, _this select 1];call ExAd_fnc_updateSB", "%"]]; 
 
 
 [_sliderTextSize,[0,2],ExAd_SB_Text_Size] call ExAd_fnc_prepareSlider;
 [_sliderTextMargin,[0,5],count ExAd_SB_Text_Margin] call ExAd_fnc_prepareSlider;
 [_sliderTextPadding,[0,5],count ExAd_SB_Text_InnerMargin] call ExAd_fnc_prepareSlider;
 [_sliderUpdateRate,[1,60],60 / ExAd_SB_Update_Rate] call ExAd_fnc_prepareSlider;
+[_sliderIconSize,[0,2], ExAd_SB_Img_Size] call ExAd_fnc_prepareSlider;
 
-_sliderTextSize ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_Text_Size = _this select 1"]]; 
-_sliderTextMargin ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_Text_Margin = [_this select 1] call ExAd_fnc_getBlankSpace"]]; 
-_sliderTextPadding ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_Text_InnerMargin = [_this select 1] call ExAd_fnc_getBlankSpace"]]; 
-_sliderUpdateRate ctrlSetEventHandler ["SliderPosChanged", format["ExAd_SB_Update_Rate = 60 / (_this select 1);if(ExAd_SB_Active)then{call ExAd_fnc_sbStop; call ExAd_fnc_loadSB;call ExAd_fnc_sbThread}"]]; 
+_sliderTextSize ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) * 100)) + '%1');ExAd_SB_Text_Size = _this select 1", "%"]]; 
+_sliderTextMargin ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str floor(_this select 1);ExAd_SB_Text_Margin = [_this select 1] call ExAd_fnc_getBlankSpace"]]; 
+_sliderTextPadding ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip str floor(_this select 1);ExAd_SB_Text_InnerMargin = [_this select 1] call ExAd_fnc_getBlankSpace"]]; 
+_sliderUpdateRate ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (_this select 1) + ' times/min');ExAd_SB_Update_Rate = 60 / (_this select 1);if(ExAd_SB_Active)then{call ExAd_fnc_sbStop; call ExAd_fnc_loadSB;call ExAd_fnc_sbThread}"]]; 
+_sliderIconSize ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlSetTooltip (str (round ((_this select 1) * 100)) + '%1');ExAd_SB_Img_Size = _this select 1", "%"]]; 
 
 
-[_display,_newParent,([_slideClass,"btnSave"] call ExAd_fnc_getNextIDC),[_leftCol + (_leftColW / 9), _textCompTop + _rowH * 8, _leftColW / 3, _rowH],"call ExAd_fnc_sbSave","Save"] call ExAd_fnc_createButton;
-[_display,_newParent,([_slideClass,"btnOnOff"] call ExAd_fnc_getNextIDC),[_leftCol + (_leftColW / 2) + (_leftColW / 9), _textCompTop + _rowH * 8, _leftColW / 3, _rowH],"_this call ExAd_fnc_sbPowerToggle",(if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE})] call ExAd_fnc_createButton;
+[_display,_newParent,([_slideClass,"btnSave"] call ExAd_fnc_getNextIDC),[_leftCol + (_leftColW / 9), _textCompTop + _rowH * 10, _leftColW / 3, _rowH],"call ExAd_fnc_sbSave","Save"] call ExAd_fnc_createButton;
+[_display,_newParent,([_slideClass,"btnOnOff"] call ExAd_fnc_getNextIDC),[_leftCol + (_leftColW / 2) + (_leftColW / 9), _textCompTop + _rowH * 10, _leftColW / 3, _rowH],"_this call ExAd_fnc_sbPowerToggle",(if(!ExAd_SB_Active)then{STR_ExAd_SB_APP_BTN_SHOW}else{STR_ExAd_SB_APP_BTN_HIDE})] call ExAd_fnc_createButton;
 
 true

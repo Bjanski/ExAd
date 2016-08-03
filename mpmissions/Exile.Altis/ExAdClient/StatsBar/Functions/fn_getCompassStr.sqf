@@ -18,7 +18,7 @@
 */
 private["_img","_dir"];
 
-_img = [ExAd_SB_ICON_COMPASS,0.75] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_COMPASS] call ExAd_fnc_formatSBImage;
 _dir = direction player;
 
 try

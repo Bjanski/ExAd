@@ -20,6 +20,7 @@
 class StatsBar
 {
 	file = "ExAdClient\StatsBar\Functions";
+	class formatNbrToPrefixStr {};
 	class formatSBImage {};
 	class formatSBOutput {};
 	class getBankStr {};

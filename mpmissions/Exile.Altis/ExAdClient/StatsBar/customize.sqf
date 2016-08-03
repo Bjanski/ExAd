@@ -16,19 +16,19 @@
 	limitations under the License.
 */
 
-ExAd_SB_ICON_BANK = "exile_assets\texture\ui\map_safe_ca.paa";
-ExAd_SB_ICON_CLAN = "exile_assets\texture\ui\xm8_app_clan_ca.paa";
-ExAd_SB_ICON_COMPASS = "ExAdClient\StatsBar\icons\compass.paa";
-ExAd_SB_ICON_GRID = "\a3\ui_f\data\gui\rsc\rscdisplayarsenal\compass_ca.paa";
-ExAd_SB_ICON_HP = "exile_assets\texture\ui\xm8_app_health_scanner_ca.paa";
-ExAd_SB_ICON_HUNGER = "ExAdClient\StatsBar\icons\hunger.paa";
-ExAd_SB_ICON_KD = "\a3\ui_f\data\gui\cfg\respawnroles\recon_ca.paa";
-ExAd_SB_ICON_PLAYERS = "ExAdClient\StatsBar\icons\players.paa";
-ExAd_SB_ICON_RESPECT = "ExAdClient\StatsBar\icons\respect.paa";
-ExAd_SB_ICON_TEMP = "ExAdClient\StatsBar\icons\thermostat.paa";
-ExAd_SB_ICON_THIRST = "ExAdClient\StatsBar\icons\thirst.paa";
-ExAd_SB_ICON_TIMER = "ExAdClient\StatsBar\icons\restart.paa";
-ExAd_SB_ICON_Wallet = "exile_assets\texture\ui\poptab_ca.paa";
-ExAd_SB_ICON_LOGO = "ExAdClient\Core\Img\logo.paa";
+ExAd_SB_ICON_BANK = 	"ExAdClient\StatsBar\Icons\ExAd_Bank.paa";		//STRING - Path to bank icon
+ExAd_SB_ICON_CLAN = 	"ExAdClient\StatsBar\Icons\ExAd_Family.paa";	//STRING - Path to family icon
+ExAd_SB_ICON_COMPASS = 	"ExAdClient\StatsBar\Icons\ExAd_Compass.paa";	//STRING - Path to compass icon
+ExAd_SB_ICON_GRID = 	"ExAdClient\StatsBar\Icons\ExAd_Grid.paa";		//STRING - Path to grid icon
+ExAd_SB_ICON_HP = 		"ExAdClient\StatsBar\Icons\ExAd_Health.paa";	//STRING - Path to health icon
+ExAd_SB_ICON_HUNGER = 	"ExAdClient\StatsBar\Icons\ExAd_Hunger.paa";	//STRING - Path to hunger icon
+ExAd_SB_ICON_KD = 		"ExAdClient\StatsBar\Icons\ExAd_KD.paa";		//STRING - Path to kill death ratio icon
+ExAd_SB_ICON_PLAYERS = 	"ExAdClient\StatsBar\Icons\ExAd_Players.paa";	//STRING - Path to players icon
+ExAd_SB_ICON_RESPECT = 	"ExAdClient\StatsBar\Icons\ExAd_Respect.paa";	//STRING - Path to respect icon
+ExAd_SB_ICON_TEMP = 	"ExAdClient\StatsBar\Icons\ExAd_Temp.paa";		//STRING - Path to temperature icon
+ExAd_SB_ICON_THIRST = 	"ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";	//STRING - Path to thirst icon
+ExAd_SB_ICON_TIMER = 	"ExAdClient\StatsBar\Icons\ExAd_Restart.paa";	//STRING - Path to restart icon
+ExAd_SB_ICON_Wallet = 	"ExAdClient\StatsBar\Icons\Wallet.paa";			//STRING - Path to POP TABS icon
+ExAd_SB_ICON_LOGO = 	"ExAdClient\Core\Img\ExAd_logo_128.paa";		//STRING - Path to logo
 
-ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"]; //From bad to good. 
+ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"]; //STRINGS - Array of color codes, from bad to good. 

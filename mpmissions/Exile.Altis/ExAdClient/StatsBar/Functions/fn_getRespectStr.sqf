@@ -18,7 +18,7 @@
 */
 private["_img","_text"];
 
-_img = [ExAd_SB_ICON_RESPECT,0.75] call ExAd_fnc_formatSBImage;
+_img = [ExAd_SB_ICON_RESPECT] call ExAd_fnc_formatSBImage;
 _text = ExileClientPlayerScore;
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput
