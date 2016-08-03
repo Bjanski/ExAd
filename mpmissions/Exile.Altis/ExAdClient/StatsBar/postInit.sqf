@@ -32,7 +32,7 @@ if(isNil "ExAd_SB_ICON_RESPECT")then{ExAd_SB_ICON_RESPECT = "ExAdClient\StatsBar
 if(isNil "ExAd_SB_ICON_TEMP")then{ExAd_SB_ICON_TEMP = "ExAdClient\StatsBar\Icons\ExAd_Temp.paa";};
 if(isNil "ExAd_SB_ICON_THIRST")then{ExAd_SB_ICON_THIRST = "ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";};
 if(isNil "ExAd_SB_ICON_TIMER")then{ExAd_SB_ICON_TIMER = "ExAdClient\StatsBar\Icons\ExAd_Restart.paa";};
-if(isNil "ExAd_SB_ICON_Wallet")then{ExAd_SB_ICON_Wallet = "ExAdClient\StatsBar\Icons\Wallet.paa";};
+if(isNil "ExAd_SB_ICON_Wallet")then{ExAd_SB_ICON_Wallet = "ExAdClient\StatsBar\Icons\ExAd_Wallet.paa";};
 if(isNil "ExAd_SB_ICON_LOGO")then{ExAd_SB_ICON_LOGO = "ExAdClient\Core\Img\ExAd_logo_128.paa";};
 	
 if(isNil "ExAd_SB_COMPONENTS_COLORS")then{ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"];};

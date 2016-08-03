@@ -28,9 +28,9 @@ class ExAd_STATSBAR
 			idc = 1000;
 			x = "safeZoneX + 60 * pixelW";
 			y = "safeZoneY + 60 * pixelH - 32 * pixelH";
-			w = "32 * pixelW";
-			h = "32 * pixelH";
-			style=0x800;
+			w = "64 * pixelW";
+			h = "64 * pixelH";
+			style=48;
 			colorBackground[]={0,0,0,0};
 			colorText[]={1,1,1,0.4};
 			font="TahomaB";

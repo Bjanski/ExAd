@@ -28,7 +28,7 @@ ExAd_SB_ICON_RESPECT = 	"ExAdClient\StatsBar\Icons\ExAd_Respect.paa";	//STRING -
 ExAd_SB_ICON_TEMP = 	"ExAdClient\StatsBar\Icons\ExAd_Temp.paa";		//STRING - Path to temperature icon
 ExAd_SB_ICON_THIRST = 	"ExAdClient\StatsBar\Icons\ExAd_Thirst.paa";	//STRING - Path to thirst icon
 ExAd_SB_ICON_TIMER = 	"ExAdClient\StatsBar\Icons\ExAd_Restart.paa";	//STRING - Path to restart icon
-ExAd_SB_ICON_Wallet = 	"ExAdClient\StatsBar\Icons\Wallet.paa";			//STRING - Path to POP TABS icon
+ExAd_SB_ICON_Wallet = 	"ExAdClient\StatsBar\Icons\ExAd_Wallet.paa";	//STRING - Path to POP TABS icon
 ExAd_SB_ICON_LOGO = 	"ExAdClient\Core\Img\ExAd_logo_128.paa";		//STRING - Path to logo
 
 ExAd_SB_COMPONENTS_COLORS = ["#000000", "#440B00","#FE1106","#CA7400","#A9C700","#11BF03"]; //STRINGS - Array of color codes, from bad to good. 
