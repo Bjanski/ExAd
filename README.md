@@ -17,6 +17,7 @@ After you have installed the entire or parts of the ExAd Package you will easies
   * Virtual Garage
   * Grinding
   * Hacking
+  * StatsBar
   * XM8
   * Admin Events .. *Coming Soon*
   * VehicleUpgrade -- *Coming Soon*
@@ -29,6 +30,9 @@ After you have installed the entire or parts of the ExAd Package you will easies
     * XM8
 * XM8
     * Core
+* StatsBar
+    * Core
+    * XM8
 * Admin Events
     * Core
     * [Infistar](https://infistar.de/)
