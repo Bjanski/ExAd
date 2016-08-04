@@ -45,69 +45,98 @@ _newParent ctrlEnable true;
 //CheckBox setup
 //First col
 _cbStrAlign = "left"; _titleStrAlign = "center"; _cbStrTextColor = "#ffffff"; _cbStrTextFont = "PuristaMedium"; _cbStrTextSize = 1;
-_cbKD = [_display,_newParent,([_slideClass,"cbShowKD"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop, _cbW, _cbH],"ExAd_SB_Show_KD = !ExAd_SB_Show_KD",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowKD"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_KD,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
 
-_cbHP = [_display,_newParent,([_slideClass,"cbShowHP"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 1, _cbW, _cbH],"ExAd_SB_Show_HP = !ExAd_SB_Show_HP",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowHP"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 1, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_HP,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_KD)then{
+	_cbKD = [_display,_newParent,([_slideClass,"cbShowKD"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop, _cbW, _cbH],"ExAd_SB_Show_KD = !ExAd_SB_Show_KD",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowKD"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_KD,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbKD cbSetChecked ExAd_SB_Show_KD;
+};
 
-_cbThirst = [_display,_newParent,([_slideClass,"cbShowThirst"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 2, _cbW, _cbH],"ExAd_SB_Show_Thirst = !ExAd_SB_Show_Thirst",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowThirst"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 2, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_THIRST,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_HP)then{
+	_cbHP = [_display,_newParent,([_slideClass,"cbShowHP"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 1, _cbW, _cbH],"ExAd_SB_Show_HP = !ExAd_SB_Show_HP",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowHP"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 1, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_HP,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbHP cbSetChecked ExAd_SB_Show_HP;
+};
 
-_cbHunger = [_display,_newParent,([_slideClass,"cbShowHunger"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 3, _cbW, _cbH],"ExAd_SB_Show_Hunger = !ExAd_SB_Show_Hunger",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowHunger"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 3, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_HUNGER,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Thirst)then{
+	_cbThirst = [_display,_newParent,([_slideClass,"cbShowThirst"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 2, _cbW, _cbH],"ExAd_SB_Show_Thirst = !ExAd_SB_Show_Thirst",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowThirst"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 2, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_THIRST,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbThirst cbSetChecked ExAd_SB_Show_Thirst;
+};
 
-_cbWallet = [_display,_newParent,([_slideClass,"cbShowWallet"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 4, _cbW, _cbH],"ExAd_SB_Show_Wallet = !ExAd_SB_Show_Wallet",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowWallet"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 4, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_WALLET,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Hunger)then{
+	_cbHunger = [_display,_newParent,([_slideClass,"cbShowHunger"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 3, _cbW, _cbH],"ExAd_SB_Show_Hunger = !ExAd_SB_Show_Hunger",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowHunger"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 3, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_HUNGER,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbHunger cbSetChecked ExAd_SB_Show_Hunger;
+};
 
-_cbBank = [_display,_newParent,([_slideClass,"cbShowBank"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 5, _cbW, _cbH],"ExAd_SB_Show_Bank = !ExAd_SB_Show_Bank",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowBank"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 5, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_BANK,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Wallet)then{
+	_cbWallet = [_display,_newParent,([_slideClass,"cbShowWallet"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 4, _cbW, _cbH],"ExAd_SB_Show_Wallet = !ExAd_SB_Show_Wallet",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowWallet"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 4, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_WALLET,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbWallet cbSetChecked ExAd_SB_Show_Wallet;
+};
 
-_cbRespect = [_display,_newParent,([_slideClass,"cbShowRespect"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 6, _cbW, _cbH],"ExAd_SB_Show_Respect = !ExAd_SB_Show_Respect",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowRespect"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 6, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_RESPECT,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Bank)then{
+	_cbBank = [_display,_newParent,([_slideClass,"cbShowBank"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 5, _cbW, _cbH],"ExAd_SB_Show_Bank = !ExAd_SB_Show_Bank",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowBank"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 5, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_BANK,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbBank cbSetChecked ExAd_SB_Show_Bank;
+};
+
+if(ExAd_SB_Allow_Respect)then{
+	_cbRespect = [_display,_newParent,([_slideClass,"cbShowRespect"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 6, _cbW, _cbH],"ExAd_SB_Show_Respect = !ExAd_SB_Show_Respect",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowRespect"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 6, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_RESPECT,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbRespect cbSetChecked ExAd_SB_Show_Respect;
+};
 
 _cbColor = [_display,_newParent,([_slideClass,"cbShowColor"] call ExAd_fnc_getNextIDC),[_leftCol, _cbCompTop + _rowH * 7, _cbW, _cbH],"ExAd_SB_COMPONENTS_ACTIVE_COLORS = !ExAd_SB_COMPONENTS_ACTIVE_COLORS",""] call ExAd_fnc_createCheckBox;
 [_display,_newParent,([_slideClass,"strTxtShowColor"] call ExAd_fnc_getNextIDC),[_cbStr, _cbCompTop + _rowH * 7, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_COLORS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
 
 //Second col
-_cbFPS = [_display,_newParent,([_slideClass,"cbShowFPS"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop, _cbW, _cbH],"ExAd_SB_Show_FPS = !ExAd_SB_Show_FPS",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowFPS"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_FPS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_FPS)then{
+	_cbFPS = [_display,_newParent,([_slideClass,"cbShowFPS"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop, _cbW, _cbH],"ExAd_SB_Show_FPS = !ExAd_SB_Show_FPS",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowFPS"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_FPS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbFPS cbSetChecked ExAd_SB_Show_FPS;
+};
 
-_cbTime = [_display,_newParent,([_slideClass,"cbShowTime"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 1, _cbW, _cbH],"ExAd_SB_Show_Time = !ExAd_SB_Show_Time",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowTime"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 1, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_TIMER,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Time)then{
+	_cbTime = [_display,_newParent,([_slideClass,"cbShowTime"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 1, _cbW, _cbH],"ExAd_SB_Show_Time = !ExAd_SB_Show_Time",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowTime"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 1, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_TIMER,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbTime cbSetChecked ExAd_SB_Show_Time;
+};
 
-_cbTemp = [_display,_newParent,([_slideClass,"cbShowTemp"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 2, _cbW, _cbH],"ExAd_SB_Show_Temp = !ExAd_SB_Show_Temp",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowTemp"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 2, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_TEMP,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Temp)then{
+	_cbTemp = [_display,_newParent,([_slideClass,"cbShowTemp"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 2, _cbW, _cbH],"ExAd_SB_Show_Temp = !ExAd_SB_Show_Temp",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowTemp"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 2, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_TEMP,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbTemp cbSetChecked ExAd_SB_Show_Temp;
+};
 
-_cbGrid = [_display,_newParent,([_slideClass,"cbShowGrid"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 3, _cbW, _cbH],"ExAd_SB_Show_Grid = !ExAd_SB_Show_Grid",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowGrid"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 3, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_GRID,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Grid)then{
+	_cbGrid = [_display,_newParent,([_slideClass,"cbShowGrid"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 3, _cbW, _cbH],"ExAd_SB_Show_Grid = !ExAd_SB_Show_Grid",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowGrid"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 3, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_GRID,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbGrid cbSetChecked ExAd_SB_Show_Grid;
+};
 
-_cbCompass = [_display,_newParent,([_slideClass,"cbShowCompass"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 4, _cbW, _cbH],"ExAd_SB_Show_Compass = !ExAd_SB_Show_Compass",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowCompass"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 4, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_COMPASS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_Compass)then{
+	_cbCompass = [_display,_newParent,([_slideClass,"cbShowCompass"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 4, _cbW, _cbH],"ExAd_SB_Show_Compass = !ExAd_SB_Show_Compass",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowCompass"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 4, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_COMPASS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbCompass cbSetChecked ExAd_SB_Show_Compass;
+};
 
-_cbPlayers = [_display,_newParent,([_slideClass,"cbShowPlayers"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 5, _cbW, _cbH],"ExAd_SB_Show_PlayerCount = !ExAd_SB_Show_PlayerCount",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowPlayers"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 5, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_PLAYERS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_PlayerCount)then{
+	_cbPlayers = [_display,_newParent,([_slideClass,"cbShowPlayers"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 5, _cbW, _cbH],"ExAd_SB_Show_PlayerCount = !ExAd_SB_Show_PlayerCount",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowPlayers"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 5, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_PLAYERS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbPlayers cbSetChecked ExAd_SB_Show_PlayerCount;
+};
 
-_cbClan = [_display,_newParent,([_slideClass,"cbShowClan"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 6, _cbW, _cbH],"ExAd_SB_Show_ClanCount = !ExAd_SB_Show_ClanCount",""] call ExAd_fnc_createCheckBox;
-[_display,_newParent,([_slideClass,"strTxtShowClan"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 6, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_CLAN_MEMBERS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+if(ExAd_SB_Allow_ClanCount)then{
+	_cbClan = [_display,_newParent,([_slideClass,"cbShowClan"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 6, _cbW, _cbH],"ExAd_SB_Show_ClanCount = !ExAd_SB_Show_ClanCount",""] call ExAd_fnc_createCheckBox;
+	[_display,_newParent,([_slideClass,"strTxtShowClan"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 6, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_CLAN_MEMBERS,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
+	_cbClan cbSetChecked ExAd_SB_Show_ClanCount;
+};
 
 _cbHUD = [_display,_newParent,([_slideClass,"cbShowHUD"] call ExAd_fnc_getNextIDC),[_rightCol, _cbCompTop + _rowH * 7, _cbW, _cbH],"ExAd_SB_EXILE_HUD_ACTIVE = !ExAd_SB_EXILE_HUD_ACTIVE;call ExAd_fnc_toggleExileHUD",""] call ExAd_fnc_createCheckBox;
 [_display,_newParent,([_slideClass,"strTxtShowHUD"] call ExAd_fnc_getNextIDC),[_rightCbStr, _cbCompTop + _rowH * 7, _cbStrW, _rowH],STR_ExAd_SB_APP_CB_HIDE_EXILE_SB,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_cbStrAlign,1] call ExAd_fnc_createStructuredText;
 
-_cbKD cbSetChecked ExAd_SB_Show_KD;
-_cbHP cbSetChecked ExAd_SB_Show_HP;
-_cbThirst cbSetChecked ExAd_SB_Show_Thirst;
-_cbHunger cbSetChecked ExAd_SB_Show_Hunger;
-_cbWallet cbSetChecked ExAd_SB_Show_Wallet;
-_cbBank cbSetChecked ExAd_SB_Show_Bank;
-_cbRespect cbSetChecked ExAd_SB_Show_Respect;
-_cbFPS cbSetChecked ExAd_SB_Show_FPS;
-_cbTime cbSetChecked ExAd_SB_Show_Time;
-_cbTemp cbSetChecked ExAd_SB_Show_Temp;
-_cbGrid cbSetChecked ExAd_SB_Show_Grid;
-_cbCompass cbSetChecked ExAd_SB_Show_Compass;
-_cbPlayers cbSetChecked ExAd_SB_Show_PlayerCount;
-_cbClan cbSetChecked ExAd_SB_Show_ClanCount;
 
 _cbColor cbSetChecked ExAd_SB_COMPONENTS_ACTIVE_COLORS;
 _cbHUD cbSetChecked !ExAd_SB_EXILE_HUD_ACTIVE;
