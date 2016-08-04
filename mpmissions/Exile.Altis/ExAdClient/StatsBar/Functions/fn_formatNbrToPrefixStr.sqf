@@ -18,6 +18,6 @@
 */
 params [["_nbr", 0, [0]], ["_response", ""], ["_prefix", ""]];
 
-if( _nbr > 1000 ) then { if( _nbr > 1000000 ) then { "K" } else { "M" } }else{ "" };
+_prefix = if( _nbr > 1000 ) then { if( _nbr > 1000000 ) then { "M" } else { "K" } }else{ "" };
 
 format["%1%2", (str ( floor _nbr ) ) select [0, 3], _prefix]
