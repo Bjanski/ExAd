@@ -32,7 +32,7 @@ class ExAd_STATSBAR
 			h = "64 * pixelH";
 			style=48;
 			colorBackground[]={0,0,0,0};
-			colorText[]={1,1,1,0.4};
+			colorText[]={0,0,0,1};
 			font="TahomaB";
 			sizeEx=0;
 			text = "";

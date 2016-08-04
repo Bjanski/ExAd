@@ -131,7 +131,7 @@ ExAd_SB_Show_FPS = profileNamespace getVariable ["ExAd_SB_Show_FPS", ExAd_SB_Sho
 ExAd_SB_Show_Time = profileNamespace getVariable ["ExAd_SB_Show_Time", ExAd_SB_Show_Time_Default];
 ExAd_SB_Show_Temp = profileNamespace getVariable ["ExAd_SB_Show_Temp", ExAd_SB_Show_Temp_Default];
 ExAd_SB_Show_Grid = profileNamespace getVariable ["ExAd_SB_Show_Grid", ExAd_SB_Show_Grid_Default];
-ExAd_SB_Show_Compass = profileNamespace getVariable ["ExAd_SB_Show_Compass", truExAd_SB_Show_Compass_Defaulte];
+ExAd_SB_Show_Compass = profileNamespace getVariable ["ExAd_SB_Show_Compass", ExAd_SB_Show_Compass_Default];
 ExAd_SB_Show_PlayerCount = profileNamespace getVariable ["ExAd_SB_Show_PlayerCount", ExAd_SB_Show_PlayerCount_Default];
 ExAd_SB_Show_ClanCount = profileNamespace getVariable ["ExAd_SB_Show_ClanCount", ExAd_SB_Show_ClanCount_Default];
 
