@@ -45,8 +45,7 @@ _lastPos = [];
 {
 	private["_ctrl","_pos","_logo","_function"];
 	_ctrl = _display displayCtrl _idc;
-
-	diag_log format["Test - idc = %1, isNull = %2", _idc , isNull _ctrl];
+	
 	if(isNull _ctrl)then{
 		_ctrl = _display ctrlCreate ["RscExileXM8AppButton1x1",_idc,_slide];
 		_xPos = if( (_lastPos select 0) == (30 - 3) * (0.025) ) then { (4 - 3) * (0.025) } else {  (_lastPos select 0) + ( 6.5 * 0.025 ) };
