@@ -18,7 +18,7 @@ if !(ExileClientXM8CurrentSlide isEqualTo _toSlideName) then
 {
 	_display = uiNameSpace getVariable ["RscExileXM8", displayNull];
 	
-	//Manipulate the source of config data
+	//ExAd Manipulate the source of config data
 	_src = if(isClass(configFile >> "CfgXM8" >> _toSlideName))then{configFile}else{missionConfigFile};
 	_toSlideControlID = getNumber (_src >> "CfgXM8" >> _toSlideName >> "controlID");
 	_toSlideControl = _display displayCtrl _toSlideControlID;
@@ -33,7 +33,11 @@ if !(ExileClientXM8CurrentSlide isEqualTo _toSlideName) then
 		call _toSlideOpenFunction;
 	};
 	
-	//Manipulating the source of config data
+	//ExAd Load Apps 
+	if(toLower _toSlideName == 'extraapps')then{
+		call ExAd_fnc_addApps;
+	};
+	//ExAd Manipulating the source of config data
 	_src2 = if(isClass(configFile >> "CfgXM8" >> ExileClientXM8CurrentSlide))then{configFile}else{missionConfigFile};
 	_fromSlideControlID = getNumber(_src2 >> "CfgXM8" >> ExileClientXM8CurrentSlide >> "controlID");
 	
