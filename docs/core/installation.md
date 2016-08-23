@@ -3,7 +3,7 @@
 This is the core package that needs to be installed for all other ExAd plugins/addons to work. 
 
 IMPORTANT!! 
-Keep the folder struction att all time when copying over files.
+Keep the folder structure at all time when copying over files.
 
 ## Client
 * Copy missionconfig classes from "mpmissions\Exile.Altis\description.ext\" into your own description.ext  
