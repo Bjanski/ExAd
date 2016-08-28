@@ -7,7 +7,10 @@ Remember for this plugin to work you first need to install
 ## Client
 
 * Place the folder "StatsBar" into "mpmissions\exile.<MAP>\ExAdClient\"  
-
+* Goto "mpmissions\exile.<MAP>\ExAdClient\RscTitles.cpp" and uncomment 
+```cpp 
+//#include "StatsBar\RscTitles.cpp" 
+```
 * Goto "mpmissions\exile.<MAP>\ExAdClient\CfgFunctions" and uncomment  
 
 _From_  
