@@ -18,5 +18,5 @@
 class ExAd
 {
 	displayName = "ExAd Virtual Garage";
-	#include "VirtualGarage\CfgHints.cpp"
+	//#include "VirtualGarage\CfgHints.cpp"
 };
