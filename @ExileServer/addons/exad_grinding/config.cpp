@@ -20,6 +20,8 @@ class CfgPatches {
 	class ExAd_Grinding {
 		requiredVersion = 0.1;
 		requiredAddons[] = {"ExAd_Core"};
+		units[] = {};
+		weapons[] = {};
 	};
 };
 

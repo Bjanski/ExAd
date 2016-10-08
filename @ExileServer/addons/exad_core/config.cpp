@@ -20,6 +20,8 @@ class CfgPatches {
 	class ExAd_Core {
 		requiredVersion = 0.1;
 		requiredAddons[] = {"exile_server"};
+		units[] = {};
+		weapons[] = {};
 	};
 };
 
