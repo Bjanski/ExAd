@@ -1,4 +1,7 @@
 #<img src="logo.png" alt="ExAd" width="200" />
+
+[![Arma 1.64](https://img.shields.io/badge/Arma-1.64-blue.svg)](https://dev.arma3.com/post/sitrep-00175) [![Exile 1.0.2 Kohlrabi](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg)](http://www.exilemod.com/topic/17807-102-kohlrabi/) [![ExAd Version](https://img.shields.io/badge/ExAd-v0.8.2-orange.svg)](http://bjanski.github.io/ExAd/)
+
 Exile Addons - originally small projects developed for the Arma Exile communities EXO and SP4R but now rewritten and collected here for public use. 
 
 I'll gradually add all features I built, encouragements always helps the project to stay alive a little longer :smirk: | [Donate here](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jan%2ebabor%2e383%40gmail%2ecom&lc=GB&item_name=ExAd&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
