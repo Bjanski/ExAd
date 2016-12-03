@@ -19,6 +19,6 @@
 private["_img","_text"];
 
 _img = [ExAd_SB_ICON_PLAYERS] call ExAd_fnc_formatSBImage;
-_text = count playableUnits;
+_text = count allPlayers;
 
 [[_img, _text]] call ExAd_fnc_formatSBOutput

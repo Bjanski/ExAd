@@ -15,4 +15,4 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-(('Exile_Item_Laptop' in (magazines player)) && ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1) && (({alive _x}count playableUnits) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))
+(('Exile_Item_Laptop' in (magazines player)) && ((ExileClientInteractionObject getvariable ['ExileIsLocked',1]) isEqualTo -1) && (({alive _x}count allPlayers) >= ExAd_HACKING_MIN_PLAYERS_ONLINE))
