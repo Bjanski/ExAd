@@ -1,7 +1,7 @@
 #Documentation  
-Each subfolder withholds the subproject's documentation including installation instruction and examples of useage.
+Each subfolder withholds the subproject's documentation including installation instruction and examples of usage.
   
-To simplify the proccess for me, I've decided to simply devide everything and leave a changelog and update instructions in every subprojects documentation folder. This way you won't miss any information related to that subproject and it will be simple for me to keep the track off all changes with out skimming a general changelog. 
+To simplify the process for me, I've decided to simply divide everything and leave a changelog and update instructions in every subprojects documentation folder. This way you won't miss any information related to that subproject and it will be simple for me to keep the track off all changes with out skimming a general changelog. 
 
 ## How to Update  
 Since this project consist of multiple subprojects I've had some issues deciding how to structure the project for a simple update process. 
