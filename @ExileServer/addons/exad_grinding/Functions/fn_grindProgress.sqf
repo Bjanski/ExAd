@@ -22,6 +22,14 @@ _object = objectFromNetId ([_this, 0, "",[""]] call BIS_fnc_param);
 
 if(isNull _object)exitWith{false};
 
+_territory = _object call ExileClient_util_world_getTerritoryAtPosition;
+_serverTime = time;
+if(_serverTime > ((_territory getVariable ["ExileXM8MobileNotifiedTime",-1800]) + 1800))then
+{
+	_territory call ExileServer_system_xm8_sendBaseRaid;
+	_territory setVariable ["ExileXM8MobileNotifiedTime", _serverTime];
+};
+
 if((_object getVariable ["ExAd_Grinding_progress", 0]) >= ExAd_GRINDING_OBJECT_MAX)then{
 	_object setVariable ["ExileAccessCode", nil];
 	_object setVariable ["ExileIsLocked", nil, true];

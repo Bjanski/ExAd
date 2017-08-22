@@ -44,6 +44,14 @@ if(isNil "ExAd_HACKS_IN_PROGRESS")then{
 
 ["Hacking", format["Hack started: Player - %1(%2)|Territory - %3|Hacks in motion - %4",name _player, getPlayerUID _player, _flag getVariable ["ExileTerritoryName", "Unknown"], ExAd_HACKS_IN_PROGRESS]] call ExAdServer_fnc_log;
 
+_territory = _flag call ExileClient_util_world_getTerritoryAtPosition;
+_serverTime = time;
+if(_serverTime > ((_territory getVariable ["ExileXM8MobileNotifiedTime",-1800]) + 1800))then
+{
+	_territory call ExileServer_system_xm8_sendBaseRaid;
+	_territory setVariable ["ExileXM8MobileNotifiedTime", _serverTime];
+};
+
 _pos = _player modelToWorld [0, +0.5, 0];
 _pos set [2,((getPosATL _player) select 2)];
 
