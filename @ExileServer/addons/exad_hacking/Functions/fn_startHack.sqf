@@ -67,7 +67,7 @@ _player removeItem "Exile_Item_Laptop";
 	params ["_object","_player","_laptop","_flag","_markers","_marker","_success","_ticks","_newSize","_destroy","_msg"];
 	UISleep 2;
 	
-	(parseText (format["<t color='%1' size='%2' font='%3'>%4</t><br/><t color='%5' size='%6' font='%7'>%8</t>", ExAd_Hint_Title_Color, ExAd_Hint_Title_Size, ExAd_Hint_Title_Font,STR_ExAd_HACKING_HINT_TITLE, ExAd_Hint_Msg_Color, ExAd_Hint_Msg_Size, ExAd_Hint_Msg_Font, STR_ExAd_HACKING_HINT_HACK_START])) remoteExec ["hint", -2];
+	["baguetteRequest", ["Hacktivity Detected on the Grid!"]] call ExileServer_system_network_send_broadcast; 
 	
 	if(ExAd_HACKS_IN_PROGRESS >= ExAd_HACKING_ALLOWED_HACKS)exitWith{
 		_laptop setVariable ["ExAd_HACKING_IN_PROGRESS", false, true];
