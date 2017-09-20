@@ -42,7 +42,7 @@ if(isNil "ExAd_ACTION_EJECT_HEIGHT")then{ExAd_ACTION_EJECT_HEIGHT = 0;};
 		
 		if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
 			ExAd_ACTION_HALOPARACHUTE_USE_KEY_ACTIONS = (findDisplay 46) displayAddEventHandler ["KeyDown",{
-				if(_this select 1 == 45 && _this select 2 && _this select 4)then{
+				if(_this select 1 == 47 && _this select 2 && _this select 4)then{
 					if((getPos player) select 2 > ExAd_ACTION_EJECT_HEIGHT && vehicle player != player)then{
 						call ExAd_fnc_ejectPlayer
 					}else{
