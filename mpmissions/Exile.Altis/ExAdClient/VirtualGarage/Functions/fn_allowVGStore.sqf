@@ -15,9 +15,12 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-private ["_res","_flag"];
+private ["_res","_flag","_cmon1","_cmon2","ExAd_STOP_COMBAT_STORING"];
 
-if(isNil "ExAdCurFlagNetId")exitWith{diag_log "ExAdClient: allowVGStore - ExAdCurFlagNetId is nil";false};
+_cmon1 = if (ExileClientPlayerIsInCombat && ExAd_STOP_COMBAT_STORING)exitWith{["ErrorTitleAndText", ["ExAd - Virtual Garage", "You cannot store Vehicles While in Combat!"]] call ExileClient_gui_toaster_addTemplateToast;};
+
+_cmon2 = if (isNil "ExAdCurFlagNetId")exitWith{diag_log "ExAdClient: allowVGStore - ExAdCurFlagNetId is nil";false};
+
 _flag = objectFromNetId ExAdCurFlagNetId;
 
 _allowedVeh = _flag call ExAd_fnc_allowedVGVeh;

@@ -14,7 +14,7 @@
 		</Container>
 		<Container name="Info">
 			<Key ID="STR_ExAd_HALOPARACHUTE_INFO_DETACH">
-				<Original>You can eject from parachute with: Alt Shift x</Original>
+				<Original>Alt+Shift+V to Eject from Parachute!</Original>
 			</Key>
 		</Container>
 	</Package>
@@ -110,7 +110,7 @@
 				<Original>Hack Activity</Original>
 			</Key>
 			<Key ID="STR_ExAd_HACKING_HINT_HACK_START">
-				<Original>A brute force hack is detected on the grid!</Original>
+				<Original>Someone is hacking another person's base!</Original>
 			</Key>
 		</Container>
 	</Package>
