@@ -24,6 +24,8 @@ if(isNull _object || isNull _player)exitWith{false};
 
 _flag = ((getPos _object) nearObjects ["Exile_Construction_Flag_Static", 150]) select 0;
 
+if(_flag isEqualTo objNull)exitWith{false};
+
 if(ExAd_HACKING_PLAYER_ONLINE && !([_flag] call ExAdServer_fnc_territoryPlayerPresent))exitWith{
 	[STR_ExAd_HACKING_NOTI_NO_PLAYER_PRESENT ,0,0.6,2,0] remoteExec ["BIS_fnc_dynamicText",owner _player];
 };
