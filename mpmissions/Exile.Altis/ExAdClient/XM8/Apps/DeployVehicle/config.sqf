@@ -65,11 +65,11 @@ ExAd_XM8_DV_fnc_pack = {
 ExAd_XM8_DV_fnc_spawnVehicle = {
     params["_slideClass","_bambiState","_delopyRecipe","_vehicleClass"];
 
-    if !(vehicle player == player) exitwith { 
-    ["ErrorTitleAndText", ["Come on Bruh!", "You can't deploy from inside a vehicle!"]] call ExileClient_gui_toaster_addTemplateToast;
-    };    
     try
     {    
+        
+        if !(vehicle player == player) then { throw "You can't do this in a vehicle!"};
+        
         _bambiState = if(isNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState")) then
         {
             if(getNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState") > 0)then{true}else{false}
