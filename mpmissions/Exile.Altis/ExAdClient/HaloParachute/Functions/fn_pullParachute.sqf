@@ -40,7 +40,8 @@ if(ExAd_HALOPARACHUTE_SAFE_MODE)then{
 };
 
 if(ExAd_HALOPARACHUTE_USE_KEY_ACTIONS)then{
-	hint localize "STR_ExAd_HALOPARACHUTE_INFO_DETACH"
+	//hint localize "STR_ExAd_HALOPARACHUTE_INFO_DETACH"
+	[localize "STR_ExAd_HALOPARACHUTE_INFO_DETACH"] spawn ExileClient_gui_baguette_show;
 };
 
 true

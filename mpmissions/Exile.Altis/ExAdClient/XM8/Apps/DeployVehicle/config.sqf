@@ -63,70 +63,73 @@ ExAd_XM8_DV_fnc_pack = {
 };
 
 ExAd_XM8_DV_fnc_spawnVehicle = {
-	params["_slideClass","_bambiState","_delopyRecipe","_vehicleClass"];
+    params["_slideClass","_bambiState","_delopyRecipe","_vehicleClass"];
 
-	try
-	{	
-		_bambiState = if(isNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState")) then
-		{
-			if(getNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState") > 0)then{true}else{false}
-		} else {true};
+    try
+    {    
+        
+        if !(vehicle player == player) then { throw "You can't do this in a vehicle!"};
+        
+        _bambiState = if(isNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState")) then
+        {
+            if(getNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState") > 0)then{true}else{false}
+        } else {true};
 
-		if(_bambiState && !ExileClientPlayerIsBambi) then { throw "You can only spawn vehicles as a bambi!"};
+        if(_bambiState && !ExileClientPlayerIsBambi) then { throw "You can only spawn vehicles as a bambi!"};
 
-		_delopyRecipe = getArray(missionConfigFile >> "CfgXM8" >> _slideClass >> "recipe");
-		if(count _delopyRecipe > 0) then
-		{
-			{
-				if(count _x > 1) then
-				{
-					_amount = if(_x select 1 == -1)then{1}else{_x select 1};
-					if!([player, [_x select 0, _amount]] call ExAd_XM8_DV_fnc_itemsInCargo) then 
-					{
-						throw ([_delopyRecipe] call ExAd_XM8_DV_fnc_itemsMissing);
-					};
-				} else {
-					if!([player, _x select 0] call ExileClient_util_playerEquipment_contains) then 
-					{
-						throw ([_delopyRecipe] call ExAd_XM8_DV_fnc_itemsMissing);
-					}
-				}
-			}forEach _delopyRecipe;
+        _delopyRecipe = getArray(missionConfigFile >> "CfgXM8" >> _slideClass >> "recipe");
+        if(count _delopyRecipe > 0) then
+        {
+            {
+                if(count _x > 1) then
+                {
+                    _amount = if(_x select 1 == -1)then{1}else{_x select 1};
+                    if!([player, [_x select 0, _amount]] call ExAd_XM8_DV_fnc_itemsInCargo) then 
+                    {
+                        throw ([_delopyRecipe] call ExAd_XM8_DV_fnc_itemsMissing);
+                    };
+                } else {
+                    if!([player, _x select 0] call ExileClient_util_playerEquipment_contains) then 
+                    {
+                        throw ([_delopyRecipe] call ExAd_XM8_DV_fnc_itemsMissing);
+                    }
+                }
+            }forEach _delopyRecipe;
 
-			{
-				_count = if(count _x > 1)then{(_x select 1)}else{1};
-				for "_i" from 1 to _count do {
-					[player, _x select 0] call ExileClient_util_playerCargo_remove
-				}
-			}forEach _delopyRecipe;
-		};
+            {
+                _count = if(count _x > 1)then{(_x select 1)}else{1};
+                for "_i" from 1 to _count do {
+                    [player, _x select 0] call ExileClient_util_playerCargo_remove
+                }
+            }forEach _delopyRecipe;
+        };
 
-		_vehicleClass = getText(missionConfigFile >> "CfgXM8" >> _slideClass >> "vehicleClass");
-		if!(isClass(configFile >> "CfgVehicles" >> _vehicleClass ))then { throw "The vehicle class doesn't exist"};
+        _vehicleClass = getText(missionConfigFile >> "CfgXM8" >> _slideClass >> "vehicleClass");
+        if!(isClass(configFile >> "CfgVehicles" >> _vehicleClass ))then { throw "The vehicle class doesn't exist"};
 
-		[_slideClass] spawn {
-			params["_slideClass"];
-			disableUserInput true;
-			player playActionNow "Medic";
+        [_slideClass] spawn {
+            params["_slideClass"];
+            disableUserInput true;
+            player playActionNow "Medic";
 
-			uiSleep 3;
-			["spawnDeployableVehicle", [netId player, _slideClass]] call ExAd_fnc_serverDispatch;
-			uiSleep 1;
-			["SuccessTitleAndText", ["Vehicle deployed"]] call ExileClient_gui_toaster_addTemplateToast;
-			ExileClientXM8CurrentSlide = "extraApps";
-			disableUserInput false;
-		};	
+            uiSleep 3;
+            ["spawnDeployableVehicle", [netId player, _slideClass]] call ExAd_fnc_serverDispatch;
+            uiSleep 1;
+            ["SuccessTitleAndText", ["Vehicle deployed"]] call ExileClient_gui_toaster_addTemplateToast;
+            ExileClientXM8CurrentSlide = "extraApps";
+            disableUserInput false;
+        };    
 
-		["extraApps", 1] call ExileClient_gui_xm8_slide;
-		closeDialog 0;
+        ["extraApps", 1] call ExileClient_gui_xm8_slide;
+        closeDialog 0;
 
 
-	}
-	catch{
-		[_exception] spawn {
-			UISleep 0.5; 
-			["ErrorTitleAndText", ["ExAd - Deploy Vehicle", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
-			["extraApps", 1] call ExileClient_gui_xm8_slide;
-		};
-	};
+    }
+    catch{
+        [_exception] spawn {
+            UISleep 0.5; 
+            ["ErrorTitleAndText", ["ExAd - Deploy Vehicle", _this select 0]] call ExileClient_gui_toaster_addTemplateToast;
+            ["extraApps", 1] call ExileClient_gui_xm8_slide;
+        };
+    };
 };
