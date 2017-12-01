@@ -1,8 +1,8 @@
 <img src="logo.png" alt="ExAd" width="200" />
 
-[![Arma 1.78](https://img.shields.io/badge/Arma-1.78-blue.svg)](https://dev.arma3.com/post/sitrep-00175) [![Exile 1.0.3 Lemon](https://img.shields.io/badge/Exile-1.0.2%20Kohlrabi-C72651.svg)](http://www.exilemod.com/topic/17807-102-kohlrabi/) [![ExAd Version](https://img.shields.io/badge/ExAd-v0.8.2-orange.svg)](http://bjanski.github.io/ExAd/)
+[![Arma 1.78](https://img.shields.io/badge/Arma-1.78-blue.svg)](https://dev.arma3.com/post/spotrep-00076) [![Exile 1.0.3 Lemon](https://img.shields.io/badge/Exile-1.0.3%20Lemon-C72651.svg)](http://www.exilemod.com/topic/22940-103-lemon/) [![ExAd Version](https://img.shields.io/badge/ExAd-v0.9.0-purple.svg)](http://bjanski.github.io/ExAd/)
 
-Exile Addons - originally small projects developed for the Arma Exile communities EXO and SP4R but now rewritten and collected here for public use. 
+Exile Addons - originally small projects developed for the Arma Exile communities EXO and SP4R but now rewritten and collected here for public use. Contributers to the code can be found in the "Contributers" section at the top of the Repo.
 
 I'll gradually add all features I built, encouragements always helps the project to stay alive a little longer :smirk: | [Donate here](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jan%2ebabor%2e383%40gmail%2ecom&lc=GB&item_name=ExAd&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
 
@@ -59,4 +59,5 @@ Apache License
 
 ##Contact
 For this project I only reply through my [Exile profile](http://www.exilemod.com/profile/7143-janski/)  
+Contact Monkeynutz Directly for a fast reply: [Exile profile](http://www.exilemod.com/profile/61794-monkeynutz/)
 If you want help with an issue, report a bug or maybe just request a new feature first make sure now one else have had the same issue by searching the [Issue Tracker](https://github.com/Bjanski/ExAd/issues) and the [Exile Forum](http://www.exilemod.com/).
