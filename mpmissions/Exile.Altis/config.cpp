@@ -44,7 +44,8 @@ class CfgXM8
 	{
 		title = "Deploy Bike";
 		config = "ExadClient\XM8\Apps\DeployVehicle\config.sqf";
-		bambiState = 0;
+		bambiState = 0;		//Set to 1 to only allow players to deploy as a bambi.
+		blockInSafezone = 0;	//Set to 1 to prevent players deploying said vehicle inside of safezones.
 		vehicleClass = "Exile_Bike_MountainBike";
 		recipe[] = {{"Exile_Item_ExtensionCord",-1}};
 		packable = 1;
@@ -55,6 +56,7 @@ class CfgXM8
 	{
 		title = "Deploy Quad";
 		bambiState = 0;
+		blockInSafezone = 0;
 		vehicleClass = "Exile_Bike_QuadBike_Fia";
 		recipe[] = {{"Exile_Item_ExtensionCord",1}};
 		packable = 1;
