@@ -75,7 +75,14 @@ ExAd_XM8_DV_fnc_spawnVehicle = {
             if(getNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "bambiState") > 0)then{true}else{false}
         } else {true};
 
-        if(_bambiState && !ExileClientPlayerIsBambi) then { throw "You can only spawn vehicles as a bambi!"};
+        if(_bambiState && !ExileClientPlayerIsBambi) then { throw "You can only spawn this vehicle as a bambi!"};
+	
+	_szDeploy = if(isNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "blockInSafezone")) then
+        {
+            if(getNumber(missionConfigFile >> "CfgXM8" >> _slideClass >> "blockInSafezone") > 0)then{true}else{false}
+        } else {true};
+
+        if(_szDeploy && ExilePlayerInSafezone) then { throw "You cannot deploy this vehicle in a SafeZone."};
 
         _delopyRecipe = getArray(missionConfigFile >> "CfgXM8" >> _slideClass >> "recipe");
         if(count _delopyRecipe > 0) then
