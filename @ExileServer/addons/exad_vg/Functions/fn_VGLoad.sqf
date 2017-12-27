@@ -54,10 +54,9 @@ _vehObj setPosATL _pos;
 if (ExAd_VG_GIVE_GODMODE)then
 	{
 		_vehObj allowDamage false;
-		ExAd_VG_GODMODE_TIME = 20;
 		["VirtualGarage", format["Spawned: Player - %1(%2)|Vehicle - %3(%4)|",name _player, getPlayerUID _player, typeOf _vehObj, _objId]] call ExAdServer_fnc_log;
 
-		sleep ExAd_VG_GODMODE_TIME;
+		sleep ExAd_VG_GM_TIME;
 
 		_vehObj allowDamage true;
 	} 
