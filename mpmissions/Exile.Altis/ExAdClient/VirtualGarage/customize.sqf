@@ -30,6 +30,6 @@ ExAd_STOP_COMBAT_STORING = true; 		//BOOLEAN - If set to true players cannot sto
 
 ExAd_VG_GIVE_GODMODE = false;			//BOOLEAN - If set to true, vehicles spawned from the VG will have Godmode enabled on them.
 
-ExAd_VG_GODMODE_TIME = 20;				//SCALAR - Time for vehicles to have Godmode enabled in seconds (Will be ingored if ExAd_VG_GIVE_GODMODE = false)
+ExAd_VG_GM_TIME = 20;				//SCALAR - Time for vehicles to have Godmode enabled in seconds (Will be ingored if ExAd_VG_GIVE_GODMODE = false)
 
 ExAd_VG_ALLOWED_VEH_TYPE = ["Car","Tank","Plane","Air","Ship","Submarine"];//ARRAY - Array with allowed vehicle types for the virtual garage. | "Car", "Tank", "Helicopter", "Plane" or "Air" for both WARNING DON'T USE "LandVehicle" Can crash the Exile system.  
