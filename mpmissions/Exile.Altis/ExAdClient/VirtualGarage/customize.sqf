@@ -28,7 +28,7 @@ ExAd_VG_SHOW_ADVHINT = false; 			//BOOLEAN - If the virtual garage should displa
 
 ExAd_STOP_COMBAT_STORING = true; 		//BOOLEAN - If set to true players cannot store vehicles while they are in combat. Prevents combat storing.
 
-ExAd_VG_GIVE_GODMODE = false;			//BOOLEAN - If set to true, vehicles spawned from the VG will have Godmode enabled on them.
+ExAd_VG_GIVE_GM = false;			//BOOLEAN - If set to true, vehicles spawned from the VG will have Godmode enabled on them.
 
 ExAd_VG_GM_TIME = 20;				//SCALAR - Time for vehicles to have Godmode enabled in seconds (Will be ingored if ExAd_VG_GIVE_GODMODE = false)
 
