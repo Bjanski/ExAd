@@ -51,7 +51,7 @@ _pos = getPosATL _vehObj;
 _pos set [2, (_pos select 2) + 0.1];
 _vehObj setPosATL _pos;
 
-if (ExAd_VG_GIVE_GODMODE)then
+if (ExAd_VG_GIVE_GM)then
 	{
 		_vehObj allowDamage false;
 		["VirtualGarage", format["Spawned: Player - %1(%2)|Vehicle - %3(%4)|",name _player, getPlayerUID _player, typeOf _vehObj, _objId]] call ExAdServer_fnc_log;
