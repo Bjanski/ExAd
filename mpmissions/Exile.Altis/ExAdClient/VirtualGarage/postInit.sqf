@@ -25,7 +25,10 @@ if(isNil "ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR")then{ExAd_VG_ALLOWED_VEH_MULTIPLE
 if(isNil "ExAd_VG_ACCESS_LEVEL")then{ExAd_VG_ACCESS_LEVEL = 1;};
 if(isNil "ExAd_VG_CLEAN_ON_STORE")then{ExAd_VG_CLEAN_ON_STORE = true;};
 if(isNil "ExAd_VG_SHOW_ADVHINT")then{ExAd_VG_SHOW_ADVHINT = false;};
-if(isNil "ExAd_VG_ALLOWED_VEH_TYPE")then{ExAd_VG_ALLOWED_VEH_TYPE = ["Car","Air"];};
+if(isNil "ExAd_STOP_COMBAT_STORING")then{ExAd_STOP_COMBAT_STORING = true;};
+if(isNil "ExAd_VG_GIVE_GM")then{ExAd_VG_GIVE_GM = false;};
+if(isNil "ExAd_VG_GM_TIME")then{ExAd_VG_GM_TIME = 20;};
+if(isNil "ExAd_VG_ALLOWED_VEH_TYPE")then{ExAd_VG_ALLOWED_VEH_TYPE = ["Car","Tank","Plane","Air","Ship","Submarine"];};
 
 ["STR_ExAd_VG_NOTI_FULL", "The garage is full"] call ExAd_fnc_localize;
 ["STR_ExAd_VG_NOTI_NOT_PERSISTENT", "You can only store pincode protected vehicles into the garage!"] call ExAd_fnc_localize;
