@@ -15,7 +15,7 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-private ["_res","_flag","_cmon1","_cmon2","ExAd_STOP_COMBAT_STORING"];
+private ["_res","_flag","_cmon1","_cmon2"];
 
 _cmon1 = if (ExileClientPlayerIsInCombat && ExAd_STOP_COMBAT_STORING)exitWith{["ErrorTitleAndText", ["ExAd - Virtual Garage", "You cannot store Vehicles While in Combat!"]] call ExileClient_gui_toaster_addTemplateToast;};
 
