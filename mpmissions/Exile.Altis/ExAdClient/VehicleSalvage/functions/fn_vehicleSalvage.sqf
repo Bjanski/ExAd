@@ -50,7 +50,7 @@ try
 			throw 1;
 		};
 
-		uiSleep _sleepDuration; 
+		uiSleep _sleepTime; 
 		_progress = ((diag_tickTime - _startTime) / _duration) min 1;
 		_percentage ctrlSetText format["%1%2", round (_progress * 100), "%"];
 	};
