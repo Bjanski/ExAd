@@ -15,7 +15,7 @@ Below you can see what dependencies each plugin has.
 ## Update Instructions
 After you have installed the entire or parts of the ExAd Package you will easiest update by checking each subproject documentation folder to retrieve the changelog and update instructions. 
 
-##Collection
+## Collection
   * Core
   * Halo & Parachute
   * Virtual Garage
@@ -26,7 +26,7 @@ After you have installed the entire or parts of the ExAd Package you will easies
   * Admin Events .. *Coming Soon*
   * VehicleUpgrade -- *Coming Soon*
 
-##Dependencies
+## Dependencies
 * Core
     * [Exile](http://www.exilemod.com/downloads/)
 * Virtual Garage
@@ -55,11 +55,11 @@ Contributions are allways welcome, please read [Contribution Guidlines](CONTRIBU
 
 All contributed code first needs to be rewieved and tested before pushed to master. 
 
-##License
+## License
 Apache License
 
-##Contact
-For this project I only reply through my [Exile profile](http://www.exilemod.com/profile/7143-janski/)  
-Contact Monkeynutz Directly for a fast reply: [Exile profile](http://www.exilemod.com/profile/61794-monkeynutz/)
+## Contact
+Janski doesn't reply as much anymore as he is not in the ArmA scene. But here is his [Exile profile](http://www.exilemod.com/profile/7143-janski/)  
+Contact Monkeynutz Directly for a fast reply: [Monkey's Profile](http://www.exilemod.com/profile/61794-monkeynutz/)
 
-If you want help with an issue, report a bug or maybe just request a new feature first make sure now one else have had the same issue by searching the [Issue Tracker](https://github.com/Bjanski/ExAd/issues) and the [Exile Forum](http://www.exilemod.com/).
+If you want help with an issue, report a bug or maybe just request a new feature first make sure now one else have had the same issue by searching the [Issue Tracker](https://github.com/Bjanski/ExAd/issues) and the [Exile Forum](http://www.exilemod.com/topic/13865-exad-package-of-virtual-garagexm8statsbarhalo-parachuteadmin-eventshackinggrindingvehicle-upgrade/).
