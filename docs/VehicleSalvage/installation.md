@@ -24,14 +24,14 @@ _To_
 
 * Add to the bottom of "class Car" menus this: 
 			
-			```cpp
-			class ExAdSalvage: ExileAbstractAction
-            {
+```cpp
+		class ExAdSalvage: ExileAbstractAction
+            	{
                 title = "<t color='#ff0000'>ExAd Salvage Aircraft</t>";
                 condition = "(!(alive (ExileClientInteractionObject)))";
                 action = "_this call ExAd_fnc_vehicleSalvage";
-			};
-			```
+		};
+```
 			
 * Make sure it follows the formatting of the rest of the actions.
 
