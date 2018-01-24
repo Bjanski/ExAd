@@ -93,6 +93,12 @@ class CfgInteractionMenus
 				condition = "call ExAd_XM8_DV_fnc_canPack";
 				action = "call ExAd_XM8_DV_fnc_pack";
 			};
+			class ExAdSalvage: ExileAbstractAction
+            		{
+                	title = "<t color='#ff0000'>ExAd Salvage Aircraft</t>";
+                	condition = "(!(alive (ExileClientInteractionObject)))";
+                	action = "_this call ExAd_fnc_vehicleSalvage";
+			};	
 		};
 	};
 	class Bikes
