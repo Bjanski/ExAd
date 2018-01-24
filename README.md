@@ -1,6 +1,6 @@
 <img src="logo.png" alt="ExAd" width="200" />
 
-[![Arma 1.78](https://img.shields.io/badge/Arma-1.80-blue.svg)](https://dev.arma3.com/post/spotrep-00076) [![Exile 1.0.4 "Pineapple"](https://img.shields.io/badge/Exile-1.0.4%20"Lemon"-yellow.svg)](http://www.exilemod.com/topic/22940-103-lemon/) [![ExAd Version](https://img.shields.io/badge/ExAd-v0.10.0%20Broccoli-green.svg)](http://bjanski.github.io/ExAd/)
+[![Arma 1.78](https://img.shields.io/badge/Arma-1.80-blue.svg)](https://dev.arma3.com/post/spotrep-00076) [![Exile 1.0.4 "Pineapple"](https://img.shields.io/badge/Exile-1.0.4%20"Lemon"-yellow.svg)](http://www.exilemod.com/topic/25026-104-pineapple/) [![ExAd Version](https://img.shields.io/badge/ExAd-v1.0.0%20Kumquat-orange.svg)](http://bjanski.github.io/ExAd/)
 
 Exile Addons - originally small projects developed for the Arma Exile communities EXO and SP4R but now rewritten and collected here for public use. Contributers to the code can be found in the "Contributers" section at the top of the Repo.
 
