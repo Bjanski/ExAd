@@ -1,7 +1,7 @@
 /**
 	ExAd Salvage Vehicle Script
 	Old script found & fixed, edited, optimized and added to by [GADD]Monkeynutz
-	Written for ExAd by [ExAd]Janski
+	Written for ExAd by [ExAd]Janski 
 **/
 
 if (ExileClientActionDelayShown) exitWith { false };
