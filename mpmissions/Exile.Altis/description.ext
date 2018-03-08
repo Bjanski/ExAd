@@ -10,11 +10,6 @@ class RscTitles
 	#include "ExAdClient\RscTitles.cpp"
 };
 
-class CfgHints
-{
-	#include "ExAdClient\CfgHints.cpp"
-};
-
 class CfgNetworkMessages
 {
 	#include "ExAdClient\CfgNetworkMessages.cpp"

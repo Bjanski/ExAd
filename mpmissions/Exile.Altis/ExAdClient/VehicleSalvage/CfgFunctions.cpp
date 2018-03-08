@@ -1,7 +1,9 @@
 /*  
-	fn_allowedVGVeh.sqf
+	CfgFunctions.cpp
 
 	Copyright 2016 Jan Babor
+	
+	Added to ExAd by [GADD]Monkeynutz
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
@@ -15,8 +17,11 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 */
-params ["_flag"];
 
-_res = ExAd_VG_MIN_ALLOWED_VEH + round(ExAd_VG_ALLOWED_VEH_MULTIPLE_FACTOR * (_flag getVariable ["ExileTerritoryLevel", 1]));
 
-_res
+class VehicleSalvage
+{
+	file = "ExAdClient\VehicleSalvage\Functions";
+	class vehicleSalvage {};
+	class postInitSV {file = "ExAdClient\VehicleSalvage\postInit.sqf"; postInit = 1;};
+};

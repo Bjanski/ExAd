@@ -1,5 +1,5 @@
 /*  
-	fn_startHack.sqf
+	postInit.sqf
 	
 	Copyright 2016 Jan Babor
 
@@ -14,8 +14,11 @@
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 	See the License for the specific language governing permissions and
 	limitations under the License.
+
 */
 
-player playActionNow "SitDown";
+_path = "ExAdClient\VehicleSalvage\customize.sqf";
+call compile preprocessFileLineNumbers _path;
 
-["startHack", [netId (_this select 0), netId player]] call ExAd_fnc_serverDispatch;
+if(isNil "ExAd_SV_DISALLOW_DURING_COMBAT")then{ExAd_SV_DISALLOW_DURING_COMBAT = false;};
+if(isNil "ExAd_SV_TIME_TAKEN_TO_SALVAGE")then{ExAd_SV_TIME_TAKEN_TO_SALVAGE = 10;};

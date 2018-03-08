@@ -16,14 +16,5 @@
 	limitations under the License.
 */
 
-ExAd_GRINDING_PROGRESS_INTERVALL = 5;	//SCALAR - Grinding, interval time measured in seconds.
-
-ExAd_GRINDING_PROGRESS = 30;			//SCALAR - Damage each finished interval will take from the code lock.
-
-ExAd_GRINDING_OBJECT_MAX = 300;			//SCALAR - Code lock sustainability.
-
-ExAd_GRINDING_PROGRESSBAR_POS = "Mid";	//SCALAR/STRING - You can use values between 0.3-2 or using "LOW"|"MID"|"HIGH"
-
-/*
-The default values above means that a full succesful grind will take (900 / 30) * 60 = 1800 = 20 minutes
-*/
+ExAd_SV_DISALLOW_DURING_COMBAT = true;	//BOOLEAN - Set to true to prevent people salvaging their vehicles during combat.
+ExAd_SV_TIME_TAKEN_TO_SALVAGE = 10; 		//SCALAR - Set in seconds how long you wish for salvaging to take players. (Default = 10)
